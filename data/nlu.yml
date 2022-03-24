@@ -1,0 +1,574 @@
+version: "2.0"
+
+nlu:
+- intent: chaohoi
+  examples: |
+    - chào bot
+    - hello bot
+    - hi bot
+    - bot ơi , cho mình hỏi
+    - bot ơi
+    - cho mình hỏi chút
+
+- intent: bye
+  examples: |
+    - good bye
+    - bye bye
+    - tạm biệt em
+    - tạm biệt bot nhá
+
+- intent: hoikhanang
+  examples: |
+    - bot có thể làm những gì nhỉ?
+    - bot có chức năng gì?
+    - bot giúp gì được tôi không?
+    - bot có thể giúp gì cho tôi?
+    - bot biết làm gì?
+    - bot hỗ trợ tôi như thế nào?
+    - cho tôi xem các chức năng của bot!
+
+- intent: camon
+  examples: |
+    - cảm ơn em nhá
+    - thanks em nha
+    - cảm ơn nha
+    - good job
+    - thank you
+    - cảm ơn bot nha
+    - thanks bot
+    - cảm ơn
+    - thank you so much
+    - great! Thanks
+
+- intent: cauhoi1
+  examples: |
+    - Thế nào là bệnh truyền nhiễm?
+    - thế nào là bênh truyền nhiễm ?
+    - the nao la benh truyen nhiem ?
+    - nhu the nao la benh truye nhiem?
+- intent: cauhoi2
+  examples: |
+    - Thế nào là dịch bệnh truyền nhiễm?
+    - the nao la dịch bệnh truyền nhiễm ?
+    - the nao la dịch bệnh truyền nhiem?
+    - the nao la dich benh truyen nhiem?
+- intent: cauhoi3
+  examples: |
+    - Dịch Covid-19 là gì?
+    - dịch covid 19 la gi ?
+    - dich covid 19 la gi vay
+- intent: cauhoi4
+  examples: |
+    - Khi nào nước ta công bố dịch bệnh?
+    - khi nao nuoc ta cong bo dai dich?
+    - khi nao nước ta công bố dịch?
+    - khi nào nước ta công bố dịch?
+- intent: cauhoi5
+  examples: |
+    - Có phải dịch Covid-19 nguy hiểm hơn các dịch bệnh khác nên Thủ tướng Chính phủ công bố dịch?
+    - Có phải dịch covid 19 nguy hiểm hơn các dịch bệnh khác nên thủ tướng chính phủ công bố dịch?
+    - có phai dịch covid 19 nguy hiem hon cac dịch benh khac nen thu tuong chinh phu cong bo dịch?
+    - co phai dịch covid 19 nguy hiểm hơn các dịch bệnh khác nên thủ tướng chính phủ công bố dịch ?
+- intent: cauhoi6
+  examples: |
+    - Dịch Covid-19 nguy hiểm như thế nào?
+    - dịch covid-19 nguy hiểm như nào ?
+    - dịch covid 19 nguy hiểm như nào ?
+    - dịch covid 19 nguy hiểm như nào ?
+- intent: cauhoi7
+  examples: |
+    - Dịch Covid-19 xuất hiện như thế nào?
+    - dịch covid 19 xuất hiện như thế nào ?
+    - dịch covid 19 xuất hiện như thể nào vậy ?
+    - dịch covid 19 xuất hiện như nào vậy bot?
+- intent: cauhoi8
+  examples: |
+    - Dịch Covid-19 lan truyền bằng cách nào?
+    - Dịch covid-19 lan truyền bằng cách nào ?
+    - dịch covid 19 lan truyền như thế nào ?
+    - dịch covid 19 lan truyền như nào vậy ?
+- intent: cauhoi9
+  examples: |
+    - Dịch Covid-19 so với dịch SARS và dịch viêm đường hô hấp Trung Đông (MERS), dịch nào nguy hiểm hơn?
+    - dịch covid-19 so với dịch sars và dịch viêm đường hô hấp Mers, dịch nào nguy hiểm hơn?
+    - dịch covid-19 so với dịch sars và dịch viên đường hô hấp dịch nào nguy hiểm hơn ?
+    - covid 19 so với dịch sars và mers dịch nào nguy hiểm hơn ?
+- intent: cauhoi10
+  examples: |
+    - Dịch Covid-19 sẽ kéo dài bao lâu?
+    - dịch covid-19 kéo nào bao lâu?
+    - dịch covid 19 kéo dài bao lâu?
+    - dịch covid-19 kéo dài bao lâu vậy?
+- intent: cauhoi11
+  examples: |
+    - Tác nhân gây bệnh Covid-19 là gì?
+    - tác nhân gây bệnh covid 19 là gì ?
+    - Tác nhân gây bệnh covid 19 là gì ?
+    - tác nhân gay bệnh covid 19 là gì vậy?
+- intent: cauhoi12
+  examples: |
+    - Virus Covid-19 có nguồn gốc từ đâu?
+    - virus codid 19 có nguồn gốc từ đâu
+    - virus covid 19 có nguồn gốc từ mô?
+    - virus covid 19 có nguồn gốc từ đâu vậy?
+- intent: cauhoi13
+  examples: |
+    - Virus Covid-19 có ở đâu trong môi trường xung quanh chúng ta?
+    - Virus covid 19 có ở đâu trong môi trường xung quanh chúng ta ?
+    - Virus covid 19 có ở đâu trong môi trường chúng ta ?
+    - virus covid 19 có ở đâu trong môi trường?
+- intent: cauhoi14
+  examples: |
+    - Virus Covid-19 có nhân lên trong môi trường tự nhiên không?
+    - Virus covid 19 có nhân lên trong môi trường tự nhiên không?
+    - virus covid 19 có nhân lên trong không khí không?
+- intent: cauhoi15
+  examples: |
+    - Virus Covid-19 tồn tại bao lâu trong môi trường tự nhiên?
+    - virus covid 19 tồn tại bao lâu trong môi trường tự nhiên ?
+    - virus covid 19 tồn tại bao lâu trong môi trường tự nhiên vậy bot?
+    - virus covid 19 tổn tại bao lâu trong môi trường tự nhiên vậy má ?
+- intent: cauhoi16
+  examples: |
+    - Virus Covid-19 lây nhiễm vào con người như thế nào?
+    - Virus covid 19 lây nhiễm vào con người như thế nào?
+    - virus covid 19 lây nhiễm vào con người chúng ta như thế nào ?
+
+- intent: cauhoi17
+  examples: |
+    - Tôi đang ở nơi được gọi là “vùng dịch” thì có phải là tôi đã bị nhiễm Covid-19 rồi không?
+    - tôi đang ở nơi được gọi là vùng dịch thì có phải tôi đã bị nhiễm covid 19 rồi không
+    - tôi đang ở nơi được gọi là vùng dịch thì có phải tôi đã nhiễm covid 19 rồi phải không?
+    - toi dang o noi duoc goi la vung dich thi co phai toi da nhiem covid 19 roi phai khong
+- intent: cauhoi18
+  examples: |
+    - Tôi đang khỏe mạnh nhưng nếu cứ ở vùng có dịch là tôi sẽ bị nhiễm Covid-19 phải không?
+    - toi dang khoe mamh nhung neu cu ỏ vung co dich la toi se bi nhiem covid 19 phai khong
+    - tôi đang khỏe mạnh nhưng nếu cứ ở vùng có dịch là tôi sẽ bị nhiễm covid 19 phải không ?
+- intent: cauhoi19
+  examples: |
+    - Tôi vừa đi cùng chuyến [máy bay]{"entity":"transport","value":"máy bay"} với một người vừa được xác định là người nhiễm Covid-19 có nghĩa là tôi cũng đã nhiễm Covid-19 phải không?
+    - tôi vừa đi cùng chuyến [ô tô]{"entity":"transport","value":"ô tô"} với một người vừa được xác định là người nhiễm Covid-19 có nghĩa là tôi cũng đã nhiễm Covid-19 phải không?
+    - tôi vừa đi cùng [toa tàu]{"entity":"transport","value":"toa tàu"} với một người vừa được xác định là người nhiễm Covid-19 có nghĩa là tôi cũng đã nhiễm Covid-19 phải không
+    - Tôi vừa ở cùng [phòng họp]{"entity":"room","value":"phòng họp"} với một người vừa được xác định là người nhiễm Covid-19 có nghĩa là tôi cũng đã nhiễm Covid-19 phải không?
+    - Tôi vừa ở [lớp học]{"entity":"room","value":"lớp học"} với một người vừa được xác định là người nhiễm Covid-19 có nghĩa là tôi cũng đã nhiễm Covid-19 phải không?
+- intent: cauhoi20
+  examples: |
+    - Thế nào là tiếp xúc trực tiếp với người bệnh?
+    - thế nào là tiếp xúc trực tiếp với người bệnh ?
+    - thế nào là tiếp xúc trực tiếp với người bệnh ?
+    - thế nào là tiếp xúc trực tiếp với người bệnh
+- intent: cauhoi21
+  examples: |
+    - Thế nào là tiếp xúc gần với người bệnh?
+    - thế nào là tiếp xúc gần với người bệnh ?
+    - thế nào là tiếp xúc gần với người bị bệnh?
+- intent: cauhoi22
+  examples: |
+    - Bắt tay có làm lây Covid-19 không?
+    - bắt tay có làm lây covid 19 không?
+    - bắt tay có làm lây covid 19 không vây?
+    - bắt tay với người khác có lây covid 19 không vậy?
+- intent: cauhoi23
+  examples: |
+    - Hôn nhau có làm lây Covid-19 không?
+    - hôn nhau có làm lây covid 19 không vậy bot ?
+    - tôi với người yêu hôn nhau có làm lây covid 19 không vậy?
+- intent: cauhoi24
+  examples: |
+    - Sinh hoạt tình dục có làm lây Covid-19 không?
+    - quan hệ tình dục có làm lây covid 19 không?
+    - ấy ấy với người yêu có làm lây covid 19 không?
+    - quan hệ tinh dục có làm lây covid 19 không?
+- intent: cauhoi25
+  examples: |
+    - Covid-19 có lây qua thức ăn không?
+    - covid 19 có lây qua thức qua không
+    - covid 19 có lây qua thức ăn không vậy bot?
+    - covid 19 có lây qua thực phẩm không vậy bot?
+- intent: cauhoi26
+  examples: |
+    - Covid-19 có lây qua đường máu không?
+    - covid 19 có lây qua đường máu không vậy
+- intent: cauhoi27
+  examples: |
+    - Covid-19 có lây từ mẹ sang con không?
+    - covid 19 có lây từ mẹ sang con không
+    - covid 19 co lay tu me sang con không?
+- intent: cauhoi28
+  examples: |
+    - Virus Covid-19 gây bệnh như thế nào?
+    - covid 19 gây bệnh như nào ?
+    - virus covid 19 gây bệnh như thế nào
+- intent: cauhoi29
+  examples: |
+    - Virus Covid-19 gây bệnh cho cơ quan nào?
+    - virus covid 19 gây bệnh cho cơ quan nào?
+    - virus covid 19 gây bệnh cho cơ quan nào của cơ thể ?
+    - virus covid 19 gây bệnh cho cơ quan nào vậy?
+- intent: cauhoi30
+  examples: |
+    - Covid-19 có gây quái thai không?
+    - covid 19 có gây quái thai không
+    - covid 19 có gây quái thay dị tật không ?
+
+- intent: cauhoi31
+  examples: |
+    - Tại sao có người nhiễm Covid-19 thì bị bệnh, có người không bị bệnh?
+    - tại sao có người nhiễm covid 19 thì bị bệnh, có người không bị bệnh
+    - tại sao người nhiễm covid thi bị bệnh , có người không bị bệnh
+- intent: cauhoi32
+  examples: |
+    - Có ai có đề kháng tự nhiên với Covid-19 hay không?
+    - có ai có đề kháng tự nhiên với covid 19 không
+    - có ai có đề khàng tự nhiên với covid 19 không vậy?
+- intent: cauhoi33
+  examples: |
+    - Cơ thể người đề kháng với Covid-19 như thế nào?
+    - cơ thể người đề kháng với covid 19 như thế nào ?
+    - cơ thể người đề kháng với covid 19 như thế nào vậy?
+- intent: cauhoi34
+  examples: |
+    - Sau khi nhiễm Covid-19 bao lâu thì có kháng thể?
+    - sau khi nhiễm covid 19 bao lâu thì có kháng thể ?
+    - sau khi nhiễm covid 19 thì bao lâu mới có kháng thể?
+    - nhiễm covid 19 thì bao lâu mới có kháng thể ?
+- intent: cauhoi35
+  examples: |
+    - Người bị bệnh do Covid-19 một lần đã khỏi có bị lại bệnh này nữa không?
+    - người bị bệnh do covid 19 một lần đã khỏi có bị lại bệnh này nữa không
+    - người bị bệnh do dịch covid 19 một lần đã khỏi có bị lại bệnh này nữa không?
+    - người bị nhiễm do dịch covid 19 một lần đã khỏi có bị lại dịch bệnh này nữa không ?
+- intent: cauhoi36
+  examples: |
+    - Có thể lấy huyết tương của người bị bệnh Covid-19 đã khỏi bệnh để chữa cho người đang bị bệnh hay không?
+    - có thể lấy huyết tương của người bị nhiễm covid 19 đã khỏi bệnh để chữa cho người đang bị bệnh hay không?
+    - có thể lấy huyết tương của người bị nhiễm covid 19 đã khỏi bệnh để chưa cho người đang bị bệnh hay không ?
+    - có thể lấy huyết tương cua nguoi bi nhiem covid 19 da khoi benh de chua cho nguoi dang bi benh nay khong
+- intent: cauhoi37
+  examples: |
+    - Covid-19, SARS-CoV và MERS-CoV đều là virus corona, người bị SARS hoặc MERS đã khỏi bệnh có bị bệnh do Covid19 nữa hay không?
+    - Covid-19, SARS-CoV và MERS-CoV đều là virus corona, người bị SARS hoặc MERS đã khỏi bệnh có bị bệnh do Covid19 nữa hay không?
+    - covid-19, SARS-CoV và MERS-CoV đều là virus corona, người bị SARS hoặc MERS đã khỏi bệnh có bị bệnh do Covid19 nữa hay không?
+    - Covid-19, SARS-CoV và MERS-CoV đều là virus corona, người bị SARS hoặc MERS đã khỏi bệnh có bị bệnh do Covid19 nữa hay không?
+- intent: cauhoi38
+  examples: |
+    - Tại sao dùng vắc xin dự phòng được bệnh?
+    - tại sao dùng vắc xin dự phòng được bệnh?
+    - tại sao dùng vaccin dự phòng được bệnh?
+    - tại sao dùng vaccin dự phòng được covid 19?
+- intent: cauhoi39
+  examples: |
+    - Hiện nay đã có vắc xin phòng bệnh Covid-19 chưa?
+    - hiện nay đã có vắc xin phòng bệnh covid 19 chưa?
+    - hiện nay đã có vắc xin phòng bệnh covid 19 chưa?
+- intent: cauhoi40
+  examples: |
+    - Khi nào thì có vắc xin phòng bệnh Covid-19?
+    - khi nào thì có vaccin phòng bệnh covid 19 ?
+    - khi nao thi co vaccin phòng chống bệnh covid 19 ?
+- intent: cauhoi41
+  examples: |
+    - Người bị bệnh Covid-19 có biểu hiện gì?
+    - Người bị bệnh covid 19 có biểu hiện gì ?
+    - người bị bệnh covid 19 có những biểu hiện gì ?
+- intent: cauhoi42
+  examples: |
+    - Bị nhiễm Covid-19 nếu không được điều trị có thể dẫn đến những hậu quả gì?
+    - bị nhiễm covid 19 nếu không được điều trị có thể dẫn đến những hậu quả gì ?
+    - bị nhiễm covid 19 nếu không được điều trị có thể dẫn đến những hậu quả gì ?
+- intent: cauhoi43
+  examples: |
+    - Tôi đang tự theo dõi vì nghi ngờ mình bị nhiễm Covid-19, khi có dấu hiệu gì thì tôi phải báo ngay cho cơ quan y tế?
+    - tôi đang tự theo dõi vì nghi ngờ mình bị nhiễm Covid-19, khi có dấu hiệu gì thì tôi phải báo ngay cho cơ quan y tế?
+    - tôi đang tự theo dõi vì nghi ngờ mình bị nhiễm Covid-19, khi có dấu hiệu gì thì tôi phải báo ngay cho cơ quan y tế?
+- intent: cauhoi44
+  examples: |
+    - Có phải cứ ho, sốt là bị bệnh do Covid-19 hay không?
+    - có phải cứ ho, sốt là bị bệnh do covid 19 hay không?
+    - có phải cứ ho và sốt là bị bệnh do covid 19 hay không?
+- intent: cauhoi45
+  examples: |
+    - Để khẳng định chắc chắn bị bệnh do Covid-19 thì cần làm những xét nghiệm gì?
+    - để khẳng định chắc chắn bị bệnh do covid 19 thì cần làm những xét nghiệm gì
+    - đề khằng định chắc chắn bị bệnh covid 19 thì cần làm những xét nghiệm nào ?
+- intent: cauhoi46
+  examples: |
+    - Nếu chỉ ho, sốt, khó thở nhẹ tôi có phải đi bệnh viện không?
+    - nếu chỉ ho, sốt, khó thở nhẹ tôi có phải đi bệnh viện không?
+    - nếu chỉ ho, sốt, khó thở nhẹ tôi có phải đi bệnh viện không?
+- intent: cauhoi47
+  examples: |
+    - Để cho yên tâm tôi có nên đến thẳng các bệnh viện lớn tuyến trung ương để khám và làm xét nghiệm không?
+    - để cho yên tâm tôi có nên đến thẳng các bệnh viện lớn tuyến trung ương để khám và làm xét nghiệm không?
+    - để cho yên tâm tôi có nên đến thẳng các bệnh viện lớn tuyến trung ương để khám và làm xét nghiệm không
+- intent: cauhoi48
+  examples: |
+    - Hiện nay đã có thuốc điều trị đặc hiệu cho bệnh Covid-19 chưa?
+    - hiện nay đã có thuốc điều trị đặc hiệu cho bệnh Covid-19 chưa?
+    - hiện nay đã có thuốc điều trị đặc hiệu cho bệnh Covid-19 chưa
+- intent: cauhoi49
+  examples: |
+    - Thông tin về thuốc điều trị HIV chữa được Covid-19 là đúng hay sai?
+    - thông tin về thuốc điều trị HIV chữa được Covid-19 là đúng hay sai?
+    - thông tin về thuốc điều trị HIV chữa được Covid-19 là đúng hay sai
+- intent: cauhoi50
+  examples: |
+    - Hiện nay các biện pháp chính để điều trị bệnh do Covid-19 là gì?
+    - hiện nay các biện pháp chính để điều trị bệnh do Covid-19 là gì?
+    - hiện nay các biện pháp chính để điều trị bệnh do Covid-19 là gì
+
+- intent: cauhoi51
+  examples: |
+    - Cách ly y tế là gì?
+    - cách ly y tế là gì ?
+    - cách ly y tế là gì
+- intent: cauhoi52
+  examples: |
+    - Tại sao khi có dịch Covid-19 lại phải tiến hành cách ly y tế?
+    - tại sao khi có dịch Covid-19 lại phải tiến hành cách ly y tế?
+    - tại sao khi có dịch Covid-19 lại phải tiến hành cách ly y tế
+- intent: cauhoi53
+  examples: |
+    - Có những hình thức cách ly y tế nào?
+    - có những hình thức cách ly y tế nào?
+    - có những hình thức cách ly y tế nào
+- intent: cauhoi54
+  examples: |
+    - Thế nào là cách ly y tế tập trung?
+    - thế nào là cách ly y tế tập trung?
+    - thế nào là cách lu y tế tập trung
+- intent: cauhoi55
+  examples: |
+    - Thế nào là tự cách ly?
+    - thế nào là tự cách ly?
+    - thế nào là tự cách ly
+- intent: cauhoi56
+  examples: |
+    - Những người nào thuộc diện phải cách ly trong đợt dịch Covid-19 này?
+    - những người nào thuộc diện phải cách ly trong đợt dịch Covid-19 này?
+    - những người nào thuộc diện phải cách ly trong đợt dịch Covid-19 này
+- intent: cauhoi57
+  examples: |
+    - Người đang bị bệnh Covid-19 chưa khỏi thì phải áp dụng hình thức cách ly nào và thời gian cách ly trong bao lâu?
+    - người đang bị bệnh Covid-19 chưa khỏi thì phải áp dụng hình thức cách ly nào và thời gian cách ly trong bao lâu?
+    - người đang bị bệnh Covid-19 chưa khỏi thì phải áp dụng hình thức cách ly nào và thời gian cách ly trong bao lâu
+- intent: cauhoi58
+  examples: |
+    - người đang bị ho, sốt, khó thở mới chỉ nghi ngờ bị bệnh Covid-19 chưa có khẳng định chắc chắn thì phải áp dụng hình thức cách ly nào, thời gian cách ly trong bao lâu và tại sao?
+    - người đang bị ho, sốt, khó thở mới chỉ nghi ngờ bị bệnh Covid-19 chưa có khẳng định chắc chắn thì phải áp dụng hình thức cách ly nào, thời gian cách ly trong bao lâu và tại sao
+    - Người đang bị ho, sốt, khó thở mới chỉ nghi ngờ bị bệnh Covid-19 chưa có khẳng định chắc chắn thì phải áp dụng hình thức cách ly nào, thời gian cách ly trong bao lâu và tại sao?
+- intent: cauhoi59
+  examples: |
+    - người không có biểu hiện bệnh mới chỉ nghi ngờ bị nhiễm Covid-19 (do trước đó nghi có tiếp xúc với mầm bệnh) thì phải áp dụng hình thức cách ly nào, thời gian cách ly trong bao lâu và tại sao
+    - người không có biểu hiện bệnh mới chỉ nghi ngờ bị nhiễm Covid-19 (do trước đó nghi có tiếp xúc với mầm bệnh) thì phải áp dụng hình thức cách ly nào, thời gian cách ly trong bao lâu và tại sao?
+    - Người không có biểu hiện bệnh mới chỉ nghi ngờ bị nhiễm Covid-19 (do trước đó nghi có tiếp xúc với mầm bệnh) thì phải áp dụng hình thức cách ly nào, thời gian cách ly trong bao lâu và tại sao?
+- intent: cauhoi60
+  examples: |
+    - Tại sao người đi về từ vùng có dịch dù không có biểu biện bị bệnh hoặc nghi ngờ tiếp xúc với mầm bệnh vẫn phải tiến hành cách ly?
+    - tại sao người đi về từ vùng có dịch dù không có biểu biện bị bệnh hoặc nghi ngờ tiếp xúc với mầm bệnh vẫn phải tiến hành cách ly?
+    - tại sao người đi về từ vùng có dịch dù không có biểu biện bị bệnh hoặc nghi ngờ tiếp xúc với mầm bệnh vẫn phải tiến hành cách ly
+- intent: cauhoi61
+  examples: |
+    - Người từ vùng dịch làm nhiệm vụ trở về có phải tiến hành cách ly không?
+    - người từ vùng dịch làm nhiệm vụ trở về có phải tiến hành cách ly không?
+    - người từ vùng dịch làm nhiệm vụ trở về có phải tiến hành cách ly không
+- intent: cauhoi62
+  examples: |
+    - một nhóm người đi về từ vùng có dịch nên được tổ chức cách ly tập trung trong theo kế hoạch 14 ngày; ban đầu tất cả không có biểu hiện bệnh nhưng ngày thứ 10 thì có một người sốt nên người này được chuyển đi nơi khác để điều trị và theo dõi thêm, những người còn lại đến ngày thứ 14 cũng không có ai bị sốt vậy, những người này sẽ được ra khỏi nơi cách ly hay vẫn tiếp tục phải cách ly
+    - một nhóm người đi về từ vùng có dịch nên được tổ chức cách ly tập trung trong theo kế hoạch 14 ngày; ban đầu tất cả không có biểu hiện bệnh nhưng ngày thứ 10 thì có một người sốt nên người này được chuyển đi nơi khác để điều trị và theo dõi thêm, những người còn lại đến ngày thứ 14 cũng không có ai bị sốt vậy, những người này sẽ được ra khỏi nơi cách ly hay vẫn tiếp tục phải cách ly?
+    - Một nhóm người đi về từ vùng có dịch nên được tổ chức cách ly tập trung trong theo kế hoạch 14 ngày; ban đầu tất cả không có biểu hiện bệnh nhưng ngày thứ 10 thì có một người sốt nên người này được chuyển đi nơi khác để điều trị và theo dõi thêm, những người còn lại đến ngày thứ 14 cũng không có ai bị sốt vậy, những người này sẽ được ra khỏi nơi cách ly hay vẫn tiếp tục phải cách ly?
+- intent: cauhoi63
+  examples: |
+    - tại sao phải hạn chế đi lại với những người đang sống trong vùng có dịch mặc dù họ không có biểu biện bị bệnh hoặc nghi ngờ tiếp xúc với người bệnh
+    - tại sao phải hạn chế đi lại với những người đang sống trong vùng có dịch mặc dù họ không có biểu biện bị bệnh hoặc nghi ngờ tiếp xúc với người bệnh?
+    - Tại sao phải hạn chế đi lại với những người đang sống trong vùng có dịch mặc dù họ không có biểu biện bị bệnh hoặc nghi ngờ tiếp xúc với người bệnh?
+- intent: cauhoi64
+  examples: |
+    - Những người đang sống trong vùng có dịch cần phải hạn chế đi lại cho đến khi nào và tại sao?
+    - những người đang sống trong vùng có dịch cần phải hạn chế đi lại cho đến khi nào và tại sao?
+    - những người đang sống trong vùng có dịch cần phải hạn chế đi lại cho đến khi nào và tại sao
+- intent: cauhoi65
+  examples: |
+    - Một người đang ở trong vùng có dịch, ban đầu khỏe mạnh, sau đó tự nhiên bị sốt thì có phải là đã bị nhiễm Covid-19 hay không?
+    - một người đang ở trong vùng có dịch, ban đầu khỏe mạnh, sau đó tự nhiên bị sốt thì có phải là đã bị nhiễm Covid-19 hay không?
+    - một người đang ở trong vùng có dịch, ban đầu khỏe mạnh, sau đó tự nhiên bị sốt thì có phải là đã bị nhiễm Covid-19 hay không
+
+- intent: cauhoi66
+  examples: |
+    - Tại sao lại cần tiến hành giám sát thân nhiệt để kiểm soát dịch bệnh?
+    - tại sao lại cần tiến hành giám sát thân nhiệt để kiểm soát dịch bệnh?
+    - tại sao lại cần tiến hành giám sát thân nhiệt để kiểm soát dịch bệnh
+- intent: cauhoi67
+  examples: |
+    - Ngoài giám sát thân nhiệt còn có biện pháp nào để kiểm soát dịch bệnh nữa không?
+    - ngoài giám sát thân nhiệt còn có biện pháp nào để kiểm soát dịch bệnh nữa không?
+    - ngoài giám sát thân nhiệt còn có biện pháp nào để kiểm soát dịch bệnh nữa không
+- intent: cauhoi68
+  examples: |
+    - Những cách đo thân nhiệt nào thường được áp dụng trong phòng chống dịch và độ tin cậy của các phương pháp ấy như thế nào?
+    - những cách đo thân nhiệt nào thường được áp dụng trong phòng chống dịch và độ tin cậy của các phương pháp ấy như thế nào?
+    - những cách đo thân nhiệt nào thường được áp dụng trong phòng chống dịch và độ tin cậy của các phương pháp ấy như thế nào
+- intent: cauhoi69
+  examples: |
+    - nếu không có nhiệt kế điện tử thì nên dùng nhiệt kế gì để giám sát thân nhiệt cho nhiều người và phải lưu ý vấn đề gì khi sử dụng loại nhiệt kế đó
+    - nếu không có nhiệt kế điện tử thì nên dùng nhiệt kế gì để giám sát thân nhiệt cho nhiều người và phải lưu ý vấn đề gì khi sử dụng loại nhiệt kế đó?
+    - Nếu không có nhiệt kế điện tử thì nên dùng nhiệt kế gì để giám sát thân nhiệt cho nhiều người và phải lưu ý vấn đề gì khi sử dụng loại nhiệt kế đó?
+- intent: cauhoi70
+  examples: |
+    - Khi đo nhiệt độ ở trán bằng nhiệt kế điện tử, nhiệt độ bao nhiêu trở lên thì coi là bị sốt?
+    - khi đo nhiệt độ ở trán bằng nhiệt kế điện tử, nhiệt độ bao nhiêu trở lên thì coi là bị sốt?
+    - khi đo nhiệt độ ở trán bằng nhiệt kế điện tử, nhiệt độ bao nhiêu trở lên thì coi là bị sốt
+- intent: cauhoi71
+  examples: |
+    - Tại sao đeo khẩu trang có thể ngăn ngừa được bệnh lây nhiễm qua đường hô hấp?
+    - tại sao đeo khẩu trang có thể ngăn ngừa được bệnh lây nhiễm qua đường hô hấp?
+    - tại sao đeo khẩu trang có thể ngăn ngừa được bệnh lây nhiễm qua đường hô hấp
+- intent: cauhoi72
+  examples: |
+    - Có bao nhiêu loại khẩu trang y tế, cấu tạo cơ bản và công dụng của mỗi loại?
+    - có bao nhiêu loại khẩu trang y tế, cấu tạo cơ bản và công dụng của mỗi loại?
+    - có bao nhiêu loại khẩu trang y tế, cấu tạo cơ bản và công dụng của mỗi loại
+- intent: cauhoi73
+  examples: |
+    - Khi nào cần dùng khẩu trang y tế N95 để dự phòng lây nhiễm Covid-19?
+    - khi nào cần dùng khẩu trang y tế N95 để dự phòng lây nhiễm Covid-19?
+    - khi nào cần dùng khẩu trang y tế N95 để dự phòng lây nhiễm Covid-19
+- intent: cauhoi74
+  examples: |
+    - Đeo khẩu trang là để bảo vệ người chưa bị nhiễm hay bảo vệ người đã bị nhiễm Covid-19?
+    - đeo khẩu trang là để bảo vệ người chưa bị nhiễm hay bảo vệ người đã bị nhiễm Covid-19?
+    - đeo khẩu trang là để bảo vệ người chưa bị nhiễm hay bảo vệ người đã bị nhiễm Covid-19
+- intent: cauhoi75
+  examples: |
+    - Tại sao người đã nhiễm Covid-19 vẫn cần phải đeo khẩu trang?
+    - tại sao người đã nhiễm Covid-19 vẫn cần phải đeo khẩu trang?
+    - tại sao người đã nhiễm Covid-19 vẫn cần phải đeo khẩu trang
+- intent: cauhoi76
+  examples: |
+    - Vì sao nói khẩu trang y tế 3 lớp đã có thể ngăn cản hiệu quả lây nhiễm Covid-19?
+    - vì sao nói khẩu trang y tế 3 lớp đã có thể ngăn cản hiệu quả lây nhiễm Covid-19?
+    - vì sao nói khẩu trang y tế 3 lớp đã có thể ngăn cản hiệu quả lây nhiễm Covid-19
+- intent: cauhoi77
+  examples: |
+    - Đeo khẩu trang y tế như như nào là đúng cách?
+    - đeo khẩu trang y tế như như nào là đúng cách?
+    - đeo khẩu trang y tế như như nào là đúng cách
+- intent: cauhoi78
+  examples: |
+    - Khi ở bên ngoài vùng có dịch có nhất thiết phải đeo khẩu trang không?
+    - khi ở bên ngoài vùng có dịch có nhất thiết phải đeo khẩu trang không?
+    - khi ở bên ngoài vùng có dịch có nhất thiết phải đeo khẩu trang không
+- intent: cauhoi79
+  examples: |
+    - Khi nào cần đeo khẩu trang?
+    - khi nào cần đeo khẩu trang?
+    - khi nào cần đeo khẩu trang
+- intent: cauhoi80
+  examples: |
+    - Khẩu trang vải có tác dụng dự phòng lây nhiễm Covid-19 không?
+    - khẩu trang vải có tác dụng dự phòng lây nhiễm Covid-19 không?
+    - khẩu trang vải có tác dụng dự phòng lây nhiễm Covid-19 không
+- intent: cauhoi81
+  examples: |
+    - Covid-19 là virus gây bệnh đường hô hấp, tại sao rửa tay lại hạn chế được lây nhiễm mầm bệnh?
+    - covid-19 là virus gây bệnh đường hô hấp, tại sao rửa tay lại hạn chế được lây nhiễm mầm bệnh?
+    - covid-19 là virus gây bệnh đường hô hấp, tại sao rửa tay lại hạn chế được lây nhiễm mầm bệnh
+- intent: cauhoi82
+  examples: |
+    - Khi nào thì phải rửa tay để hạn chế lây nhiễm Covid-19?
+    - khi nào thì phải rửa tay để hạn chế lây nhiễm Covid-19?
+    - khi nào thì phải rửa tay để hạn chế lây nhiễm Covid-19
+- intent: cauhoi83
+  examples: |
+    - Phải rửa tay như như nào mới đúng để có thể hạn chế được sự lây nhiễm của Covid-19?
+    - phải rửa tay như như nào mới đúng để có thể hạn chế được sự lây nhiễm của Covid-19?
+    - phải rửa tay như như nào mới đúng để có thể hạn chế được sự lây nhiễm của Covid-19
+- intent: cauhoi84
+  examples: |
+    - Vì sao phải rửa tay bằng xà phòng?
+    - vì sao phải rửa tay bằng xà phòng?
+    - vì sao phải rửa tay bằng xà phòng
+- intent: cauhoi85
+  examples: |
+    - Vì sao khi rửa tay với xà phòng cần phải rửa tối thiểu trong 30 giây?
+    - vì sao khi rửa tay với xà phòng cần phải rửa tối thiểu trong 30 giây?
+    - vì sao khi rửa tay với xà phòng cần phải rửa tối thiểu trong 30 giây
+- intent: cauhoi86
+  examples: |
+    - Thế nào gọi là rửa tay khô?
+    - thế nào gọi là rửa tay khô?
+    - thế nào gọi là rửa tay khô
+- intent: cauhoi87
+  examples: |
+    - Dung dịch rửa tay khô phải bảo đảm điều kiện gì mới có thể sử dụng để rửa tay khô phòng lây nhiễm Covid-19?
+    - dung dịch rửa tay khô phải bảo đảm điều kiện gì mới có thể sử dụng để rửa tay khô phòng lây nhiễm Covid-19?
+    - dung dịch rửa tay khô phải bảo đảm điều kiện gì mới có thể sử dụng để rửa tay khô phòng lây nhiễm Covid-19
+- intent: cauhoi88
+  examples: |
+    - Ngoài việc rửa tay sạch, cần thực hiện thêm thói quen gì với đôi tay để hạn chế lây nhiễm Covid-19?
+    - ngoài việc rửa tay sạch, cần thực hiện thêm thói quen gì với đôi tay để hạn chế lây nhiễm Covid-19?
+    - ngoài việc rửa tay sạch, cần thực hiện thêm thói quen gì với đôi tay để hạn chế lây nhiễm Covid-19
+
+- intent: cauhoi89
+  examples: |
+    - Tại sao phải vệ sinh môi trường để hạn chế lây nhiễm Covid19?
+    - tại sao phải vệ sinh môi trường để hạn chế lây nhiễm Covid19?
+    - tại sao phải vệ sinh môi trường để hạn chế lây nhiễm Covid19
+- intent: cauhoi90
+  examples: |
+    - Cần vệ sinh môi trường như thế nào để hạn chế lây nhiễm Covid-19?
+    - cần vệ sinh môi trường như thế nào để hạn chế lây nhiễm Covid-19?
+    - cần vệ sinh môi trường như thế nào để hạn chế lây nhiễm Covid-19
+- intent: cauhoi91
+  examples: |
+    - Cần vệ sinh nhà cửa như thế nào để hạn chế lây nhiễm Covid-19?
+    - cần vệ sinh nhà cửa như thế nào để hạn chế lây nhiễm Covid-19?
+    - cần vệ sinh nhà cửa như thế nào để hạn chế lây nhiễm Covid-19
+- intent: cauhoi92
+  examples: |
+    - Những đồ vật nào cần phải vệ sinh thường xuyên để hạn chế lây nhiễm Covid-19?
+    - những đồ vật nào cần phải vệ sinh thường xuyên để hạn chế lây nhiễm Covid-19?
+    - những đồ vật nào cần phải vệ sinh thường xuyên để hạn chế lây nhiễm Covid-19
+- intent: cauhoi93
+  examples: |
+    - Vệ sinh đồ vật và môi trường như thế nào là đúng cách?
+    - vệ sinh đồ vật và môi trường như thế nào là đúng cách?
+    - vệ sinh đồ vật và môi trường như thế nào là đúng cách
+- intent: cauhoi94
+  examples: |
+    - Chất tẩy rửa nào thường được sử dụng để vệ sinh đồ vật và môi trường dự phòng lây nhiễm Covid-19?
+    - chất tẩy rửa nào thường được sử dụng để vệ sinh đồ vật và môi trường dự phòng lây nhiễm Covid-19?
+    - chất tẩy rửa nào thường được sử dụng để vệ sinh đồ vật và môi trường dự phòng lây nhiễm Covid-19
+- intent: cauhoi95
+  examples: |
+    - Nên vệ sinh cá nhân như thế nào để đề phòng lây nhiễm Covid-19?
+    - nên vệ sinh cá nhân như thế nào để đề phòng lây nhiễm Covid-19?
+    - nên vệ sinh cá nhân như thế nào để đề phòng lây nhiễm Covid-19
+- intent: cauhoi96
+  examples: |
+    - Nên vệ sinh mũi, họng như thế nào để đề phòng lây nhiễm Covid-19?
+    - nên vệ sinh mũi, họng như thế nào để đề phòng lây nhiễm Covid-19?
+    - nên vệ sinh mũi, họng như thế nào để đề phòng lây nhiễm Covid-19
+- intent: cauhoi97
+  examples: |
+    - Vì sao cần giữ ấm cơ thể để đề phòng lây nhiễm Covid-19?
+    - vì sao cần giữ ấm cơ thể để đề phòng lây nhiễm Covid-19?
+    - vì sao cần giữ ấm cơ thể để đề phòng lây nhiễm Covid-19
+- intent: cauhoi98
+  examples: |
+    - Nên duy trì chế độ ăn như thế nào để tăng sức đề kháng phòng chống Covid-19?
+    - nên duy trì chế độ ăn như thế nào để tăng sức đề kháng phòng chống Covid-19?
+    - nên duy trì chế độ ăn như thế nào để tăng sức đề kháng phòng chống Covid-19?
+- intent: cauhoi99
+  examples: |
+    - Ăn nhiều tỏi có tác dụng chống Covid-19 không?
+    - ăn nhiều tỏi có tác dụng chống Covid-19 không?
+    - ăn nhiều tỏi có tác dụng chống Covid-19 không
+- intent: cauhoi100
+  examples: |
+    - Nên chuẩn bị tâm lý như thế nào để vượt qua đại dịch Covid-19?
+    - nên chuẩn bị tâm lý như thế nào để vượt qua đại dịch Covid-19?
+    - nên chuẩn bị tâm lý như thế nào để vượt qua đại dịch Covid-19
+
+
