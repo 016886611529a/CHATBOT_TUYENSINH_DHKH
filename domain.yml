@@ -1,6 +1,12 @@
 version: "2.0"
 
 intents:
+  - testcovid
+  - price_test
+  - testpcr
+  - testnhanh
+  - chaohoithongminh
+  - faq
   - chaohoi
   - bye
   - hoikhanang
@@ -26,7 +32,8 @@ intents:
   - cauhoi19:
       use_entities:
         - transport
-
+  - ch50:
+      use_entities: true
   - cauhoi20
   - cauhoi21
   - cauhoi22
@@ -111,14 +118,50 @@ intents:
 entities:
   - transport
   - room
+  - sex
+  - name
+  - vaccine
+slots:
+ vaccine:
+  auto_fill: true
+  type: text
+ sex:
+  auto_fill: true
+  type: text
+ name:
+   auto_fill: true
+   type: text
+
+
 
 responses:
+  utter_testcovid:
+  - text: "bạn muốn test nhanh hay test pcr?"
+  utter_price_test:
+  - text: "giá của test nhanh là 70k còn test pcr là 700K"
+  utter_testpcr:
+  - text: "Xét nghiệm PCR (Polymerase chain reaction) thực hiện bằng kỹ thuật Real Time hay gọi tắt là RT- RT-PCR. Phương pháp này sử dụng dịch tỵ hầu, hay dịch tiết hô hấp để xét nghiệm, cần có các hệ thống máy chuyên dụng và thực hiện tại phòng thí nghiệm ATSH cấp II, để xác định sự hiện diện của Virus trong mẫu bệnh phẩm."
+  utter_testnhanh:
+  - text: "Vạch C (Control line): vạch chứng và hiểu nôm na như xác nhận chất lượng của bộ kit.
+
+Nếu sau khi nhỏ mẫu vào khay mà vạch này hiển thị màu đỏ thì chứng tỏ kit test hoạt động bình thường. Do đó, vạch C sẽ luôn luôn hiển trên khay test nếu người sử dụng đã thấm đủ lượng dịch mẫu. Và sau khi xét nghiệm mà vẫn chỉ có vạch C hiển thị thì có nghĩa là bạn có kết quả âm tính tại thời điểm thực hiện, tức không mắc Covid-19.
+Nếu vạch C mờ thì có thể do bạn nhỏ lượng dịch chiết vào ô nhận mẫu chưa đủ. Lúc này, kết quả ở vạch T có thể bị ảnh hưởng nếu lượng dịch chiết quá ít, không thể thấm và di chuyển đến vị trí này để phản ứng và xác định chính xác bạn có nhiễm hay không nhiễm bệnh.
+Vạch T (Test line): vạch thử - đây mới là vạch “hồi hộp”. Nếu bạn mắc Covid 19 thì vạch này sẽ hiển thị màu đỏ và cho kết quả dương tính với Sars-cov-2. Số lượng virus nhiều hay ít không phụ thuộc vào vạch T càng đậm hoặc rất nhạt. Việc này chỉ xác định được bằng kỹ thuật sinh học phân tử PCR.
+
+Và cũng có khi, do thời điểm bạn đang test thì nồng độ virus trong cơ thể còn thấp (giai đoạn sớm của bệnh), khay test không thể phát hiện nên chỉ hiện thị vạch C và không có vạch nào ở vị trí T. Do đó, bạn nên theo dõi sức khỏe và tự test lại sau đó vài ngày."
+  utter_chaohoithongminh:
+  - text: "Kính chào {sex} {name}. Bot có thể giúp gì được cho {sex} {name} ạ !!"
+  utter_faq/rasa_intro:
+  - text: "Rasa là một nền tảng chabot."
+  utter_faq/retrieval_action_intro:
+  - text: "Retrieval action là một dạng action trong Rasa được thiết kế để xử lý các câu hỏi dạng FAQ."
   utter_chaohoi:
   - text: "chào bạn, mình là bot mình có thể giúp gì cho bạn. "
 
   utter_bye:
   - text: "hẹn gặp lại bạn"
     image: "https://i.imgur.com/nGF1K8f.jpg"
+
 
   utter_hoikhanang:
   - text: "bot có khả năng trả lời các câu hỏi về covid 19 "
@@ -1233,6 +1276,8 @@ Hy vọng tài liệu này là một cẩm nang kiến thức thường thức
 để giúp mỗi người nâng cao ý thức để bảo vệ mình và trách
 nhiệm bảo vệ cộng đồng, cùng nhau chúng ta vượt qua đại
 dịch Covid-19."
+actions:
+- action_vaccine_week
 
 session_config:
   session_expiration_time: 60

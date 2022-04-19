@@ -1,6 +1,60 @@
 version: "2.0"
 
 nlu:
+- intent: ch50
+  examples: |
+    - [pfizer]{"entity":"vaccine","value":"Pfizer"} mũi 2 cách mũi trước bao lâu
+    - [astrazeneca]{"entity":"vaccine","value":"AstraZeneca"} mũi 2 khi nào
+    - [verc]{"entity":"vaccine","value":"Verc"} mũi 2 cách mũi 1 là bao nhiêu ngày
+    - [sputnik v]{"entity":"vaccine","value":"Sputnik V"} mũi 2 khi nào
+    - [moderna]{"entity":"vaccine","value":"Moderna"} mũi 2 cách mũi 1 là bao nhiêu ngày
+    - [sinopharm]{"entity":"vaccine","value":"Sinopharm"} mũi 2 cách mũi 1 là bao nhiêu ngày
+
+- intent: testcovid
+  examples: |
+    - Tôi muốn test covid?
+    - Anh muốn test covid?
+    - Chị muốn test covid?
+    - Em muốn test covid ?
+
+- intent: price_test
+  examples: |
+    - giá của mỗi loại test đó là bao nhiêu?
+    - giá của nó là bao nhiêu?
+    - giá test rẻ hay đắt vậy?
+
+- intent: testpcr
+  examples: |
+    - Tôi muốn làm test pcr
+    - test pcr
+    - test chậm
+
+- intent: testnhanh
+  examples: |
+    - Tôi muốn làm test nhanh
+    - test nhanh
+
+- intent: faq/rasa_intro
+  examples: |
+    - Rasa là gì?
+    - Tôi muốn biết về Rasa
+    - Em có thể cho anh thông tin về Rasa không?
+
+- intent: faq/retrieval_action_intro
+  examples: |
+    - retrieval action là gì thế?
+    - cho tôi biết về retrieval actions
+    - retrieval action dùng để làm gì
+    - tại sao lại cần retrieval actions
+- intent: chaohoithongminh
+  examples: |
+    - [Anh]{"entity":"sex","value":"Anh"} là [Long]{"entity":"name","value":"Long"}
+    - [Anh]{"entity":"sex","value":"Anh"} là [Hoàng Long]{"entity":"name","value":"HoàngLong"}
+    - [Anh]{"entity":"sex","value":"Anh"} là [Tiến]{"entity":"name","value":"Tiến"}
+    - [Chị]{"entity":"sex","value":"Chị"} là [Phước]{"entity":"name","value":"Phước"}
+    - [Chị]{"entity":"sex","value":"Chị"} là [Hồng Phước]{"entity":"name","value":"Hồng Phước"}
+    - [Anh]{"entity":"sex","value":"Anh"} là [Thủy]{"entity":"name","value":"Thủy"}
+    - [Anh]{"entity":"sex","value":"Anh"} là [Đăng Bình]{"entity":"name","value":"Đăng Bình"}
 - intent: chaohoi
   examples: |
     - chào bot

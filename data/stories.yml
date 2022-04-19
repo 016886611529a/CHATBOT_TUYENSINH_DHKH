@@ -1,9 +1,53 @@
 version: "2.0"
 stories:
- - story: kichban1
+ - story: sad path 2
+   steps:
+   - intent: ch50
+     entities:
+     - vaccine: "pfizer"
+   - slot_was_set:
+     - vaccine: "pfizer"
+   - action: action_vaccine_week
+ - story : testcovid
    steps:
    - intent: chaohoi
    - action: utter_chaohoi
+   - intent: testcovid
+   - action: utter_testcovid
+   - intent: testpcr
+   - action: utter_testpcr
+   - intent: testnhanh
+   - action: utter_testnhanh
+   - or:
+     - intent: camon
+     - intent: bye
+   - action: utter_bye
+ - story: or statements
+   steps:
+   - intent: chaohoi
+   - action: utter_chaohoi
+   - intent: hoikhanang
+   - action: utter_hoikhanang
+   - or:
+     - intent: camon
+     - intent: bye
+   - action: utter_bye
+   - checkpoint: check_ask_questions
+ - story: kichban0
+   steps:
+   - checkpoint: check_ask_questions
+   - intent: chaohoi
+   - action: utter_chaohoi
+   - intent: chaohoithongminh
+   - action: utter_chaohoithongminh
+   - intent: hoikhanang
+   - action: utter_hoikhanang
+   - intent: cauhoi1
+   - action: utter_cauhoi1
+   - intent: camon
+   - action: utter_camon
+   - intent: bye
+   - action: utter_bye
 
  - story: kichban1
    steps:
@@ -16355,6 +16399,8 @@ stories:
    - action: utter_camon
    - intent: bye
    - action: utter_bye
+
+
 
 
 

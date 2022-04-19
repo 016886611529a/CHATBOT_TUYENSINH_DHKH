@@ -2,8 +2,7 @@ version: "2.0"
 
 rules:
 
-- rule:
-  Say goodbye anytime the user says goodbye
+- rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: bye
   - action: utter_bye
@@ -12,3 +11,17 @@ rules:
   steps:
   - intent: hoikhanang
   - action: utter_hoikhanang
+- rule: bot chao lai khi nguoi dung chao bot
+  steps:
+  - intent: chaohoithongminh
+  - action: utter_chaohoithongminh
+- rule: chuyen doi ngu canh bang rule
+  steps:
+  - intent: price_test
+  - action: utter_price_test
+- rule: respond to FAQs
+  steps:
+  - intent: faq
+  - action: utter_faq
+
+
