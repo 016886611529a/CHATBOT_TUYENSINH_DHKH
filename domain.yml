@@ -1,154 +1,140 @@
 version: "2.0"
 
 intents:
-  - testcovid
-  - price_test
-  - testpcr
-  - testnhanh
-  - chaohoithongminh
-  - faq
-  - chaohoi
-  - bye
-  - hoikhanang
-  - camon
-  - cauhoi1
-  - cauhoi2
-  - cauhoi3
-  - cauhoi4
-  - cauhoi5
-  - cauhoi6
-  - cauhoi7
-  - cauhoi8
-  - cauhoi9
-  - cauhoi10
-  - cauhoi11
-  - cauhoi12
-  - cauhoi13
-  - cauhoi14
-  - cauhoi15
-  - cauhoi16
-  - cauhoi17
-  - cauhoi18
-  - cauhoi19:
-      use_entities:
-        - transport
-  - ch50:
-      use_entities: true
-  - cauhoi20
-  - cauhoi21
-  - cauhoi22
-  - cauhoi23
-  - cauhoi24
-  - cauhoi25
-  - cauhoi26
-  - cauhoi27
-  - cauhoi28
-  - cauhoi29
-  - cauhoi30
-  - cauhoi31
-  - cauhoi32
-  - cauhoi33
-  - cauhoi34
-  - cauhoi35
-  - cauhoi36
-  - cauhoi37
-  - cauhoi38
-  - cauhoi39
-  - cauhoi40
-  - cauhoi41
-  - cauhoi42
-  - cauhoi43
-  - cauhoi44
-  - cauhoi45
-  - cauhoi46
-  - cauhoi47
-  - cauhoi48
-  - cauhoi49
-  - cauhoi50
-  - cauhoi51
-  - cauhoi52
-  - cauhoi53
-  - cauhoi54
-  - cauhoi55
-  - cauhoi56
-  - cauhoi57
-  - cauhoi58
-  - cauhoi59
-  - cauhoi60
-  - cauhoi61
-  - cauhoi62
-  - cauhoi63
-  - cauhoi64
-  - cauhoi65
-  - cauhoi66
-  - cauhoi67
-  - cauhoi68
-  - cauhoi69
-  - cauhoi70
-  - cauhoi71
-  - cauhoi72
-  - cauhoi73
-  - cauhoi74
-  - cauhoi75
-  - cauhoi76
-  - cauhoi77
-  - cauhoi78
-  - cauhoi79
-  - cauhoi80
-  - cauhoi81
-  - cauhoi82
-  - cauhoi83
-  - cauhoi84
-  - cauhoi85
-  - cauhoi86
-  - cauhoi87
-  - cauhoi88
-  - cauhoi89
-  - cauhoi90
-  - cauhoi91
-  - cauhoi92
-  - cauhoi93
-  - cauhoi94
-  - cauhoi95
-  - cauhoi96
-  - cauhoi97
-  - cauhoi98
-  - cauhoi99
-  - cauhoi100
+ - chaohoi2
+ - thongtintoanbo
+ - chaohoi1
+ - chon1
+ - chon2
+ - chon3
+ - tohopmon:
+     use_entities: true
+       - mon
+ - Manganh:
+     use_entities: true
+       - code
+ - diemchuan2021:
+     use_entities: true
+       - diem
+ - cachxettuyenhocba
+ - xettuyentheophuongthucrieng
+ - xettuyentheophuongthucdiemthiTHPT
+ - chaohoithongminh
+ - faq
+ - chaohoi
+ - tambiet
+ - infomation
+ - majors
+ - tuition
+ - reg
+ - phuongthucrieng
+ - phuongthuchocba
+ - phuongthucxetdiemthithpt
+ - điều kiện xét tuyển học bạ
+ - điều kiện xét tuyển theo điểm thi THPT
+ - điều kiện theo phương thức riêng
+ - benchmark
+ - job
+ - job_IT:
+     use_entities:
+       - job
+       - major
+ - job_jour:
+     use_entities:
+       - job
+       - major
+ - job_OS:
+     use_entities:
+       - job
+       - major
+ - job_SE:
+     use_entities:
+       - job
+       - major
+ - job_Biotech:
+     use_entities:
+       - job
+       - major
+ - job_Bioeng:
+     use_entities:
+       - job
+       - major
+ - job_Arc:
+     use_entities:
+       - job
+       - major
+ - job_Chemi:
+     use_entities:
+       - job
+       - major
+ - job_Philo:
+     use_entities:
+       - job
+       - major
+ - job_SW:
+     use_entities:
+       - job
+       - major
+ - bot_challenge
+
 entities:
-  - transport
-  - room
-  - sex
-  - name
-  - vaccine
+ - mon
+ - code
+ - diem
+ - job
+ - major
+ - sex
+ - name
 slots:
- vaccine:
+ major:
   auto_fill: true
   type: text
  sex:
   auto_fill: true
   type: text
  name:
-   auto_fill: true
-   type: text
-
-
-
+  auto_fill: true
+  type: text
+actions:
+- action_diemchuan2021
+- action_tohopmon
+- action_Manganh
+- action_template
+- action_template2
+- action_template3
+- action_templatetong
 responses:
-  utter_testcovid:
-  - text: "bạn muốn test nhanh hay test pcr?"
-  utter_price_test:
-  - text: "giá của test nhanh là 70k còn test pcr là 700K"
-  utter_testpcr:
-  - text: "Xét nghiệm PCR (Polymerase chain reaction) thực hiện bằng kỹ thuật Real Time hay gọi tắt là RT- RT-PCR. Phương pháp này sử dụng dịch tỵ hầu, hay dịch tiết hô hấp để xét nghiệm, cần có các hệ thống máy chuyên dụng và thực hiện tại phòng thí nghiệm ATSH cấp II, để xác định sự hiện diện của Virus trong mẫu bệnh phẩm."
-  utter_testnhanh:
-  - text: "Vạch C (Control line): vạch chứng và hiểu nôm na như xác nhận chất lượng của bộ kit.
-
-Nếu sau khi nhỏ mẫu vào khay mà vạch này hiển thị màu đỏ thì chứng tỏ kit test hoạt động bình thường. Do đó, vạch C sẽ luôn luôn hiển trên khay test nếu người sử dụng đã thấm đủ lượng dịch mẫu. Và sau khi xét nghiệm mà vẫn chỉ có vạch C hiển thị thì có nghĩa là bạn có kết quả âm tính tại thời điểm thực hiện, tức không mắc Covid-19.
-Nếu vạch C mờ thì có thể do bạn nhỏ lượng dịch chiết vào ô nhận mẫu chưa đủ. Lúc này, kết quả ở vạch T có thể bị ảnh hưởng nếu lượng dịch chiết quá ít, không thể thấm và di chuyển đến vị trí này để phản ứng và xác định chính xác bạn có nhiễm hay không nhiễm bệnh.
-Vạch T (Test line): vạch thử - đây mới là vạch “hồi hộp”. Nếu bạn mắc Covid 19 thì vạch này sẽ hiển thị màu đỏ và cho kết quả dương tính với Sars-cov-2. Số lượng virus nhiều hay ít không phụ thuộc vào vạch T càng đậm hoặc rất nhạt. Việc này chỉ xác định được bằng kỹ thuật sinh học phân tử PCR.
-
-Và cũng có khi, do thời điểm bạn đang test thì nồng độ virus trong cơ thể còn thấp (giai đoạn sớm của bệnh), khay test không thể phát hiện nên chỉ hiện thị vạch C và không có vạch nào ở vị trí T. Do đó, bạn nên theo dõi sức khỏe và tự test lại sau đó vài ngày."
+  utter_thongtintuyensinhnam2021_local:
+  - text: "Thông tin về ngành"
+    buttons:
+    - title: "Thông tin toàn bộ về ngành"
+      payload: "/thongtintoanbo"
+    - title: "Điểm 2021"
+      payload: "/chon1"
+    - title: "Mã ngành 2021"
+      payload: "/chon2"
+    - title: "Tổ hợp môn"
+      payload: "/chon3"
+  utter_thongtintuyensinhnam2021:
+  - text: "Thông tin về ngành"
+    buttons:
+    - title: "Thông tin toàn bộ về ngành"
+      payload: "/thongtintoanbo"
+  utter_thongtindiemnam2021:
+  - text: "thông tin về điểm"
+    buttons:
+    - title: "Điểm 2021"
+      payload: "/chon1"
+  utter_thongtinmanganhnam2021:
+  - text: "thông tin về ngành"
+    buttons:
+    - title: "Mã ngành 2021"
+      payload: "/chon2"
+  utter_thongtintohopmonnam2021:
+  - text: "thông tin về tổ hợp môn"
+    buttons:
+    - title: "Tổ hợp môn"
+      payload: "/chon3"
   utter_chaohoithongminh:
   - text: "Kính chào {sex} {name}. Bot có thể giúp gì được cho {sex} {name} ạ !!"
   utter_faq/rasa_intro:
@@ -156,1129 +142,218 @@ Và cũng có khi, do thời điểm bạn đang test thì nồng độ virus tr
   utter_faq/retrieval_action_intro:
   - text: "Retrieval action là một dạng action trong Rasa được thiết kế để xử lý các câu hỏi dạng FAQ."
   utter_chaohoi:
-  - text: "chào bạn, mình là bot mình có thể giúp gì cho bạn. "
-
-  utter_bye:
-  - text: "hẹn gặp lại bạn"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-
-  utter_hoikhanang:
-  - text: "bot có khả năng trả lời các câu hỏi về covid 19 "
-
-  utter_camon:
-  - text: "cám ơn bạn đã quan tâm đến bot"
-  utter_fallback:
+  - text: "Chào bạn. Mình là Chatbot hỗ trợ tư vấn tuyển sinh Trường Đại học Khoa học - Đại học Huế. Bạn cần tư vấn về vấn đề gì?"
+  utter_default:
   - text: "Em xin lỗi, em chưa hiểu ý muốn của anh(chị) ạ. Anh chị có thể nói lại được không ạ"
 
-  utter_cauhoi1:
-  - text: "Bệnh truyền nhiễm là bệnh lây truyền trực tiếp hoặc gián tiếp
-từ người hoặc từ động vật sang người do tác nhân gây bệnh
-truyền nhiễm. Ví dụ: Bệnh cúm mùa lây trực tiếp từ người
-sang người, bệnh sốt xuất huyết lây từ người sang người qua
-muỗi đốt, bệnh cúm gia cầm lây từ gia cầm sang người."
+  utter_tambiet:
+  - text: "Cám ơn bạn đã đến đây.\n
+  Tạm biệt bạn"
 
-  utter_cauhoi2:
-  - text: "Luật Phòng, chống bệnh truyền nhiễm năm 2007 quy định
-“Dịch là sự xuất hiện bệnh truyền nhiễm với số người mắc
-bệnh vượt quá số người mắc bệnh dự tính bình thường trong
-một khoảng thời gian xác định ở một khu vực nhất định”.
-Tuy nhiên, khái niệm trên được hiểu với những bệnh đã từng
-xảy ra trước đó (điển hình là cúm và sốt xuất huyết). Trường
-hợp hội chứng viêm đường hô hấp cấp nặng (SARS) xuất hiện
-năm 2002 hay hội chứng hô hấp Trung Đông (MERS) xuất
-hiện năm 2012 và dịch Covid-19 lần này là những bệnh mới,
-lần đầu tiên xuất hiện thì các cơ quan y tế sẽ căn cứ vào khả
-năng lây lan, mức độ gây tử vong, đã có thuốc đặc trị và vắc
-xin chưa để cân nhắc xác định dịch."
-  utter_cauhoi3:
-  - text: "Dịch Covid-19 viết tắt của cụm từ “Coronavirrus disease
-2019”, là dịch bệnh do virus corona gây ra và xuất hiện lần
-đầu năm 2019.
-Dịch bệnh này xuất hiện đầu tiên ở thành phố Vũ Hán, tỉnh
-Hồ Bắc, Trung Quốc, trong đó nhiều người cùng bị viêmđường hô hấp cấp. Tác nhân gây bệnh sau đó được xác định
-là một chủng mới của virus Corona. Chủng virus mới này
-được tìm ra năm 2019 nên được ký hiệu là 2019-nCoV (viết
-tắt của cụm từ “2019 Novel Coronavirus”). Vì thế ban đầu
-dịch bệnh này có tên là “Dịch viêm đường hô hấp cấp do
-chủng mới của virus Corona 2019-nCoV”
-Tên dịch bệnh vừa mô tả biểu biện bệnh và tác nhân gây
-bệnh nên thường rất dài. Để ngắn gọn, trong thời gian đầu
-giới chuyên môn và các phương tiện truyền thông ở nước ta
-thường gọi tắt dịch bệnh này là:
-- Dịch viêm đường hô hấp cấp do “virus Corona mới” hoặc
-“virus Corona chủng mới” hoặc “chủng mới của virus Corona”
-(vì trước đây đã có các dịch viên đường hô hấp cấp do các
-chủng virus Corona khác gây ra); hoặc
-- Dịch viêm đường hô hấp cấp do 2019-nCoV (chỉ nêu tác nhân
-gây bệnh); hoặc
-- Dịch viêm đường hô hấp cấp do nCoV (nêu ngắn gọn tác nhân
-gây bệnh nCoV đã đủ để phân biệt với tất cả các chủng virus
-khác đồng thời dễ phát âm hơn 2019-nCoV).
-Vấn đề gọi tên dài dòng, phức tạp và khó phát âm (nhất là
-cụm từ “2019-nCoV”) không chỉ xảy ra trong tiếng Việt mà
-ngay cả trong các ngôn ngữ quốc tế khác. Bên cạnh đó, chủng
-virus này còn được một số phòng thí nghiệm khác ký hiệu là
-SARS-CoV-2. Sau khi thống nhất các chuyên gia toàn cầu,
-ngày 11 tháng 02 năm 2020, Tổ chức Y tế Thế giới (WHO) đã
-chính thức gọi tên bệnh này là Covid-19 (viết tắt của cụm từ
-“Coronavirrus disease 2019”) với ý nghĩa là bệnh do virus
-Corona gây ra và xuất hiện lần đầu năm 2019. Phương thức
-đặt tên mới này cũng được WHO xác định làm công thức
-chuẩn để đặt tên những bệnh mới khác có thể xuất hiện
-trong tương lai, trong đó có quan tâm cả vấn đề dễ phát âm,đầy đủ thông tin, bỏ qua các yếu tố địa danh để tránh nguy
-cơ phát sinh sự kỳ thị."
-  utter_cauhoi4:
-  - text: "Điều 30 Luật Phòng, chống bệnh truyền nhiễm năm 2007 quy
-định nguyên tắc, thẩm quyền, thời hạn và điều kiện công bố
-dịch như sau:
-1. Việc công bố dịch được thực hiện theo nguyên tắc sau đây:
-a) Mọi trường hợp có dịch đều phải được công bố;
-b) Việc công bố dịch và hết dịch phải công khai, chính xác, kịp
-thời và đúng thẩm quyền.
-2. Thẩm quyền công bố dịch được quy định như sau:
-a) Chủ tịch Uỷ ban nhân dân cấp tỉnh công bố dịch theo đề
-nghị của Giám đốc Sở Y tế đối với bệnh truyền nhiễm thuộc
-nhóm B và nhóm C.
-b) Bộ trưởng Bộ Y tế công bố dịch theo đề nghị của Chủ tịch
-Uỷ ban nhân dân cấp tỉnh đối với bệnh truyền nhiễm thuộc
-nhóm A và đối với một số bệnh truyền nhiễm thuộc nhóm B
-khi có từ hai tỉnh, thành phố trực thuộc trung ương trở lên đã
-công bố dịch.
-c) Thủ tướng Chính phủ công bố dịch theo đề nghị của Bộ
-trưởng Bộ Y tế đối với bệnh truyền nhiễm thuộc nhóm A khi
-dịch lây lan nhanh từ tỉnh này sang tỉnh khác, ảnh hưởng
-nghiêm trọng đến tính mạng, sức khỏe con người.
-3. Trong thời hạn 24 giờ, kể từ khi nhận được đề nghị công
-bố dịch, người có thẩm quyền quy định tại khoản 2 Điều này
-quyết định việc công bố dịch.
-4. Thủ tướng Chính phủ quy định cụ thể điều kiện công
-bố dịch.  "
-  utter_cauhoi5:
-  - text: "Việc Thủ tướng Chính phủ công bố dịch bệnh này là thực hiện
-theo Luật Phòng, chống bệnh truyền nhiễm năm 2007 (xem
-câu 4) vì Covid-19 là bệnh truyền nhiễm nhóm A (nhóm đặc
-biệt nguy hiểm) đồng thời lại là bệnh mới xuất hiện, chưa có
-thuốc điều trị đặc hiệu và chưa có vắc xin. "
-  utter_cauhoi6:
-  - text: "Theo Điều 3 Luật Phòng, chống bệnh truyền nhiễm, các bệnh
-truyền nhiễm được phân chia làm 3 nhóm:
-- Nhóm A: Là những bệnh truyền nhiễm đặc biệt nguy hiểm,
-lây truyền nhanh; phát tán rộng; tỷ lệ tử vong cao hoặc chưa
-rõ tác nhân gây bệnh.
-- Nhóm B: Là các bệnh truyền nhiễm nguy hiểm, có khả năng
-lây truyền nhanh và có thể gây tử vong.
-- Nhóm C: Là các bệnh ít nguy hiểm, khả năng lây truyền không
-nhanh và ít gây tử vong.
-Trên cơ sở đó, dịch Covid-19 được Bộ Y tế xếp vào nhóm A -
-nhóm đặc biệt nguy hiểm vì bệnh có khả năng lây lan nhanh
-trong cộng đồng, chưa có thuốc điều trị đặc hiệu và cũng
-chưa có vắc xin phòng bệnh, tỷ lệ tử vong ban đầu được dự
-báo tới 5% - trên thực tế tại thời điểm này (14/02/2020) đang
-ở mức khoảng 2%"
-  utter_cauhoi7:
-  - text: "Do những người đầu tiên bị bệnh đều có liên quan đến một
-địa điểm mua bán động vật hoang dã ở Vũ Hán, Hồ Bắc,
-Trung Quốc và tác nhân gây bệnh được tìm thấy ở người
-bệnh là virus Corona - loại virus phổ biến gây bệnh ở động
-vật; mặt khác chủng virus này hoàn toàn mới nên được cho là virus Corona vốn lưu hành ở động vật đã biến đổi (tiến hóa)
-thành virus gây bệnh cho người (tương tự virus Corona gây
-bệnh SARS lây từ cầy hương sang người, virus Corona gây
-bệnh viêm đường hô hấp Trung Đông lây từ lạc đà sang
-người). Tiếp đó người hoặc những người đầu tiên nhiễm
-virus từ động vật lại trở thành nguồn phát tán và lây nhiễm
-virus sang người khác, làm cho bệnh trở thành dịch bệnh lây
-truyền từ người sang người.
-Một bệnh nếu chỉ lây từ động vật sang người rồi dừng lại ở
-người bị nhiễm bệnh từ động vật, không tiếp tục lây từ người
-sang người (như cúm gia cầm) thì việc kiểm soát còn tương
-đối thuận lợi (cách ly, thậm chí tiêu hủy toàn bộ nguồn phát
-tán mầm bệnh là động vật). Khi bệnh từ động vật lây sang
-người rồi lại tiếp tục lây từ người sang người thì việc kiểm
-soát sẽ trở nên vô cùng khó khăn như SARS, MERS và Covid19 hiện nay.
-Như vậy, sau dịch SARS do virus SARS-CoV lây từ cầy hương
-sang người, dịch viêm đường hô hấp Trung Đông do virus
-MERS-CoV lây từ lạc đà sang người; nay dịch Covid-19 cũng
-do virus Corona lây từ động vật hoang dã (nhiều khả năng từ
-dơi hoặc tê tê hoặc rắn) sang người, càng có thêm cơ sở để
-khuyến cáo người dân tránh tiếp xúc với động vật hoang dã.
-Đặc biệt, việc mua bán, giết thịt động vật hoang dã có nguy
-cơ nhiễm bệnh rất cao do con người tiếp xúc trực tiếp với các
-chất bài tiết và thịt sống của động vật hoang dã."
-  utter_cauhoi8:
-  - text: "Hiện nay, phương thức lây truyền chính xác từ động vật sang
-người như nào chưa rõ hết; điều chắc chắn là người (hoặc
-những người) đầu tiên nhiễm virus từ động vật truyền sang
-có tiếp xúc với nguồn chứa virus do động vật phát tán (chất
-thải, dịch tiết, thịt sống…). Từ những nguồn này virus gây bệnh Covid-19 đã nhiễm vào các tế bào ở đường hô hấp của
-người nhiễm mầm bệnh. Tại đây, virus nhân lên gây bệnh cho
-đường hô hấp đồng thời phát tán ra ngoài qua đường hô hấp
-trên của người bệnh để rồi lây truyền từ người này sang
-người khác.
-Virus lây truyền từ người sang người qua ba đường chính:
-Giọt bắn, không khí và tiếp xúc bề mặt có virus. Từ trong
-đường hô hấp của người nhiễm mầm bệnh (có thể có triệu
-chứng bị bệnh hoặc không), virus Covid-19 được phát tán ra
-bên ngoài khi người mang mầm bệnh ho, hắt hơi (mà không
-đeo khẩu trang) làm bắn ra các giọt chất lỏng kích thước từ
-5µm (micromet) trở lên gọi là giọt bắn làm người xung quanh
-hít phải các giọt bắn chứa virus và nhiễm bệnh; khi người
-bệnh ho, hắt hơi hoặc được chăm sóc y tế bằng các thủ thuật
-hút đờm dãi hoặc khí dung, virus từ đường hô hấp được phát
-tán ra trong các giọt có kích thước dưới 5µm vào không khí
-làm người xung quanh hít phải không khí chứa virus và nhiễm
-bệnh; virus từ các giọt bắn hoặc không khí bám vào các bề
-mặt (khẩu trang, quần áo, đồ dùng xung quanh…), sau đó
-người khác chạm vào bề mặt này và nhiễm virus gây bệnh.
-Từ ba đường lây chính này, các biện pháp dự phòng được
-khuyến cáo là đeo khẩu trang và rửa tay thường xuyên bằng
-xà phòng hoặc dung dịch sát trùng.
-- Đối với người bệnh có triệu chứng hoặc người mang mầm
-bệnh không triệu chứng (mới bị nhiễm còn đang ở giai đoạn
-ủ bệnh hoặc người mang mầm bệnh không triệu chứng thực
-thụ), đeo khẩu trang là cách hiệu quả để ngăn phát tán giọt
-bắn ra môi trường xung quanh khi ho hoặc hắt hơi. Những
-người này cần đeo khẩu trang và cách ly là thể hiện trách
-nhiệm với cộng đồng, giúp hạn chế nguồn tác nhân gây bệnh
-truyền nhiễm ra cộng đồng.
-Người chưa nhiễm virus đeo khẩu trang y tế thông thường
-đúng cách đã có thể ngăn ngừa một cách hiệu quả đường lây
-nhiễm do giọt bắn.
-- Lây qua đường không khí thường chỉ gặp trong tình huống
-chăm sóc y tế có tiến hành các thao tác khí dung hoặc hút
-đờm dãi, do vậy chỉ nhân viên y tế hoặc người nhà chăm sóc
-người bệnh mới cần các loại khẩu trang y tế chuyên dụng
-như N95.
-- Rửa tay thường xuyên, nhất là sau khi tiếp xúc với các bề
-mặt có nguy cơ cao (che miệng khi ho, hắt hơi; chạm tay vào
-khẩu trang đã sử dụng, ống tay áo che mũi/miệng khi ho, hắt
-hơi; tay nắm cửa, nút bấm thang máy, điện thoại di động…),
-đồng thời tập thói quen không cho tay bẩn vào miệng, mũi,
-mắt là cách hiệu quả nhất để ngăn cản đường lây qua tiếp
-xúc bề mặt có virus. "
-  utter_cauhoi9:
-  - text: "Dịch nào nguy hiểm hơn còn tùy tiêu chí đánh giá:
-- Tỷ lệ tử vong: Tỷ lệ tử vong do SARS là 9,6%, do MERS trên
-30% cao hơn so với Covid-19 (hiện tại khoảng 2%).
-- Mức độ lây lan và số người nhiễm: Covid-19 có mức độ lây
-lan nhanh hơn và số người nhiễm nhiều hơn. Cho đến nay
-(17/02/2020), toàn thế giới đã có hơn 70 nghìn người nhiễm
-và hơn 1.700 người tử vong, vượt xa con số nhiễm và tử vong
-do SARS và MERS cộng lại.
-Từ hai tiêu chí trên cho thấy, với cá nhân 1 người bị nhiễm
-bệnh thì SARS và MERS nguy hiểm hơn; với cộng đồng thì
-Covid-19 nguy hiểm và gây thiệt hại nhiều hơn. Nói cách
-khác, bệnh SARS, bệnh MERS nguy hiểm hơn bệnh Covid-19;
-còn dịch Covid-19 nguy hiểm hơn dịch SARS và dịch MERS.
-Điều này cho thấy mỗi cá nhân đều phải có trách nhiệm lớn
-trong việc bảo vệ cộng đồng."
-  utter_cauhoi10:
-  - text: "Muốn hết dịch thì cần phải thực hiện tổng hợp tất cả các biện
-pháp để cắt đứt sự lây nhiễm, không để xuất hiện những ca
-nhiễm mới. Ngoài các giải pháp do con người thực hiện, điều
-kiện thời tiết cũng ảnh hưởng lớn đến sự tồn tại của mầm
-bệnh ở môi trường và sức đề kháng của con người với mầm
-bệnh. Dựa vào diễn biến thời tiết và các kết quả thu được từ
-các biện pháp phòng chống dịch hiện nay, một số nhà dịch tễ
-học dự đoán dịch sẽ kéo dài khoảng 2 - 3 tháng nữa. Tuy
-nhiên yếu tố con người vẫn có vai trò quyết định mức độ
-thiệt hại do dịch bệnh gây ra, đòi hỏi các chỉnh phủ phải triển
-khai tích cực các biện pháp phòng chống dịch và mỗi người
-dân phải tuân thủ nghiêm ngặt các biện pháp phòng chống
-dịch được triển khai."
-  utter_cauhoi11:
-  - text: " Tác nhân gây bệnh Covid-19 là một chủng virus Corona.
-Chủng virus gây bệnh Covid-19 khác hẳn với các chủng virus
-Corona đã biết trước đó nên đã được đặt tên là “virus
-Corona mới” (Novel Coronavirrus - viết tắt là nCoV). Trong
-danh pháp khoa học, tên chủng virus mới còn có thêm thông
-tin về năm phát hiện, do vậy tên đầy đủ của chủng virus
-Corona mới này là “2019 Novel Coronavirus” viết tắt hay ký
-hiệu là “2019-nCoV”. Ngoài ra, chủng virus này còn được một
-số phòng thí nghiệm khác gọi là SARS-CoV-2 với ý nghĩa là
-chủng virus Corona thứ hai gây bệnh có biểu hiện là hội
-chứng viêm đường hô hấp cấp nặng (SARS). Trên phương
-diện virus học, virus gây bệnh Covid-19 chính là chủng virus
-Corona mới có các ký hiệu là “2019-nCoV” hoặc “nCoV” hoặc
-“SARS-CoV-2”.
-Từ ngày 11/02/2020, sau khi WHO chính thức gọi tên bệnh là
-Covid-19, các phương tiện truyền thông và giới khoa học
-nhiều nơi trên thế giới cũng có xu hướng gọi tên “virus gây
-bệnh Covid-19” là “virus Covid-19”. Tài liệu này cũng thống
-nhất dùng thuật ngữ “virus Covid-19”. Trong một vài ngữ
-cảnh “nhiễm Covid-19” cũng được hiểu là nhiễm virus gây
-bệnh Covid-19."
-  utter_cauhoi12:
-  - text: "Tên gọi Corona bắt nguồn từ đặc điểm nhận dạng virus khi
-nhìn dưới kính hiển vi điện tử, chúng có các gai nhô ra ở mặt
-ngoài trông như hình chiếc vương miện.
-Corona là một họ virus lớn thường thấy lưu hành và gây bệnh
-ở động vật. Sau khi dịch viêm đường hô hấp cấp nặng (SARS)
-xuất hiện ở người vào năm 2002 - 2003, các nhà khoa học xác
-định được virus Corona gây bệnh SARS (ký hiệu là SARS-CoV)
-có nguồn gốc từ cầy hương lây sang người. Đến dịch viêm
-đường hô hấp Trung Đông (MERS) xuất hiện ở người vào năm
-2012, các nhà khoa học lại xác định được virus Corona gây
-bệnh MERS (ký hiệu là MERS-CoV) cũng có nguồn gốc từ
-động vật (lạc đà). Lần này, khi phân lập được chủng virus mới
-ở các bệnh nhân đầu tiên bị bệnh ở Vũ Hán cũng thuộc họ
-Corona và yếu tố khởi phát bệnh có liên quan đến động vật
-hoang dã nên có thể khẳng định loại virus mới này (Covid-19)
-cũng có nguồn gốc từ động vật rồi lây sang và gây bệnh
-cho người.
-Như vậy đã có ba bệnh dịch đặc biệt nguy hiểm do virus
-Corona có nguồn gốc từ động vật lây sang người là SARS,
-MERS và Covid-19. Có thể thấy, thế giới tự nhiên đã nhiều lần
-nhắc nhở con người về việc săn bắt, mua bán, giết thịt động
-vật hoang dã sẽ có nguy cơ nhiễm bệnh mới thuộc loại đặc
-biệt nguy hiểm rất cao do quá trình này con người tiếp xúc
-trực tiếp với các chất bài tiết và thịt sống của động vật
-hoang dã."
-  utter_cauhoi13:
-  - text: "Covid-19 là virus có cả ở người và động vật bị bệnh cũng như
-người và động vật mang virus không có biểu hiện bệnh. Từ
-người và động vật mang virus, Covid-19 được phát tán ra môi
-trường xung quanh chủ yếu dưới dạng giọt bắn từ dịch tiết
-đường hô hấp khi ho, hắt hơi, xì mũi hay khạc nhổ. Các giọt
-bắn này gây ô nhiễm không khí trong phạm vi bán kính 2m từ
-nguồn phát tán. Từ không khí, các giọt bắn rơi lên bề mặt các
-đồ vật như quần áo, bàn ghế, điện thoại, bàn phím máy tính,
-nút bấm thang máy… gây ô nhiễm trực tiếp các bề mặt này.
-Nếu ai đó chạm vào bề mặt ô nhiễm trên rồi lại chạm tiếp vào
-các vật khác như tay nắm cửa, nút bấm thang máy, thành
-ghế, tay vịn cầu thang, tay vịn trên các phương tiện giao
-thông… sẽ tiếp tục gây ô nhiễm gián tiếp cho các bề mặt mới
-này. Như vậy, Covid-19 tồn tại chủ yếu trong không khí ở
-khoảng cách trong bán kính khoảng 2m xung quanh người
-mang virus ho, hắt hơi, xì mũi mà không đeo khẩu trang hay
-lấy tay che mũi, miệng; ở trên bề mặt các đồ vật xung quanh
-khu vực người ho, hắt hơi, xì mũi, khạc nhổ và có thể cả trên
-bề mặt các đồ vật bị ô nhiễm thứ phát rất khó xác định.
-Từ các lý do trên, hành động đeo khẩu trang khi bị bệnh hoặc
-nghi ngờ mang mầm bệnh; che mũi, miệng khi ho, hắt hơi khi
-không đeo khẩu trang; không xì mũi, khạc nhổ nơi công cộng.có ý nghĩa hết sức quan trọng trong việc hạn chế phát tán và
-gây ô nhiễm virus trong cộng đồng; thường xuyên vệ sinh các
-đồ vật xung quanh cũng là biện pháp hiệu quả để tránh ô
-nhiễm (kể cả trực tiếp và gián tiếp) môi trường sống; hạn chế
-chạm tay vào các bề mặt có nguy cơ ô nhiễm cao, rửa hoặc
-sát trùng tay thường xuyên, hạn chế bắt tay cũng là các biện
-pháp hiệu quả để tránh gây ô nhiễm thứ phát. Điều này
-không chỉ đúng với Covid-19 mà còn đúng với tất cả các bệnh
-có tác nhân gây bệnh trong đường hô hấp nói chung. "
-  utter_cauhoi14:
-  - text: "Không. Covid-19 nói riêng và virus nói chung không tự nhân
-lên được. Virus phải “mượn” tế bào sống để nhân lên bằng
-cách “khống chế” tế bào chủ “làm việc” cho virus. Sau khi
-nhiễm được vào tế bào virus sẽ kiểm soát tế bào chủ bằng
-cách cài các gen của virus vào bộ gen của tế bào chủ, bắt tế
-bào bị nhiễm virus tạo ra các thành phần của virus. Khi đã đủ
-các thành phần cần thiết, các thành phần này lắp ghép lại với
-nhau để hình thành nhiều virus mới, đồng thời làm tổn
-thương cho tế bào bị nhiễm virus. "
-  utter_cauhoi15:
-  - text: " Trong môi trường tự nhiên, virus chỉ tồn tại nguyên dạng và
-không nhân lên, do vậy thời gian sống của virus trong môi
-trường tự nhiên là thời gian tồn tại của một thế hệ virus. Thời
-gian này là bao lâu sẽ phụ thuộc vào bản chất của virus và các
-điều kiện tự nhiên. Thông thường, ở nhiệt độ lạnh virus sẽ
-tồn tại lâu hơn, nhất là nhiệt độ lạnh âm sâu; các yếu tố khác
-như độ ẩm, chất liệu bề mặt (đất, gỗ, sắt…) cũng ảnh hưởng
-đến thời gian tồn tại của virus; đặc biệt ánh sáng mặt trời có
-tác dụng tiêu diệt virus rất hiệu quả.
-Đã có một số nghiên cứu cho thấy Covid-19 có thể sống được
-đến vài ngày, thậm chí đến 9 ngày trong môi trường tự nhiên.
-Vì thế, các biện pháp vệ sinh môi trường có vai trò hết sức
-quan trọng trong việc triệt tiêu nguồn tác nhân gây bệnh có
-trong môi trường. Không nên chủ quan cho rằng virus đã bị
-tiêu diệt bởi các yếu tố từ môi trường. Mặt khác, môi trường
-sống thông thoáng, có ánh nắng mặt trời cũng có ý nghĩa rất
-tốt làm giảm bớt các tác nhân gây bệnh, trong đó có virus
-Covid-19, trong môi trường. "
-  utter_cauhoi16:
-  - text: "Mỗi loại virus có các cấu trúc đặc trưng trên bề mặt hoạt
-động như những “móc câu” để virus bám vào các cấu trúc
-phù hợp với loại móc câu ấy (được gọi là thụ thể - receptor)
-trên bề mặt tế bào chủ để virus chui vào bên trong tế bào. Tế
-bào nào có cấu trúc giúp các “móc câu” của virus “móc” vào
-được sẽ là tế bào “nhạy cảm” với virus và bị virus nhiễm vào.
-Virus Covid-19 sử dụng protein S làm “móc câu” để gắn vào
-thụ thể của nó trên bề mặt màng tế bào niêm mạc đường hô
-hấp của vật chủ, qua đó virus xâm nhập và nhân lên gây bệnh
-cho cơ thể.
-Do các tế bào của đường hô hấp là đích tấn công của virus
-Covid-19 (trong đó các tế bào niêm mạc ở mũi, họng được
-cho là cửa ngõ đầu tiên để virus Covid-19 xâm nhập vào cơ
-thể) nên thường xuyên uống nước ấm, không để họng bị khô
-là một biện pháp được khuyến cáo để bảo vệ họng, giảm bớt
-khả năng tấn công của virus vào các tế bào niêm mạc họng."
-  utter_cauhoi17:
-  - text: "Không hoàn toàn như vậy. Sống trong “vùng dịch” hay “vùng
-có dịch” là sống ở nơi có dịch đang lưu hành, tức là có người
-bị bệnh và tác tác nhân gây bệnh đang ở khu vực đó chứ
-không phải mọi người trong khu vực đó đều là người đã
-nhiễm Covid-19. Chỉ khi đã có xét nghiệm khẳng định nhiễm
-virus gây bệnh Covid-19 mới coi là người bị nhiễm bệnh. Đây
-cũng là lý do làm nảy sinh nguy cơ kỳ thị có liên quan đến địa
-danh nơi có dịch - điều đã được WHO lưu tâm khi đặt tên các
-loại bệnh dịch mới. "
-  utter_cauhoi18:
-  - text: "Không hoàn toàn như vậy. Sống trong vùng có dịch là sống ở
-nơi có nguy cơ cao bị nhiễm Covid-19. Mặc dù đang ở nơi có
-nguy cơ cao nhưng thực hiện tốt các biện pháp kiểm soát
-nguy cơ (chính là các biện pháp phòng chống dịch đang được
-các cấp, các ngành và toàn dân triển khai) sẽ không để xảy ra
-nguy cơ nhiễm bệnh. Làm tốt điều này thì mỗi cá nhân dù
-đang ở trong vùng dịch cũng sẽ không bị nhiễm bệnh. Cộng
-đồng trong vùng dịch làm tốt không để có thêm người nhiễm
-bệnh mới, đồng thời điều trị khỏi cho những người đã nhiễm
-bệnh và vệ sinh môi trường loại bỏ mầm bệnh thì khu vực đó
-sẽ hết dịch."
-  utter_cauhoi19:
-  - text: "Không hoàn toàn như vậy. Trường hợp này được coi là tiếp
-xúc gần với người bệnh. Bạn cần theo dõi và tự cách ly bản
-thân trong vòng 14 ngày, vừa để bảo vệ mình vừa để bảo vệ những người xung quanh và cộng đồng theo hướng dẫn của
-Bộ Y tế.  "
-  utter_cauhoi20:
-  - text: "Là tiếp xúc có “da-chạm-da”, hôn hoặc quan hệ tình dục với
-người bệnh. Tiếp xúc trực tiếp với máu và dịch tiết của cơ thể
-người bệnh được coi là tiếp xúc trực tiếp với mầm bệnh. "
-  utter_cauhoi21:
-  - text: "Là tiếp xúc với bệnh nhân trong cự ly 2m hoặc ở trong cùng
-một phòng hay khu vực chăm sóc một ca bệnh được khẳng
-định có bệnh hoặc khả năng bị bệnh trong thời gian kéo dài. "
-  utter_cauhoi22:
-  - text: "Không. Cho đến nay chưa có bằng chứng virus Covid-19 có
-thể xâm nhập qua da vào cơ thể. Tuy nhiên bắt tay là hành
-động có nguy cơ cao. Khi tay một người bị nhiễm Covid-19
-chạm vào tay người khác có thể truyền virus sang tay người
-này. Từ bàn tay có virus có thể nhiễm tiếp vào đường hô hấp
-do các hành động khác như dụi mắt, ngoáy mũi, cho tay lên
-miệng hoặc kể cả chạm tay lên mặt, tạo cơ hội (dù nhỏ) để
-virus “bay” vào mũi. Do vậy thực hành rửa tay/sát trùng tay
-và không chạm tay vào vùng mặt (đặc biệt là sau khi bắt tay)
-là biện pháp hiệu quả để ngăn nguy cơ lây nhiễm do bắt tay. "
-  utter_cauhoi23:
-  - text: "Có. Khi hôn, dù hôn môi hay hôn lên trán, lên má đều là tiếp
-xúc trực tiếp với người bệnh. "
-  utter_cauhoi24:
-  - text: "Chưa có nghiên cứu chứng minh Covid-19 có lây qua niêm
-mạc đường sinh dục hay không và do vậy có lây qua sinh hoạt
-tình dục ở hình thức giao hợp khác giới hay không. Tuy nhiên, do sinh hoạt tình dục có nhiều hình thức, mức độ và động tác
-khác nhau nên sinh hoạt tình dục là hành vi có nguy cơ. Nguy
-cơ lấy nhiễm cao hay thấp tùy thuộc mức độ tương tác giữa
-những người bạn tình tiếp xúc với dịch tiết đường hô hấp của
-người có Covid-19. Khi mọi việc chưa rõ ràng, nên thực hiện
-các hành vi tình dục an toàn để vừa có tác dụng bảo vệ người
-đã nhiễm Covid-19 trước nguy cơ bị nhiễm thêm các bệnh lây
-truyền qua đường tình dục, vừa bảo vệ bạn tình không bị lây
-nhiễm Covid-19 từ người nhiễm trước đó."
-  utter_cauhoi25:
-  - text: "Chưa có nghiên cứu chứng minh Covid-19 có lây qua đường
-ăn uống hay không. Mặc dù đã có nghiên cứu cho thấy có
-Covid-19 trong phân của bệnh nhân và một số bệnh nhân có
-biểu hiện bị tiêu chảy, điều đó gợi ý rằng Covid-19 có thể gây
-tổn thương đường tiêu hóa. Do miệng và mũi thông nhau
-nên chưa biết liệu virus từ đường hô hấp rơi xuống đường
-tiêu hóa và ra phân hay virus từ thức ăn trong miệng tấn
-công lên đường hô hấp. Khi chưa thể loại trừ mọi khả năng
-thì vẫn nên thực hành “ăn chín, uống sôi” để phòng chống
-dịch. Tuyệt đối không nên ăn tiết canh sống, thịt sống - nhất
-là của động vật hoang dã. "
-  utter_cauhoi26:
-  - text: "Chưa có thông tin về vấn đề này. Trên quan điểm dự phòng,
-bệnh Covid-19 là bệnh truyền nhiễm đặc biệt nguy hiểm, mọi
-khuyến cáo về bảo hộ nhân viên y tế đều được đặt lên ở mức
-cao nhất trước nguy cơ phơi nhiễm với máu của người bệnh.
-Về phương diện an toàn truyền máu, trong giai đoạn hiện
-nay chắc chắn người có xét nghiệm dương tính với Covid-19
-sẽ không được hiến máu tình nguyện trong những đợt hiến
-máu tình nguyện đại trà. Trong tương lai liệu xét nghiệm
-Covid-19 có được đưa vào nhóm xét nghiệm sàng lọc an toàn truyền máu hay không còn chờ thêm các bằng chức chắc
-chắn về việc virus này có lây truyền qua đường máu hay
-không. "
-  utter_cauhoi27:
-  - text: "Trong đợt dịch này các nhà khoa học Trung Quốc đã theo dõi
-9 trường hợp phụ nữ mang thai nhiễm Covid-19 và đã sinh
-con. Các xét nghiệm dịch ối, máu dây rốn trẻ sơ sinh có mẹ
-nhiễm Covid-19 và sữa mẹ không thấy có virus Covid-19.
-Cùng thêm các thông tin về SARS-CoV và MERS-CoV không lây
-truyền dọc từ mẹ sang con khiến cho các nhà khoa học tạm
-kết luận rằng Covid-19 không lây truyền dọc từ mẹ sang con.
-Mặc dù vậy, các quan sát mới chỉ thực hiện ở 9 ca bệnh nên
-cần có số liệu của nhiều người hơn để có thể kết luận chắc
-chắn về vấn đề này.
-Lưu ý: Lây nhiễm dọc được hiểu là lây từ mẹ sang con qua
-nhau thai. Việc cách ly con khỏi mẹ để tránh lây nhiễm qua
-đường hô hấp hoặc đường tiếp xúc trực tiếp vẫn là cần thiết."
-  utter_cauhoi28:
-  - text: "Sau khi nhiễm được vào tế bào niêm mạc đường hô hấp,
-Covid-19 cài các gen của virus vào bộ gen của tế bào chủ, bắt
-tế bào bị nhiễm virus tạo ra các thành phần của virus. Khi đã
-đủ các thành phần cần thiết, các thành phần này lắp ghép lại
-với nhau để hình thành nhiều virus mới chui ra ngoài (ảnh
-bên) đồng thời làm tổn thương cho tế bào bị nhiễm virus.
-Trình tự các bước bao gồm: Dịch mã gen sao chép từ RNA
-gen của virion. Đầu tiên chúng tổng hợp ra sợi ARN -> các
-protein cấu trúc virut S, E và M được chuyển vào lưới nội bào
-(ER) và di chuyển vào khoang trung gian reticulum-Golgi
-(ERGIC) -> Nucleocapsid -> các hạt virion trưởng thành (tức
-là các virus mới). Các virus mới hình thành và tiếp tục lây nhiễm sang các tế bào lành khác hoặc theo dịch tiết đường
-hô hấp được đào thải ra ngoài trở thành nguồn lây nhiễm cho
-người xung quanh. "
-  utter_cauhoi29:
-  - text: "Biểu hiện bệnh chủ yếu của người nhiễm Covid-19 là viêm
-đường hô hấp cấp có nghĩa là Covid-19 gây bệnh cho đường
-hô hấp.
-Một số bệnh nhân nhiễm Covid-19 còn có biểu hiện tiêu chảy
-và xét nghiệm có virus trong phân. Dù chưa chắc chắn nhưng
-không loại trừ khả năng Covid-19 gây tổn thương cho các tế
-bào niêm mạc khác, trong đó có đường tiêu hóa.
-Trong số các bệnh nhân bị bệnh kết hợp còn thấy hiện tượng
-tổn thương chức năng của các tạng khác như gan, thận… Tuy
-nhiên, đây là hậu quả trực tiếp do virus tấn công hay hậu quả gián tiếp từ tổn thương phổi còn đang được các nhà khoa
-học làm rõ hơn. "
-  utter_cauhoi30:
-  - text: "Một số virus nhiễm vào phụ nữ mang thai gây ảnh hưởng đến
-thai nhi như virus cúm gây sứt môi hở hàm ếch, virus Zika gây
-bệnh đầu nhỏ; một số virus có thể gây sẩy thai như Rubella.
-Chưa thể trả lời được liệu Covid-19 có thể gây ảnh hưởng gì
-lên thai nhi. Trên thực tế, cần theo dõi dài ngày hậu quả thai
-sản của những trường hợp bệnh nhân là phụ nữ mang thai
-nhiễm Covid-19 ở các giao đoạn sớm của thai kỳ."
-  utter_cauhoi31:
-  - text: "Khi bị nhiễm mầm bệnh, một người có bị bệnh hay không sẽ
-phụ thuộc vào các yếu tố từ mầm bệnh và các yếu tố từ
-người bị nhiễm mầm bệnh. Bị bệnh hay không là kết quả của
-cuộc chiến giữa mầm bệnh và con người, nếu mầm bệnh
-thắng thì người đó sẽ bị bệnh. Cùng một người nhưng nếu bị
-nhiễm với số lượng virus ít và độc lực của virus thấp có thể sẽ
-không phát thành bệnh; cùng lượng virus nhưng khả năng đề
-kháng chống virus của mỗi người khác nhau, trong đó người
-có sức đề kháng tốt có thể không bị bệnh. Vì vậy, bên cạnh
-việc bảo vệ bản thân hạn chế lây nhiễm mầm bệnh, luyện tập
-làm tăng sức đề kháng chung cũng góp phần phòng chống
-bệnh tật - đặc biệt là các bệnh nhiễm trùng. "
-  utter_cauhoi32:
-  - text: "Hoàn toàn có thể có. Những người có đột biến gen mã hóa
-thụ thể dành cho virus làm cho virus không thể chui được vào
-bên trong tế bào là người có khả năng đề kháng tự nhiên với
-virus. Điều này đã được khẳng định ở trường hợp của HIV.
-Tuy nhiên, còn quá sớm để tìm ra người có đề kháng tự nhiên
-với Covid-19. Hy vọng công nghệ giải mã bộ gen người hiện
-nay đã rất phát triển cho phép giải trình tự toàn bộ bộ gen
-người trong thời gian ngắn và giá thành thấp sẽ tạo điều kiện
-sàng lọc trong số những người nhiễm hoặc phơi nhiễm với
-Covid-19 nhưng không bị bệnh để. Bằng cách đó có thể sẽ
-tìm ra được những người có đột biến gen tạo khả năng đề
-kháng tự nhiên với Covid-19. "
-  utter_cauhoi33:
-  - text: "Là một virus hoàn toàn mới, lần đầu tiên xuất hiện ở người
-nên chưa ai có đề kháng đặc hiệu với virus. Vì vậy, cơ thể
-người mới nhiễm Covid-19 lần đầu tiên sẽ đề kháng chống
-virus bằng những phương thức tự nhiên không đặc hiệu
-trước (chủ yếu là các yếu tố hóa học trong dịch tiết của niêm
-mạc đường hô hấp). Nếu cơ chế này chiến thắng thì người đó
-không bị bệnh. Nếu cơ chế này thất bại thì người đó bị nhiễm
-mầm bệnh vào bên trong các tế bào. Lúc này, hệ thống miễn
-dịch của cơ thể người nhiễm virus sẽ phát triển các cơ chế đề
-kháng đặc hiệu để loại bỏ virus và cả các tế bào đã bị nhiễm
-virus. Đây là cuộc chạy đua giữa một bên là sức tấn công hủy
-diệt của virus với một bên là sức đề kháng của cơ thể khống
-chế sự nhân lên và loại bỏ virus cộng với khả năng tái tạo lại
-các tế bào đã bị tổn thương do virus. Nếu virus thắng bệnh sẽ
-tiến triển, nếu hệ miễn dịch thắng thì người bệnh khỏi bệnh. "
-  utter_cauhoi34:
-  - text: "Quá trình này cần có thời gian ít nhất là 1 tuần hoặc muộn
-hơn tùy theo từng người, tương tự như thời gian từ khi tiêm
-vắc xin đến khi bắt đầu có kháng thể đặc hiệu.
-Khoảng thời gian này thường được gọi là “giai đoạn cửa sổ”
-kể từ khi nhiễm mầm bệnh đến khi có thể gián tiếp phát hiện
-nhiễm mầm bệnh thông qua xét nghiệm tìm kháng thể mà
-người đó tạo ra để chống lại mầm bệnh đã nhiễm.
-Hiện nay việc xét nghiệm tìm kháng thể IgM kháng Covid-19
-cũng đã bắt đầu được áp dụng để phát hiện người nhiễm
-Covid-19. Tuy nhiên đây chỉ là bằng chứng giám tiếp, đồng
-thời xét nghiệm này có nhược điểm là phải qua “giai đoạn
-cửa sổ” rồi mới phát hiện được."
-  utter_cauhoi35:
-  - text: "Có thể có hoặc không tùy theo từng điều kiện nhất định. Nếu
-Covid-19 tạo được miễn dịch bền vững như virus sởi hoặc
-quai bị thì không bị lại; tuy nhiên điều này chưa thể khẳng
-định được vì còn quá sớm. Nếu miễn dịch không bền vững,
-trong giai đoạn đầu mới khỏi bệnh lượng kháng thể đủ mạnh
-thì có thể không bị lại, nhưng đến giai đoạn sau lượng kháng
-thể đặc hiệu mất dần đi thì vẫn có thể bị lại. Trong trường
-hợp này thì cần sử dụng vắc xin để khôi phục lại khả năng đề
-kháng chống virus. "
-  utter_cauhoi36:
-  - text: "Có. Vì trong huyết tương (thành phần dịch lỏng của máu)
-người bị bệnh đã khỏi có các kháng thể chống lại tác nhân
-gây bệnh. Chính các kháng thể này là “vũ khí” giúp cơ thể
-người bệnh chống lại các tác nhân gây bệnh, góp phần giúp người đó khỏi bệnh. Truyền huyết tương (hoặc sản phẩm
-kháng thể tinh chế) của người bị bệnh đã khỏi cho người
-đang bị bệnh chính là truyền các yếu tố đã giúp người này
-khỏi bệnh sang cho người khác đang bị bệnh, tương tự như
-cung cấp “vũ khí” cho người ấy để đánh giặc. Phương pháp
-này đã được các bác sĩ Hồng Kông áp dụng với bệnh nhân
-SARS trước đây. Điều này đòi hỏi người khỏi bệnh phải thực
-sự khỏi bệnh (không còn virus trong người), xét nghiệm máu
-có kháng thể trung hòa được virus Covid-19 và người đó đủ
-sức khỏe để có thể hiến máu tách huyết tương chứa kháng
-thể kháng Covid-19 để truyền cho bệnh nhân. Ngoài ra còn
-phải xem xét các yếu tố khác, bao gồm cả hòa hợp nhóm máu
-ABO và các xét nghiệm an toàn truyền máu khác, để tránh
-các tai biến trong điều trị bằng huyết thanh. Thực tế hiện
-nay, các bác sĩ Trung Quốc cũng đang bắt đầu nghiên cứu thí
-điểm biện pháp này cho các bệnh nhân nặng."
 
-  utter_cauhoi37:
-  - text: "Việc các virus trong cùng một họ và có bộ gen gần tương
-đồng mở ra hy vọng có thể có miễn dịch bảo vệ chéo giữa các
-loại virus này. Tuy nhiên, điều này chỉ là phỏng đoán và cần
-có bằng chứng thử nghiệm thực tế giữa huyết thanh kháng
-SARS-CoV hoặc MERS-CoV với Covid-19 mới có thể trả lời
-được một cách chắc chắn."
-  utter_cauhoi38:
-  - text: "Vắc xin là chế phẩm chứa kháng nguyên tạo cho cơ thể khả
-năng đáp ứng miễn dịch, được dùng với mục đích phòng
-bệnh. Dùng vắc xin được ví như sử dụng “quân xanh” trong
-các cuộc diễn tập cho cơ thể “rèn luyện” cách đánh với một
-loại “địch” cụ thể nhằm tạo ra phương án đánh địch tối ưu.
-Có thể coi dùng vắc xin như công việc huấn luyện, chuẩn bị
-trước cho hệ miễn dịch các phương án đánh địch, sẵn sàng
-chiến đấu một cách nhanh, mạnh và hiệu quả nhất khi “kẻ
-thù” là mầm bệnh thực thụ xâm nhập vào cơ thể."
-  utter_cauhoi39:
-  - text: "Chưa. Mặc dù đã biết chắc chắn mầm bệnh và đã phân lập,
-nuôi cấy được Covid-19 nhưng không thể dùng ngay virus
-Covid-19 sống để làm vắc xin vì các vấn đề về an toàn và hiệu
-quả của vắc xin. Vắc xin phải bảo đảm yêu cầu chỉ có tác dụng
-kích thích tạo miễn dịch bảo vệ và không được gây bệnh cũng
-như các tai biến, biến chứng do dùng vắc xin. Vì vậy, cần có
-thời gian nhất định mới tạo ra được sản phẩm vắc xin đảm
-bảo chất lượng đủ để sử dụng cho con người. "
-  utter_cauhoi40:
-  - text: "Đã có một số phòng thí nghiệm công bố sắp chế tạo thành
-công vắc xin phòng bệnh Covid-19. Tuy nhiên, một vắc xin
-mới còn phải trải qua rất nhiều thử nghiệm để đánh giá tính
-an toàn và hiệu quả bảo vệ. Theo Tổng Giám đốc Tổ chức Y tế
-Thế giới (WHO), dự kiến nhanh nhất là 1 năm nữa mới có vắc
-xin phòng bệnh Covid-19 trên thị trường."
-  utter_cauhoi41:
-  - text: "Các triệu chứng lâm sàng ban đầu hay gặp là sốt, ho khan,
-mệt mỏi, đau cơ. Một số trường hợp có thể có đau họng,
-ngạt mũi, chảy nước mũi, đau đầu, ho có đờm, nôn và tiêu
-chảy. Những trường hợp nặng xuất hiện viêm phổi; khó thở
-do viêm phổi nặng, hội chứng suy hô hấp cấp tiến triển (ARDS); suy chức năng các cơ quan. Các triệu chứng của bệnh
-xuất hiện sau khi tiếp xúc với nguồn bệnh từ 02 - 14 ngày."
-  utter_cauhoi42:
-  - text: "Người nhiễm Covid-19 có thể tiến triển ở nhiều mức độ khác
-nhau, nhẹ thì có thể tự khỏi, nặng có thể diễn biến đến viêm
-phổi nặng, suy hô hấp cấp tiến triển, suy chức năng các cơ
-quan dẫn tới tử vong. Theo số liệu đã công bố hiện nay, tỷ lệ
-tử vong khoảng trên 2%. Bệnh diễn biến nặng thường xuất
-hiện ở những người có bệnh mạn tính, suy giảm miễn dịch."
-  utter_cauhoi43:
-  - text: "Theo qui định hiện nay của Bộ Y tế, người đến, ở và về từ nơi
-có dịch hoặc tiếp xúc với người nghi bị nhiễm Covid-19 trong
-vòng 14 ngày phải báo cho cơ quan y tế để được theo dõi và
-cách ly. Khi có dấu hiệu ho, sốt, khó thở cần đeo khẩu trang
-thường xuyên và đến cơ sở y tế gần nhất để được tư vấn,
-khám và điều trị kịp thời."
-  utter_cauhoi44:
-  - text: "Ho, sốt là biểu hiện của nhiều bệnh lý cấp và mạn tính khác
-nhau liên quan đến đường hô hấp. Bệnh do Covid-19 là một
-bệnh viêm đường hô hấp cấp. Có nhiều nguyên nhân có thể
-gây viêm đường hô hấp cấp tính như các loại vi khuẩn gây
-bệnh; các loại virus như virus cúm mùa, virus á cúm, virus hô
-hấp hợp bào… Do đó, không phải cứ có ho, sốt là đều biểu
-hiện bị bệnh do Covid-19."
-  utter_cauhoi45:
-  - text: "Theo qui định hiện nay của Bộ Y tế, xét nghiệm khẳng định
-chắc chắn bị bệnh do Covid-19 được tiến hành tại các cơ sở y
-tế được Bộ Y tế cho phép thực hiện và công bố kết quả xét
-nghiệm. Hiện nay, kỹ thuật xác định Covid-19 gồm kỹ thuật
-giải trình tự gene thế hệ mới (NGS) và kỹ thuật Real time RT-PCR
-với bệnh phẩm là dịch đường hô hấp, đờm, dịch nội khí quản
-được thu thập và bảo quản trong môi trường phù hợp."
-  utter_cauhoi46:
-  - text: "Nếu bị ho, sốt mà có khó thở dù khó thở nhẹ cũng nên đến
-cơ sở y tế để được khám và xác định nguyên nhân gây bệnh,
-vì trong khi chưa được chẩn đoán và điều trị phù hợp, khó
-thở nhẹ có thể tiến triển thành khó thở nặng.
-Theo qui định hiện nay của Bộ Y tế, nếu sốt, ho, khó thở mà
-trong vòng 14 ngày trước đó, người bệnh có đến, ở và về từ
-nơi có dịch hoặc tiếp xúc với người nghi bị nhiễm Covid-19 thì
-ngay lập tức phải đeo khẩu trang, đến cơ sở y tế gần nhất để
-được tư vấn, khám, điều trị kịp thời. Cần gọi điện cho cơ sở
-y tế trước khi đến để thông tin về các triệu chứng và lịch
-trình đã di chuyển trong thời gian gần đây để có biện pháp hỗ
-trợ đúng. "
-  utter_cauhoi47:
-  - text: "Nói chung, khi bị mắc bệnh, người bệnh cần đến cơ sở y tế
-gần nhất để được chẩn đoán nguyên nhân gây bệnh, tiên
-lượng bệnh và điều trị. Nếu cần thiết, người bệnh sẽ được
-chuyển tuyến trên.
-Đối với bệnh do Covid-19, theo quy định của Bộ Y tế và tình
-hình dịch như hiện nay, người bệnh nghi ngờ mắc viêm đường hô hấp cấp tính do Covid-19 được tiếp nhận và theo
-dõi cách ly triệt để, điều trị ở bệnh viện tuyến huyện trở lên;
-khi cần thiết, người bệnh sẽ được chuyển tuyến trên. Do đó,
-nếu nghi bị mắc bệnh do Covid-19, người bệnh nên đến bệnh
-viện tuyến huyện trở lên gần nhất, không nhất thiết phải đến
-thẳng các bệnh viện lớn tuyến trung ương để khám và làm
-xét nghiệm.
-Nếu tình hình dịch diễn biến phức tạp hơn, tùy theo cấp độ
-dịch, Bộ Y tế và Cục Quân y có thể sẽ đưa ra các qui định khác
-về phân tuyến, chuyển tuyến cách ly và điều trị người bệnh."
+  utter_info1:
+  - text: "Trường Đại học Khoa học , Đại học Huế (ĐHKH) là một đơn vị đào tạo và nghiên cứu có uy tín và bề dày thành tích ở khu vực miền Trung và Tây Nguyên. Với lịch sử hơn 63 năm xây dựng và phát triển (1957 – 2020), Trường ĐHKH hiện nay đã xây dựng được một mô hình giáo dục hiện đại, đa dạng ngành nghề, nhiều tiềm năng hợp tác quốc tế và liên kết với các doanh nghiệp. Nhà trường có 15 khoa, 05 trung tâm nghiên cứu, 01 viện nghiên cứu. Đội ngũ giảng viên, cán bộ của Trường hiện nay có 03 giáo sư, 44 phó giáo sư, 67 tiến sĩ và 197 nghiên cứu sinh, thạc sĩ; đã đạt nhiều thành tích trong giảng dạy, nghiên cứu khoa học và ứng dụng, chuyển giao công nghệ với hơn 1.535 đề tài khoa học cùng nhiều bài báo quốc tế có uy tín. Trong đó, có 22 đề tài hợp tác quốc tế, 4 đề tài cấp Nhà nước, 159 đề tài nghiên cứu cơ bản, 312 đề tài cấp Bộ và cấp Bộ trọng điểm, 108 đề tài cấp Tỉnh và các đề tài cơ sở.
+           Cơ sở vật chất của Nhà trường đang không ngừng hiện đại hóa nhằm bắt kịp với xu thế giáo dục trong nền văn minh công nghiệp 4.0."
+  utter_info2:
+  - text: "Trường ĐHKH hiện có 09 tòa nhà đã và đang được xây dựng, với 92 phòng học đạt tiêu chuẩn. Trong đó, có 12 phòng học được trang bị hệ thống nghe nhìn hiện đại; 47 phòng thí nghiệm cơ bản, phòng thí nghiệm chuyên đề, phòng tư liệu và phòng bảo tàng; 08 phòng thực hành máy tính và 01 thư viện trung tâm. Các phòng thí nghiệm được xây dựng hiện đại, thư viện có nguồn tài liệu bao gồm sách, báo, tạp chí… đáp ứng tốt cho công tác đào tạo và nghiên cứu khoa học của cán bộ, sinh viên, học viên của Trường. Ngoài ra, Nhà trường còn có hệ thống căng tin, nhà ở dành cho chuyên gia, giảng viên thỉnh giảng, học viên khang trang, hiện đại phục vụ dạy học.
+            Hiện nay, trong bối cảnh toàn cầu hóa tri thức, nền công nghiệp 4.0 đang diễn ra mạnh mẽ, mọi lĩnh vực đều hướng đến hội nhập quốc tế sâu rộng, Trường ĐHKH đã nhanh chóng đổi mới chương trình dạy và học theo hướng tự chủ, phát huy tối đa tính nhân văn, sáng tạo, khai phóng. Vấn đề cấp bách hiện nay đặt ra được Lãnh đạo Nhà trường cùng toàn thể giảng viên, cán bộ hết sức quan tâm, đó là vấn đề chất lượng đầu ra và cơ hội việc làm cho người học nói chung (sinh viên, học viên cao học, nghiên cứu sinh)."
+  utter_info3:
+  - text: "
+  Địa chỉ 77 Nguyễn Huệ, TP. Huế\n
+  Số điện thoại (0234) 3823290\n
+  Email: khcndhkh@hueuni.edu.vn\n
+  Facebook: facebook.com/husc.edu.vn"
 
-  utter_cauhoi48:
-  - text: "Hiện nay, Tổ chức Y tế Thế giới và các tổ chức y tế khác chưa
-có khuyến cáo thuốc điều trị đặc hiệu nào cho viêm phổi do
-Covid-19. Một số thuốc kháng virus đang được nghiên cứu về
-hiệu quả điều trị và tính an toàn cho bệnh nhân Covid-19. "
-  utter_cauhoi49:
-  - text: "Hiện nay, các nhà khoa học Trung Quốc và một số nước trên
-Thế giới đang nghiên cứu hiệu quả điều trị và tính an toàn
-của thuốc điều trị HIV (Antiretroviral - ARV) để điều trị Covid19. Tuy nhiên chưa có công bố chính thức về các kết quả
-nghiên cứu này."
-  utter_cauhoi50:
-  - text: "Do chưa có thuốc điều trị đặc hiệu, nên việc điều trị hỗ trợ
-nâng đỡ thể trạng, sức đề kháng và điều trị triệu chứng là chủ
-yếu. Cần theo dõi và phát hiện sớm, xử lý kịp thời các ca
-bệnh nặng, nguy kịch như suy hô hấp hoặc suy các tạng khác."
-  utter_cauhoi51:
-  - text: "Cách ly y tế là việc tách riêng người mắc bệnh truyền nhiễm,
-người bị nghi ngờ mắc bệnh truyền nhiễm, người mang mầm
-bệnh truyền nhiễm hoặc vật có khả năng mang tác nhân gây
-bệnh truyền nhiễm nhằm hạn chế sự lây truyền bệnh. "
-  utter_cauhoi52:
-  - text: "Theo Luật Phòng, chống bệnh truyền nhiễm năm 2007,
-Covid-19 là bệnh truyền nhiễm đặc biệt nguy hiểm nên bắt
-buộc phải tiến hành các biện pháp cách ly y tế."
-  utter_cauhoi53:
-  - text: "-Cách ly tại nhà, nơi lưu trú: Áp dụng với các bệnh dịch thông
-thường, ít có nguy cơ gây hậu quả nghiêm trọng cho sức
-khỏe cộng đồng;
-- Cách ly tại cơ sở khám bệnh, chữa bệnh (bệnh viện): Áp
-dụng với các bệnh dịch có nguy cơ cao, gây hậu quả nghiêm
-trọng cho sức khỏe cộng đồng;
-- Cách ly nghiêm ngặt: Là hình thức cách ly cao nhất “nội bất
-xuất - ngoại bất nhập”. Nghĩa là người đang ở khu vực cách ly
-nghiêm ngặt thì không được ra khỏi khu vực cách ly cho đến
-khi có quyết định kết thúc cách ly của cơ quan có thẩm
-quyền. Ngược lại, người đang ở ngoài khu vực cũng không
-được vào cho đến khi kết thúc cách ly"
-  utter_cauhoi54:
-  - text: "Cách ly y tế tập trung là khi một nhóm người có nguy cơ mắc
-bệnh (ví dụ : Nhóm người này vừa từ vùng có dịch trở về) thì được tập trung tại một khu vực (có thể là doanh trại quân
-đội, bệnh viện dã chiến...) để cách ly theo quy định. "
-  utter_cauhoi55:
-  - text: "Tự cách ly là việc tự cá nhân bị nghi ngờ mắc bệnh truyền
-nhiễm nhưng chưa có triệu chứng bị bệnh hoặc đã xét
-nghiệm âm tính với mầm bệnh nhưng nghi ngờ chưa thực sự
-hết khả năng lây nhiễm chủ động cách ly bản thân nhằm hạn
-chế sự lây truyền bệnh. "
-  utter_cauhoi56:
-  - text: "Theo qui định hiện nay của Bộ Y tế, người mắc bệnh dịch,
-người bị nghi ngờ mắc bệnh dịch, người mang mầm bệnh
-dịch, người tiếp xúc với tác nhân Covid-19 đều phải được
-cách ly.
-a. Cách ly tại nhà, nơi lưu trú:
-Những người không có các triệu chứng nghi nhiễm Covid-19
-(ho, sốt, khó thở) và có một trong những yếu tố sau đây:
- - Sống trong cùng nhà, nơi lưu trú với trường hợp bệnh xác
-định hoặc trường hợp bệnh nghi ngờ trong thời gian mắc
-bệnh;
-- Cùng làm việc với trường hợp bệnh xác định hoặc trường
-hợp bệnh nghi ngờ trong thời gian mắc bệnh;
-- Cùng nhóm du lịch, đoàn công tác, nhóm vui chơi với
-trường hợp bệnh xác định hoặc trường hợp bệnh nghi ngờ
-trong thời gian mắc bệnh;
-- Có tiếp xúc gần trong vòng 2m với trường hợp bệnh xác
-định hoặc trường hợp bệnh nghi ngờ trong trong thời gian
-mắc bệnh ở bất kỳ tình huống nào. - Ngồi cùng hàng hoặc trước - sau hai hàng ghế trên cùng một
-chuyến xe/toa tàu/máy bay với trường hợp bệnh xác định
-hoặc trường hợp bệnh nghi ngờ;
-- Người nước ngoài nhập cảnh vào Việt Nam từ Trung Quốc
-hoặc từng đi qua Trung Quốc (trừ tỉnh Hồ Bắc) trong vòng 14
-ngày kể từ ngày nhập cảnh.
-b. Cách ly tại cơ sở khám bệnh, chữa bệnh (bệnh viện):
-Những người đã mắc bệnh Covid-19 sẽ được cách ly tại bệnh
-viện theo quy định và theo chỉ định của bác sĩ cho đến khi
-khỏi bệnh và hết thời gian cách ly sẽ được về nhà.
-c. Cách ly nghiêm ngặt:
-Áp dụng với toàn bộ những người đang ở trong một khu vực
-xác định (ví dụ: Một thôn/bản hoặc một xã) hoặc ở một đơn
-vị, cơ quan nào đó mà có quyết định cách ly nghiêm ngặt thì
-đều phải cách ly. Không ai được ra khỏi khu vực cách ly cho
-đến khi có quyết định kết thúc cách ly của cơ quan có thẩm
-quyền, bất kể người đó có hay không có nguy cơ mắc bệnh."
-  utter_cauhoi57:
-  - text: "Người mắc bệnh truyền nhiễm là người bị nhiễm tác nhân
-gây bệnh truyền nhiễm có biểu hiện triệu chứng bệnh. Theo
-qui định hiện nay của Bộ Y tế, người đang bị bệnh phải áp
-dụng cách ly nghiêm ngặt và cách ly cho đến khi điều trị khỏi,
-hết triệu chứng, có xét nghiệm virus tối thiểu 2 lần âm tính.
-Sau khi ra viện, vẫn phải tự cách ly ở nhà đủ trong 14 ngày. "
-  utter_cauhoi58:
-  - text: "Người bị nghi ngờ mắc bệnh truyền nhiễm là người tiếp xúc
-hoặc người có biểu hiện triệu chứng bệnh truyền nhiễm
-nhưng chưa rõ tác nhân gây bệnh. Theo qui định hiện nay của Bộ Y tế, người đang bị sốt, ho,
-khó thở nghi ngờ mắc Covid-19 phải đến ngay cơ sở y tế
-khám, nhập viện và thực hiện cách ly bắt buộc. Thực hiện
-ngay bằng các biện pháp dự phòng lây nhiễm gồm vệ sinh
-đường hô hấp khi ho, hắt hơi (đeo khẩu trang, rửa tay khi
-tiếp xúc với dịch tiết đường hô hấp, hạn chế tiếp xúc với
-người khác, nếu có thì phải cách xa >2m), thực hiện cách ly
-bắt buộc nếu có yếu tố dịch tễ (trở về từ vùng có dịch, tiếp
-xúc hoặc tiếp xúc gần với người bệnh mắc Covid-19...). Tiến
-hành lấy mẫu xét nghiệm Covid-19 để xác định ca bệnh.
-Thời gian cách ly tối thiểu là 14 ngày kể từ ngày phát hiện
-triệu chứng hoặc đến khi có xét nghiệm Covid-19 âm tính."
-  utter_cauhoi59:
-  - text: "Theo qui định hiện nay của Bộ Y tế, người không có triệu
-chứng gì nhưng trước đó có tiếp xúc với người bệnh/nghi
-ngờ mắc bệnh thì chỉ cần áp dụng cách ly tại nhà nhưng phải
-thông báo cho cơ sở y tế biết. Người này nên đeo khẩu trang
-khi tiếp xúc người khác, thường xuyên rửa tay bằng xà phòng
-sau khi có tiếp xúc với dịch tiết của cơ thể. Thông báo
-ngay khi có dấu hiệu ho, sốt, khó thở. Thời gian cách ly cũng
-là 14 ngày."
-  utter_cauhoi60:
-  - text: "Vì những người này hoàn toàn có thể lây nhiễm virus từ vùng
-có dịch nhưng chưa có biểu hiện bệnh. Nhóm người này cần cách ly để đảm bảo an toàn cho cộng đồng. Nếu không cách
-ly nhóm người này mà họ có xuất hiện triệu chứng bệnh thì
-số người phải cách ly tiếp theo là rất lớn và rất khó kiểm soát
-triệt để. "
-  utter_cauhoi61:
-  - text: "Những người được phân công vào làm nhiệm vụ ở nơi có
-dịch (như nhân viên y tế hoặc nhân viên cung ứng lương
-thực, thực phẩm thuốc men cho vùng dịch…) thường đã
-được bảo đảm các phương tiện bảo vệ cá nhân và đã được
-huấn luyện thuần thục các biện pháp phòng chống dịch. Hoạt
-động này được thực hiện theo những quy trình nghiêm ngặt
-và được giám sát chặt chẽ. Tùy theo mức độ công việc của
-người đó, cũng như thao tác kỹ thuật phòng chống dịch mà
-người đó thực hiện…, các cơ quan chức năng sẽ quyết định
-mức độ cách ly của những người này. "
-  utter_cauhoi62:
-  - text: "Nhóm người này đi về từ vùng dịch được cách ly đến ngày
-thứ 10 thì xuất hiện 01 người có sốt thì phải cách ly người
-này và xét nghiệm xác định ca bệnh. Nếu dương tính với
-Covid-19 thì thời gian cách ly những người tiếp xúc gần phải
-tiếp tục thêm 14 ngày kể từ ngày người bệnh kia bị sốt. Nếu
-xét nghiệm âm tính thì chỉ cần cách ly đủ 14 ngày theo kế hoạch. "
-  utter_cauhoi63:
-  - text: "Việc hạn chế đi lại của những người trong vùng có dịch giúp
-làm giảm nguy cơ lây nhiễm cho những người khác, đặc biệt
-là những người không có biểu hiện dấu hiệu lâm sàng (trong
-thời kỳ ủ bệnh) được chứng minh là vẫn có thể lây lan mạnh. "
-  utter_cauhoi64:
-  - text: "Những người sống trong vùng dịch được yêu cầu hạn chế đi
-lại vì như vậy sẽ giảm nguy cơ lây nhiễm trong cộng đồng,
-nguyên nhân do những người không có biểu hiện dấu hiệu
-lâm sàng (trong thời kỳ ủ bệnh) được chứng minh là vẫn có
-thể lây lan cho những người khác thông qua dịch tiết đường
-hô hấp và tiếp xúc thông thường. Việc hạn chế đến khi nào sẽ
-do cơ quan chức năng quyết định trên cơ sở cân nhắc nhiều
-yếu tố trong đó có thời gian ủ của bệnh, thời điểm cuối cùng
-không có ca nhiễm mới và thời điểm bệnh nhân cuối cùng
-khỏi bệnh."
-  utter_cauhoi65:
-  - text: "Không chắc chắn vì sốt là triệu chứng của rất nhiều bệnh, tuy
-nhiên người có sốt thì cần phải tự cách ly, kiểm tra y tế và
-theo dõi. Nếu xuất hiện thêm dấu hiệu hô hấp cần đến cơ sở
-y tế khám, sàng lọc và xét nghiệm Covid-19 để khẳng định có
-bị bệnh hay không."
-  utter_cauhoi66:
-  - text: "Giám sát thân nhiệt chỉ là một biện pháp kiểm soát dịch bước
-đầu để phát hiện người có sốt khi nhập cảnh, khám bệnh...
-Hầu hết các ca bệnh nhiễm Covid-19 đều có sốt nên đây là
-bước sơ bộ để kiểm soát dịch vì đơn giản và dễ thực hiện.
-Tuy nhiên, biện pháp quan trọng vẫn là phát hiện sớm, cách
-ly và phòng ngừa trong lây nhiễm Covid-19."
-  utter_cauhoi67:
-  - text: "Ngoài giám sát thân nhiệt còn phải kê khai các yếu tố dịch tễ
-như đến từ vùng dịch và theo dõi các triệu chứng hô hấp;
-quản lý và cách ly các người đến từ vùng dịch, tiếp xúc người
-bệnh và nghi ngờ mắc bệnh. Thực hiện vệ sinh tay thường
-xuyên với xà phòng, vệ sinh hô hấp, vệ sinh nhà cửa và hạn
-chế tiếp xúc đông người để giảm nguy cơ lây nhiễm. "
-  utter_cauhoi68:
-  - text: "Đo thân nhiệt có thể dùng máy đo thân nhiệt từ xa, đo thân
-nhiệt qua da bằng nhiệt kế điện tử, nhiệt kế điện tử đo trán,
-tai. Tuy nhiên, các cách đo này chỉ để sàng lọc vì chúng có sai
-số nhất định. Các trường hợp nghi ngờ sốt cần được kiểm tra
-lại bằng nhiệt kế y tế để xác định."
-  utter_cauhoi69:
-  - text: "Nếu không có nhiệt kế điện tử thì có thể dùng nhiệt kế thủy
-ngân đo ở nách. Tuy nhiên đo cách này mất nhiều thời gian
-hơn và có nguy cơ lây nhiễm do tiếp xúc. Vì vậy, đảm bảo an
-toàn là cần sát khuẩn cồn sau mỗi lần đo trên một người;
-không đo nhiệt độ ở miệng vì tăng nguy cơ lây nhiễm."
-  utter_cauhoi70:
-  - text: "Trên 37 độ C thì được coi là sốt."
-  utter_cauhoi71:
-  - text: "Khẩu trang khi sử dụng đúng loại và đúng cách có tác dụng
-ngăn ngừa được các tác nhân gây bệnh từ đường hô hấp của
-người mang mềm bệnh phát tán ra không khí và từ không khí
-vào đường hô hấp của người chưa bị nhiễm bệnh. Hiệu quả
-phòng ngừa sẽ cao hơn khi cả người mang mầm bệnh và
-người không mang mầm bệnh cùng sử dụng khẩu trang. "
-  utter_cauhoi72:
-  - text: "Khẩu trang y tế có hai loại là khẩu trang ngoại khoa và khẩu
-trang có hiệu lực lọc cao.
-Khẩu trang ngoại khoa chỉ ngăn ngừa được các giọt bắn có
-kích thước lớn từ 5 micromet trở lên và lây truyền trong
-phạm vi 1m khi ho, hắt hơi, hút đờm dãi...
-Khẩu trang hoạt lực cao (N95, N96, N99...) ngăn ngừa lây
-truyền qua đường hô hấp qua các giọt nhỏ dưới 5 micromet. "
-  utter_cauhoi73:
-  - text: "Khi ở môi trường có nguy cơ tiếp xúc với các các giọt nhỏ
-dưới 5 micromet bắn ra từ đường hô hấp của người mang
-mầm bệnh. Vì vậy, khẩu trang N95 được chỉ định cho nhân
-viên y tế và người nhà khi chăm sóc người bệnh có tiếp xúc
-trực tiếp trong vòng bán kính 2m để ngăn ngừa Covid-19 lây
-truyền qua đường không khí."
-  utter_cauhoi74:
-  - text: "Đeo khẩu trang có tác dụng kép vừa để bảo vệ người chưa bị
-nhiễm và người đã bị nhiễm. Cả hai mục đích này đều quan
-trọng. Hiệu quả phòng ngừa sẽ cao hơn khi cả người mang
-mầm bệnh và người không mang mầm bệnh cùng sử dụng
-khẩu trang, đặc biệt là trong thời kỳ có dịch bệnh đường hô
-hấp như dịch Covid-19."
-  utter_cauhoi75:
-  - text: "Người đã bị nhiễm vẫn cần đeo khẩu trang để bảo vệ tránh bị
-nhiễm thêm các mầm bệnh khác có thể làm cho bệnh nặng
-hơn, đồng thời ngăn phát tán virus ra môi trường bên ngoài
-làm lây cho người tiếp xúc hoặc lây gián tiếp qua các vật dụng
-như bàn tay, tay nắm cửa, dụng cụ sinh hoạt… để bảo vệ
-cộng đồng. Vì thế Luật Phòng, chống bệnh truyền nhiễm năm
-2007 qui định người mang mầm bệnh bắt buộc phải đeo
-khẩu trang. Hiện nay, ở nhiều nơi trên thế giới cũng như ở
-Việt Nam, kể cả không phải lúc có dịch bệnh, nhiều người đã
-có ý thức tự đeo khẩu trang khi đến nơi công cộng nếu họ bị
-ho, sốt, hắt hơi, sổ mũi để hạn chế nguy cơ lây lan bệnh đường hô hấp cho cộng đồng. Đây là hành động thể hiện
-trách nhiệm của các nhân với cộng đồng."
-  utter_cauhoi76:
-  - text: "Khẩu trang y tế 3 lớp có cấu tạo: Lớp ngoài cùng chống thấm,
-lớp giữa là màng lọc, lớp trong là lớp thấm nước. Khi sử
-dụng, không khí đi qua màng lọc và bị giữ lại các hạt nhỏ từ
-90 - 95% các tác nhân gây bệnh. Nếu bị văng bắn giọt lớn vào
-mặt ngoài chúng sẽ bị rơi xuống đất nên nguy cơ hít vào mũi
-miệng người đeo là rất thấp, vì vậy đeo khẩu trang y tế 3 lớp
-đã có hiệu quả ngăn ngừa nhiễm Covid-19."
-  utter_cauhoi77:
-  - text: "Khi đeo đảm bảo tay sạch, luôn đeo mặt chống thấm ra
-ngoài, chỉnh thanh kim loại cho ôm sát mũi và quai đeo chắc
-chắn. Khẩu trang phải chùm kín được mũi, miệng. Không sờ
-tay vào mặt ngoài trong suốt quá trình sử dụng.
-Khi tháo phải vệ sinh tay, dùng tay tháo dây đeo và chỉ cầm
-dây đeo bỏ vào thùng rác, không sờ vào mặt ngoài khẩu
-trang. Thời gian đeo khẩu trang dùng 1 lần khoảng 6 - 8 giờ."
-  utter_cauhoi78:
-  - text: "Khi ở ngoài vùng có dịch không có nghĩa là không có nguy có
-nhiễm mần bệnh vì virus có thể phát tán từ người mang mầm
-bệnh không triệu chứng. Tuy nhiên, nguy cơ ấy khác nhau
-trong từng hoàn cảnh tiếp xúc, sinh hoạt khác nhau. Ví dụ
-như chỉ ở nhà không tiếp xúc với người bên ngoài có nguy cơ
-thấp hơn so với đến dự một sự kiện ở nơi công cộng có nhiều
-người không quen biết. Mọi người nên học cách đánh giá
-nguy cơ để đưa ra quyết định nên đeo khẩu trang hoặc chưa
-cần thiết phải đeo khẩu trang. Có như vậy sẽ tránh được tâm lý hoang mang - nhất là tâm lý đám đông, dẫn đến các tình
-trạng hoảng loạn quá lo lắng vì đã “quên không đeo khẩu
-trang” hoặc đổ xô đi mua khẩu trang để đeo gây ra các hệ lụy
-không tốt cho xã hội về cung ứng khẩu trang y tế. "
-  utter_cauhoi79:
-  - text: "Người dân cần đeo khẩu trang y tế trong các trường hợp: Khi
-có các triệu chứng hô hấp như ho, khó thở; khi tiếp xúc,
-chăm sóc người nhiễm/nghi ngờ nhiễm Covid-19; khi chăm
-sóc hoặc tiếp xúc gần với người có triệu chứng ho, hắt hơi,
-chảy nước mũi, khó thở hoặc được chỉ định tự theo dõi, cách
-ly tại nhà hoặc khi đi khám tại cơ sở y tế. "
-  utter_cauhoi80:
-  - text: "Có. Tuy nhiên hiệu quả bảo vệ thấp hơn khẩu trang y tế và có
-thể khác nhau tùy theo cấu tạo và cách sử dụng (đặc biệt là
-vấn đề tái sử dụng ) của khẩu trang vải. Cần lưu ý thông tin từ
-nhà sản xuất xem khẩu trang vải định sử dụng có đáp ứng
-được các yêu cầu chất lượng của Bộ Y tế hay không? "
-  utter_cauhoi81:
-  - text: "Tay người là bộ phận tiếp xúc với các vật dụng xung quanh
-nhiều nhất (cầm, nắm, sờ…), do đó cũng có nguy cơ cao bị
-nhiễm tác nhân (có thể là vi khuẩn, virus…) từ các vật dụng.
-Khi cầm vật dụng để ăn uống, hay lau mặt, hay các động tác
-tương tự đưa lên mặt dễ làm tăng nguy cơ nhiễm Covid-19
-(qua niêm mạc đường hô hấp, niêm mạc mắt…).
-Rửa tay làm hạn chế, thậm chí loại bỏ các tác nhân trên tay bị
-ô nhiễm nên hạn chế được nguy cơ lây nhiễm mầm bệnh nói
-chung và Covid-19 nói riêng."
-  utter_cauhoi82:
-  - text: "Bất kỳ khi nào có nguy cơ ô nhiễm tay, nhất là sau khi lấy tay
-che mũi, miệng khi ho, hắt hơi; sau khi sờ, cầm, nắm vào các
-vật dụng xung quanh. Ở các vùng nghi ngờ có người mắc hay
-phải tiếp xúc với người nghi ngờ có triệu chứng như ho, hắt
-hơi, sốt… thì càng phải thực hiện biện pháp rửa tay thường
-xuyên hơn. Ngoài ra, nên rửa tay trước và sau khi ăn, sau khi
-đi vệ sinh, sau khi chế biến thực phẩm… Cần tập thói quen rửa tay thường xuyên, kể cả không phải khi đang có dịch
-Covid-19, để phòng chống nhiều loại bệnh lây truyền khác do
-tay bị ô nhiễm. "
-  utter_cauhoi83:
-  - text: "Rửa tay theo quy trình 6 bước của Bộ Y tế"
-  utter_cauhoi84:
-  - text: "Rửa tay bằng nước sạch mới làm giảm tác nhân như vi khuẩn,
-virus... Xà phòng là một hợp chất chứa acid béo este hóa và
-hydroxit natri hoặc hydroxit kali có tính năng tẩy rửa. Nhờ
-chất tẩy rửa có trong thành phần cấu tạo mà xà phòng có
-tính năng làm sạch. Những chất tẩy rửa này có sức căng bề
-mặt lớn, có tác dụng loại bỏ chất bẩn, chất hữu cơ có trên bàn tay. Vì vậy, rửa tay bằng xà phòng làm giảm hơn nữa
-nguy cơ nhiễm Covid-19. "
-  utter_cauhoi85:
-  - text: "Vì đây là thời gian tối thiểu để thực hiện đủ 6 bước rửa tay
-thường quy. Mặt khác, muốn tăng hiệu quả sát trùng của xà
-phòng thì cần thời gian để hóa chất trong xà phòng tiêu diệt
-tác nhân gây bệnh trên tay. "
-  utter_cauhoi86:
-  - text: "Rửa tay khô là biện pháp sát trùng bàn tay bằng dung dịch
-rửa tay chuyên dụng mà không cần rửa lại bằng nước. Các
-dung dịch rửa tay khô thường chứa cồn, sau khi sát trùng tay
-cồn bay hơi nên tay khô trở lại mà không cần lau hoặc sấy."
-  utter_cauhoi87:
-  - text: "Tác nhân sát trùng chính trong dịch sát trùng tay (hay còn gọi
-là dung dịch rửa tay khô) là cồn. Vì vậy, theo tiêu chuẩn của
-Bộ Y tế, dung dịch sát trùng tay phải có nồng độ cồn đạt từ
-60% trở lên. Ngoài ra, cồn là dung dịch dễ bay hơi; để làm
-tăng thời gian tiếp xúc giữa cồn với các vi trùng có trên tay
-cần làm chậm quá trình bay hơi của cồn nên trong các dung
-dịch này thường được bổ sung các chất làm chậm bay hơi
-cồn như glycerin chứ không chỉ pha loãng cồn với nước."
-  utter_cauhoi88:
-  - text: "Không cầm vào mặt trước cũng như mặt sau của khẩu trang
-đã sử dụng. Không đưa bàn tay lên mặt - nhất là dụi mắt,
-ngoáy mũi hay cắn móng tay. Hạn chế chạm tay vào các bề
-mặt có nguy cơ cao hoặc nghi ngờ ô nhiễm mầm bệnh. "
-  utter_cauhoi89:
-  - text: "Môi trường được xem như “ngôi nhà” của các tác nhân gây
-bệnh. Vệ sinh môi trường sạch sẽ làm cho các tác nhân gây
-bệnh nói chung, virus Covid-19 nói riêng không có “nhà” ở do
-đó hạn chế được lây nhiễm. "
-  utter_cauhoi90:
-  - text: "Môi trường cần sạch sẽ thông thoáng. Nếu có ánh nắng mặt
-trời chiếu vào sẽ có tác dụng tiêu diệt virus rất hiệu quả. Khi
-cần thiết, ngoài vệ sinh chung cần phu thuốc khử trùng để
-tiêu diệt virus Covid-19. "
-  utter_cauhoi91:
-  - text: "Nhà cửa (nhà ở, văn phòng…) là môi trường nơi con người
-sinh sống và làm việc và ở đó cũng có nguy cơ ô nhiễm Covid19. Do Covid-19 có trong không khí và đặc biệt là các bề mặt
-nên cần vệ sinh nhà cửa để giảm bớt nguy cơ ô nhiễm không
-khí và ô nhiễm bề mặt. Nên để nhà thoáng khí; hạn chế hoặc
-không sử dụng điều hòa vì làm không khú tù đọng trong nhà;
-nếu có điều kiện nên mở cửa để cho không khí lưu thông.
-Quét dọn, lau chùi nhà cửa thường xuyên. Đặc biệt, khi có
-ánh nắng mặt trời nên mở cửa để thông khí và cho ánh nắng
-mặt trời chiếu vào trong nhà có tác dụng tiêu diệt virus. "
-  utter_cauhoi92:
-  - text: "Những đồ vật cần vệ sinh thường xuyên để hạn chế lây
-nhiễm Covid-19 là những đồ vật có nguy cơ ô nhiễm cao như
-các đồ vật nhiều người cùng sử dụng: Tay nắm cửa, nút bấm thang máy, tay vịn cầu thang, nút bấm điện thoại dùng
-chung, mặt bàn dùng chung… thậm chí cả tiền mặt luân
-chuyển giữa người này với người khác; các đồ vật của
-cá nhân nhưng tần suất tiếp xúc cao với bàn tay hay
-vùng mặt như điện thoại di dộng, bàn phím máy tính, mặt
-bàn làm việc… "
-  utter_cauhoi93:
-  - text: "Các đồ vật cần thường xuyên được lau rửa bằng các dung
-dịch sát trùng như xà phòng, dung dịch chứa cồn hay
-cloramin.
-Với môi trường ngoài, các biện pháp vệ sinh sạch sẽ, thoát
-nước tốt, phát quang bụi rậm…; nếu nghi ngờ ô nhiễm thì cần
-phun khử trùng bằng dung dịch cloramin 0,2 % Clo hoạt tính.
-Nếu ở nơi đã có bệnh nhân nghi mắc Covid-19 thì phun dung
-dịch chứa 0,5% Clo hoạt tính. "
-  utter_cauhoi94:
-  - text: "Các chất tẩy rửa chứa chất oxy hóa hay cồn mới có tác dụng
-tiêu diệt mầm bệnh này. Chất oxy hóa hay được dùng nhất
-hiện nay là cloramin."
-  utter_cauhoi95:
-  - text: "Để phòng lây nhiễm Covid-19, cần vệ sinh cá nhân tốt. Đây là
-biện pháp dự phòng không đặc hiệu. Vệ sinh cá nhân gồm:
-- Vệ sinh bàn tay: Luôn giữ bàn tay sạch sẽ; rửa tay thường
-xuyên (như các câu trên).
-- Vệ sinh thân thể: Tắm rửa hàng ngày. Dù vào mùa đông, vẫn
-cần tắm rửa hàng ngày để loại bỏ các tác nhân gây bệnh có
-thể bám trên da.
-- Vệ sinh quần áo: Quần áo là nơi tác nhân có thể bám vào
-(như nước bọt), vì vậy cần thay quần áo thường xuyên và giặt
-bằng xà phòng.
-- Vệ sinh tóc: Tóc dài, tóc rối… là nơi có thể chứa mầm bệnh
-(qua nước bọt người bệnh). Vì vậy, nên cắt tóc ngắn, với nữ
-giới nên cuốn hoặc búi tóc gọn gàng, gội đầu hàng ngày để
-hạn chế tối đa mầm bệnh có thể bám trên tóc.
-- Vệ sinh móng: Không để móng tay, móng chân dài. Móng
-tay, móng chân là nơi có thể chứa mầm bệnh Covid-19, do đó
-luôn cắt ngắn móng tay, chân và vệ sinh tay sạch sẽ để hạn
-chế mầm bệnh."
-  utter_cauhoi96:
-  - text: "Niêm mạc mũi, họng là cửa ngõ tấn công của virus Covid-19,
-do đó cần bảo vệ, tránh làm tổn thương các tế bào niêm mạc
-mũi, họng vì các nguyên nhân khác sẽ làm tăng nguy cơ
-nhiễm Covid-19. Các biện pháp vệ sinh mũi, vệ sinh răng
-miệng chung mặc dù không đặc hiệu nhưng cũng nên áp
-dụng để giữ cho mũi, họng trong trạng thái khỏe mạnh nhất,
-tránh viêm nhiễm ở khu vực này, không chỉ hạn chế lây
-nhiễm Covid-19 mà còn hạn chế lây nhiễm nhiều loại mầm
-bệnh khác."
-  utter_cauhoi97:
-  - text: "Giữa ấm cơ thể giúp cho sức đề kháng chung của cơ thể được
-tốt hơn. Một số cơ quan khi bị lạnh có thể dẫn đến bị viêm
-nhiễm như viêm họng, viêm phế quản, viêm phổi… sẽ làm
-tăng nguy cơ nhiễm Covid-19; đồng thời nếu bị nhiễm thêm
-Covid-19 sẽ có nguy cơ làm bệnh nặng hơn. "
-  utter_cauhoi98:
-  - text: "Không có chế độ ăn đặc hiệu để tăng sức đề kháng riêng với
-Covid-19.
-Nên duy trì chế độ ăn hợp lý, đủ chất đinh dưỡng, có thể bổ
-sung vitamin để tăng sức đề kháng chung. Do chưa loại trừ
-khả năng lây qua thức ăn nên thực hiện “ăn chín uống sôi”.
-Tuyệt đối không ăn đồ ăn sống như tiết canh, thịt sống, đặc
-biệt là tiết canh, thịt sống của động vật hoang dã."
-  utter_cauhoi99:
-  - text: "Trong dân gian, sử dụng tỏi làm giảm triệu chứng hoặc làm
-nhẹ các bệnh cảm cúm thông thường. Tuy chưa chứng minh
-được tỏi có tác dụng chống Covid-19 nhưng cũng không có
-chống chỉ định sử dụng tỏi để tăng sức đề kháng chung"
-  utter_cauhoi100:
-  - text: "Công tác tâm lý cần được chuẩn bị cả cho người đã bị nhiễm
-Covid-19 cũng như người chưa nhiễm; tâm lý cả cho cá nhân
-và cho cộng đồng.
-Thực tế diễn biến dịch tại Trung Quốc cho thấy tỷ lệ tử vong
-Covid-19 thấp hơn so với SARS và MERS; các trường hợp bị
-bệnh bên ngoài Trung Quốc cũng hiếm có trường hợp tử
-vong; những người tử vong đa số là người bị nhiễm ngay từ
-Trung Quốc trước khi đi ra nước ngoài. Vì vậy, bệnh Covid-19
-không nguy hiểm bằng SARS và MERS. Một trong các nguyên
-nhân khiến tỷ lệ tử vong ở Trung Quốc cao là do công tác tâm
-lý. Hiện nay, Trung Quốc đã thực hiện các biện pháp tâm lý
-cho cả cộng đồng bệnh nhân trong các cơ sở điều trị, cơ sở
-cách ly và đã đem lại hiệu quả rất tích cực. Vì vậy, mỗi cá
-nhân không nên chủ quan nhưng cũng không nên quá lo lắng
-về dịch bệnh. Trên thực tế, các biện pháp phòng chống dịch Covid-19 của
-nước ta rất hiệu quả và đã được WHO ghi nhận. Với tinh thần
-“Chống dịch như chống giặc”, các biện pháp phòng chống
-dịch đã và đang được triển khai quyết liệt và đồng bộ từ
-trung ương đến các bộ ngành, địa phương trong cả nước.
-Chắc chắn chúng ta sớm kiểm soát được dịch Covid-19 và có
-thể Việt Nam - lần thứ hai sau dịch SARS - sẽ lại được thế giới
-biết đến chiến thắng của chúng ta trước dịch bệnh đặc biệt
-nguy hiểm. Trên tinh thần đó, cộng đồng chúng ta tự tin,
-không hoang mang để tránh xảy ra các khủng hoảng xã hội vì
-dịch bệnh.
-Hy vọng tài liệu này là một cẩm nang kiến thức thường thức
-để giúp mỗi người nâng cao ý thức để bảo vệ mình và trách
-nhiệm bảo vệ cộng đồng, cùng nhau chúng ta vượt qua đại
-dịch Covid-19."
-actions:
-- action_vaccine_week
+
+  utter_majors:
+  - text: " Các khoa ngành trường đang đào tạo:\n
+     - Báo chí\n
+     - Công nghệ kỹ thuật điện tử - Viễn thông\n
+     - Công nghệ kỹ thuật hóa học\n
+     - Công nghệ sinh học\n
+     - Công nghệ thông tin\n
+     - Công tác xã hội\n
+     - Đông phương học\n
+     - Hán - Nôm\n
+     - Hoá học\n
+     - Khoa học môi trường\n
+     - Kiến trúc\n
+     - Kỹ thuật địa chất\n
+     - Kỹ thuật môi trường\n
+     - Kỹ thuật phần mềm (Cơ chế đặc thù)\n
+     - Kỹ thuật sinh học\n
+     - Lịch sử\n
+     - Quản lý nhà nước\n
+     - Quản lý tài nguyên và môi trường\n
+     - Quản trị và phân tích dữ liệu\n
+     - Toán ứng dụng\n
+     - Triết học\n
+     - Văn học\n
+     - Xã hội học"
+
+
+  utter_tuition:
+  - text: "
+     Khoa học Xã hội: 320.000đ/tín chỉ. Tổng 9.600.000đ/năm\n
+     Khoa học tự nhiên và Công nghệ:385.000đ/tín chỉ. Tổng khoảng  11.550.000đ/năm\n
+     "
+
+  utter_reg:
+  - text: "Bạn muốn hỏi về việc đăng ký xét tuyển theo phương thức nào? Phương thức riêng, phương thức học bạ hay phương thức xét điểm tốt nghiệp?
+           https://i.imgur.com/qNEAziK.jpg\n
+           https://i.imgur.com/GjQUK2q.jpg\n
+           https://i.imgur.com/3QrwOd9.jpg\n"
+    image: "https://i.imgur.com/eMAsNZf.jpg"
+
+
+
+
+
+  utter_dieukientheophuongthucrieng:
+  - text: "
+  Xét tuyển theo phương thức riêng \n
+  Trường Đại học Khoa học ưu tiên xét tuyển đối với thí sinh thỏa mãn một trong các tiêu chí sau:\n
+- Đoạt giải nhất, nhì, ba trong các kỳ thi học sinh giỏi cấp tỉnh, thành phố trực thuộc trung ương trở lên các năm 2021, 2022 (môn đoạt giải phải thuộc tổ hợp môn xét tuyển);\n
+- Học sinh của các trường THPT chuyên trên cả nước có điểm học bạ theo tổ hợp xét tuyển đạt từ 21.0 điểm trở lên.\n
+- Học sinh của các trường THPT có học lực năm học lớp 12 đạt danh hiệu học sinh giỏi trở lên;\n
+- Có chứng chỉ Tiếng Anh (còn thời hạn đến ngày nộp hồ sơ đăng ký xét tuyển) IELTS ≥ 5.0 hoặc TOEFL iBT ≥ 60 hoặc TOEFL ITP ≥ 500 đối với những ngành."
+  utter_cachxettuyentheophuongthucrieng:
+  - text: " 
+- Hồ sơ đăng ký xét tuyển: Phiếu ĐKXT theo mẫu (thí sinh có thể tải tại địa chỉ: https://bit.ly/MAUDONXETTUYENRIENG); bản sao Giấy chứng nhận đạt giải, học bạ, chứng chỉ, … theo quy định của từng trường.\n
+- Lệ phí xét tuyển: Thí sinh được miễn lệ phí xét tuyển.\n
+- Thời gian nộp hồ sơ ĐKXT: Từ ngày 22/4/2022 đến 17h00 ngày 25/6/2022.\n
+- Địa chỉ nộp hồ sơ ĐKXT: Thí sinh chuyển phát nhanh (EMS) qua đường Bưu điện theo địa chỉ: Ban Đào tạo và Công tác sinh viên Đại học Huế, số 01 Điện Biên Phủ, thành phố Huế, tỉnh Thừa Thiên Huế (thời gian nộp qua EMS được tính theo dấu bưu điện).\n
+  CÔNG BỐ KẾT QUẢ XÉT TUYỂN: \n
+  Dự kiến trước 17h00 ngày 30/6/2022.
+     "
+  utter_dieukienxettuyendiemthi:
+  - text: "\nĐiểm các môn trong tổ hợp môn xét tuyển là điểm thi của các môn đó trong kỳ thi tốt nghiệp THPT năm 2021. Điều kiện xét tuyển là tổng điểm 3 môn (chưa nhân hệ số, đã cộng điểm ưu tiên) tối thiểu bằng mức điểm nhận hồ sơ ĐKXT. \n
+     - Điểm chuẩn các ngành:  http://tuyensinh.husc.edu.vn/wp-content/uploads/2021/09/1.jpg\n
+     - Phiếu đăng ký: http://tuyensinh.husc.edu.vn/wp-content/uploads/2021/09/Phieu_DKXT_BSD1_THPT-web.jpg\n"
+  utter_cachxettuyendiemthi:
+  - text: "
+      Với trực tiếp:
+        Hồ sơ đăng ký xét tuyển gồm có:
+        -	Phiếu ĐKXT theo mẫu đính kèm; \n
+        -	Bản chính Giấy chứng nhận kết quả thi tốt nghiệp THPT năm 2021;\n
+        -	Bản chính Giấy chứng nhận kết quả thi năng khiếu (đối với thí sinh ĐKXT vào các ngành năng khiếu);\n
+        -	Lệ phí xét tuyển: Thí sinh được miễn lệ phí xét tuyển.\n
+      Với trực tuyến:
+        - Thí sinh ĐKXT xét tuyển trực tuyến tại địa chỉ: http://dkxt.hueuni.edu.vn. Thí sinh trúng tuyển sẽ nộp bản chính các hồ sơ liên quan (ở mục 1) khi làm thủ tục nhập học tại trường\n
+        - Thời gian: Từ ngày 23/9/2021 đến 17g00 ngày 05/10/2021\n
+        - Địa điểm (đối với hình thức ĐKXT trực tiếp):\n
+        Thí sinh nộp hồ sơ ĐKXT bằng cách gửi chuyển phát nhanh (EMS) qua đường bưu điện về Ban Đào tạo và Công tác sinh viên Đại học Huế, số 01 đường Điện Biên Phủ, phường Vĩnh Ninh, thành phố Huế, tỉnh Thừa Thiên Huế.\n
+        - Công bố kết quả: Dự kiến trước 17h00 ngày 07 tháng 10 năm 2021.\n"
+  utter_dieukienxethocba:
+  - text: "Sử dụng kết quả học tập các môn trong tổ hợp môn xét tuyển ở cấp THPT của 02 học kỳ năm học lớp 11 và học kỳ I năm học lớp 12 để xét tuyển. Điểm các môn trong tổ hợp môn xét tuyển là điểm trung bình chung (làm tròn đến 1 chữ số thập phân) mỗi môn học của 02 học kỳ năm học lớp 11 và học kỳ I năm học lớp 12, điểm xét tuyển là tổng điểm các môn trong tổ hợp môn xét tuyển cộng với điểm ưu tiên theo khu vực và đối tượng nếu có (làm tròn đến 2 chữ số thập phân). Điều kiện xét tuyển là tổng điểm các môn trong tổ hợp môn xét tuyển phải ≥ 18,0 (chưa nhân hệ số).\n"
+  utter_cachxettuyenhocba:
+  - text: "
+- Thí sinh có thể truy cập địa chỉ http://dkxt.hueuni.edu.vn và làm theo hướng dẫn ở trang chủ để thực hiện ĐKXT trực tuyến.\n
+- Lệ phí xét tuyển: Thí sinh được miễn lệ phí xét tuyển.\n
+- Thời gian ĐKXT trực tuyến: Từ ngày 22/4/2022 đến 17h00 ngày 25/6/2022.\n
+  CÔNG BỐ KẾT QUẢ XÉT TUYỂN: \n
+  Dự kiến trước 17h00 ngày 30/6/2022."
+  utter_reg_ask:
+  - text: " Bạn hỏi về điều kiện xét tuyển hay phương thức xét tuyển?\n"
+
+  utter_benchmark:
+  - text: ""
+    image: "https://i.imgur.com/7BjgJ2G.jpg"
+
+
+
+  utter_iamabot:
+  - text: "- mình là auto chatbot, mình có khả năng trả lời các câu hỏi về tuyển sinh của trường đại học khoa học"
+  utter_job:
+    - text: "Bạn muốn hỏi công việc cho ngành đào tạo nào?"
+
+  utter_job_IT:
+    - text: "\n
+        - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+        - Chuyên viên gia công, phát triển và kiểm thử phần mềm, thiết kế Website tại các công ty phần mềm trong và ngoài nước;\n
+        - Chuyên viên tư vấn và thiết kế giải pháp mạng, giải pháp công nghệ thông tin, vận hành và phát triển các hệ thống thông tin cho các cơ quan và doanh nghiệp;\n
+        - Chuyên viên phân tích, thiết kế, cài đặt, quản trị, bảo trì các phần mềm máy tính trong các tổ chức, doanh nghiệp;\n
+        - Giảng dạy về ngành Công nghệ thông tin tại các trường đại học, cao đẳng, trung cấp  chuyên nghiệp, dạy nghề và các trường phổ thông.\n
+        "
+  utter_job_jour:
+    - text: "\n
+        -	Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+        -	Phóng viên, biên tập viên, kỹ thuật viên tại: đài phát thanh, đài truyền hình, toà soạn báo, các cơ quan thông tấn báo chí ở Trung ương và địa phương;\n
+        -	Cán bộ quản lý hoạt động báo chí, truyền thông tại các tỉnh, thành phố;\n
+        -	Chuyên viên truyền thông, quan hệ công chúng tại các công ty, doanh nghiệp, cơ quan hành chính sự nghiệp;\n
+        -	Chuyên viên phụ trách các trang thông tin điện tử của các cơ quan ban ngành ở Trung ương và địa phương;\n
+        -	Giảng dạy tại các trường đào tạo báo chí, truyền thông.\n
+        "
+  utter_job_OS:
+    - text: "\n
+        -	Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+        -	Làm việc tại các cơ quan ban ngành Nhà nước từ Trung ương đến địa phương về lịch sử, văn hóa, xã hội, ngoại giao, an ninh – quốc phòng; các cơ sở ngoại giao, học viện, trường chính trị, cơ quan tuyên giáo, công ty nước ngoài, công ty du lịch, chương trình, dự án, tổ chức phi chính phủ;\n
+        -	Chuyên viên tổng hợp văn phòng, nhân sự, kinh doanh, hướng dẫn viên du lịch… cho các tổ chức tư nhân, công ty, doanh nghiệp trong các lĩnh vực du lịch, lữ hành, văn hóa, xã hội, đối ngoại;\n
+        -	Làm việc tại các nước trong khu vực châu Á (Nhật Bản, Hàn Quốc, Trung Quốc, Thái Lan, Malaysia, Singapore…) theo các chương trình, dự án hợp tác của Chính phủ hoặc các công ty, cơ quan nghiên cứu, ngoại giao, du lịch… ở nước ngoài.\n
+        "
+  utter_job_SE:
+  - text: "\n
+       - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:
+       - Làm việc trong các công ty sản xuất, gia công phần mềm trong nước cũng như nước ngoài; các công ty tư vấn về đề xuất giải pháp, xây dựng và bảo trì các hệ thống thông tin;\n
+       - Chuyên viên phân tích, thiết kế, cài đặt, quản trị, bảo trì các phần mềm máy tính trong các tổ chức, doanh nghiệp;\n
+       - Cán bộ quản lý, chuyên viên phụ trách mảng ứng dụng công nghệ thông tin của các cơ quan hành chính sự nghiệp, ngân hàng, viễn thông, hàng không, xây dựng,…;\n
+       - Giảng dạy về ngành Công nghệ thông tin tại các trường đại học, cao đẳng và  trung cấp chuyên nghiệp.\n"
+
+  utter_job_Biotech:
+  - text: "\n
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+      - Cán bộ kỹ thuật, cán bộ kiểm nghiệm ở Bệnh viện, Sở Công an, Sở Y tế, Xí nghiệp dược phẩm, Trung tâm phân tích, cơ sở nuôi trồng thủy sản, khu chế xuất, các cơ sở sản xuất nuôi cấy mô, cơ sở chế biến thực phẩm;\n
+      - Cán bộ kỹ thuật tại cácTrung tâm chuyển giao công nghệ và phát triển sản xuất: nuôi cấy mô, giống cây trồng và vật nuôi, nuôi trồng và chế biến các loại nấm, chế biến thực phẩm, công nghệ bảo quản sản phẩm sau thu hoạch, dược phẩm (sản xuất, chế biến thuốc, vacxin), xử lý môi trường;\n
+      - Giảng dạy và nghiên cứu tại các viện nghiên cứu, trường đại học, cao đẳng và trung cấp chuyên nghiệp.\n
+      "
+  utter_job_Bioeng:
+  - text: "\n
+      - Kỹ sư Kỹ thuật sinh học có thể làm việc trong các lĩnh vực và vị trí sau:\n
+      - Chuyên viên tại các cơ quan quản lý Nhà nước, quản lý chất lượng trong lĩnh vực sinh học, công nghệ sinh học, thực phẩm;\n
+      - Cán bộ quản lý, kỹ thuật, kiểm tra chất lượng sản phẩm tại các doanh nghiệp sản xuất và các tập đoàn đa quốc gia về lĩnh vực nước giải khát, vacxin, dược phẩm, thực phẩm chức năng, các sản phẩm có hoạt tính sinh học;\n
+      - Cán bộ kỹ thuật, quản lý chất lượng tại các đơn vị tư vấn, thiết kế, lắp đặt và vận hành các thiết bị trong lĩnh vực công nghệ sinh học;\n
+      - Chuyên viên lập và quản lý các dự án đầu tư phát triển nông thôn;\n
+      - Giảng dạy, nghiên cứu tại các viện nghiên cứu, trường đại học, cao đẳng và trung cấp chuyên nghiệp.\n
+      "
+  utter_job_Arc:
+  - text: "\n
+      - Sinh viên tốt nghiệp ngành Kiến trúc được cấp bằng Kiến trúc sư, có thể làm việc trong các lĩnh vực và vị trí sau:\n
+      - Tự khởi nghiệp với vai trò chủ đầu tư, nhà thiết kế, thi công kiến trúc – quy hoạch – nội thất – vật liệu;\n
+      - Cán bộ trong các tổ chức chính trị – xã hội – nghề nghiệp, các doanh nghiệp Nhà nước, tư nhân và nước ngoài (đặc biệt tại Nhật Bản và Hàn Quốc);\n
+      - Kiến trúc sư tư vấn, thiết kế công trình kiến trúc dân dụng và công nghiệp, thiết kế nội thất, thiết kế quy hoạch, thiết kế bảo tồn và cảnh quan, giám sát thi công các công trình kiến trúc;\n
+      - Chuyên viên tư vấn, điều phối, xây dựng, thẩm định và đánh giá dự án;\n
+      - Giảng dạy và nghiên cứu tại các cơ sở giáo dục đào tạo và các Viện, trung tâm nghiên cứu, các trường đại học liên quan đến chuyên ngành Kiến trúc – Quy hoạch – Nội thất – xây dựng.\n
+      "
+
+  utter_job_Chemi:
+  - text: "\n
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+      - Chuyên viên nghiên cứu, tư vấn tại các viện, trung tâm nghiên cứu, các cơ quan quản lý liên quan đến hóa học, hóa học môi trường…;\n
+      - Chuyên viên quản lý, kỹ thuật, kiểm tra chất lượng sản phẩm tại các công ty, nhà máy sản xuất liên quan đến lĩnh vực hóa học (sản xuất vật liệu xây dựng, chế biến thực phẩm, mỹ phẩm, dược phẩm, bảo vệ và kiểm soát chất lượng môi trường…);\n
+      - Giảng viên các trường đại học, cao đẳng, trung học phổ thông và trung học chuyên nghiệp.\n
+
+      "
+  utter_job_Philo:
+  - text: "\n
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+      - Chuyên viên tại các cơ quan Nhà nước, trong hệ thống chính trị, chính quyền các cấp, các tổ chức Đảng, Đoàn thể như: Văn phòng Chính phủ, Mặt trận Tổ quốc, Công đoàn, Đoàn Thanh niên, Hội Liên hiệp Phụ nữ, Hội Nông dân…;\n
+      - Làm công tác tham mưu trong các cơ quan, tổ chức chính trị – xã hội, các tổ chức kinh tế Nhà nước và tư nhân;\n
+      - Nghiên cứu viên ở các cơ quan lý luận chính trị, các Viện nghiên cứu thuộc lĩnh vực xã hội;\n
+      - Chuyên viên phân tích, bình luận, viết bài về chính trị, thời sự ở các báo, đài Trung ương và địa phương;\n
+      - Giảng dạy tại các trường đại học, cao đẳng và trung cấp chuyên nghiệp.\n
+
+      "
+  utter_job_SW:
+  - text: "\n
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+      - Chuyên viên tại các cơ quan Nhà nước, các trung tâm và tổ chức tư nhân trong các lĩnh vực về lao động, việc làm, tiền lương, tổ chức nhân sự, thương binh – xã hội, bà mẹ – trẻ em, hoạt động xã hội – phong trào, tổ chức sự kiện xã hội;\n
+      - Chuyên viên các chương trình dự án, tổ chức phi chính phủ (NGO) quốc tế và địa phương, tham gia nghiên cứu và phát triển chính sách hỗ trợ xã hội ở các cấp;\n
+      - Làm việc độc lập với vai trò như là một cán bộ hoạch định chính sách, nhân viên xã hội, một kiểm huấn viên, một chuyên gia tâm lý, hay một nhà nghiên cứu…;\n
+      - Giảng dạy và nghiên cứu khoa học trong các viện nghiên cứu, các trường đại học, cao đẳng và trung cấp chuyên nghiệp.\n
+
+      "
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+

@@ -36,21 +36,22 @@ pipeline:
 #   - name: FallbackClassifier
 #     threshold: 0.3
 #     ambiguity_threshold: 0.1
-   # - name: FallbackClassifier
-   #   threshold: 0.3
-   #   ambiguity_threshold: 0.1
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
 #  - name: "MemoizationPolicity"
 #  - name: "KerasPolicy"
  # - name: "MappingPolicy"
-  - name: "TEDPolicy"
+  - name: TEDPolicy
     max_history: 5
-    epochs: 200
+    epochs: 100
+    constrain_similarities: true
   - name: RulePolicy
-  - name: "RulePolicy"
-    nlu_threshold: 0.6
-    core_threshold: 0.3
-    fallback_action_name: 'utter_fallback'
-# This key can be left empty. Policies will then be provided from a default configuration during training.
+    core_fallback_threshold: 0.4
+    core_fallback_action_name: "action_default_fallback"
+    enable_fallback_prediction: True
+# - name: "FallbackPolicy"
+#    nlu_threshold: 0.6
+#    core_threshold: 0.3
+ #   fallback_action_name: 'utter_fallback'
+# This key can be left empty. Policies will then be provided   from a default configuration during training.
