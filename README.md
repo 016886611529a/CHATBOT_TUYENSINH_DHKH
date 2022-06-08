@@ -1,9 +1,9 @@
-##Chatbot hỗ trợ tuyển sinh Đại học Khoa học
+## Chatbot hỗ trợ tuyển sinh Đại học Khoa học
 
 ## Mở đầu
 - Trong phần này tôi sẽ mô tả từng bước cài đặt môi trường cho  mã nguồn mở Rasa.
 
-### Những phần cần phải cài đặt
+###= Những phần cần phải cài đặt
 
 ```
 python
