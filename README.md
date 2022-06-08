@@ -1,4 +1,4 @@
-#chatbot hỗ trợ tuyển sinh Đại học Khoa học
+#Chatbot hỗ trợ tuyển sinh Đại học Khoa học
 
 ## Mở đầu
 - Trong phần này tôi sẽ mô tả từng bước cài đặt môi trường cho  mã nguồn mở Rasa.
@@ -12,6 +12,7 @@ rasa
 underthesea
 ngrok
 django
+....
 ```
 
 ### Cài đặt thiết lập 
@@ -25,21 +26,27 @@ django
 
 ## Cách chạy project này
 - Bạn phải cài đặt `git` trước khi thực hiện các bước bên dưới:
-1. git clone  
-2. Di chuyển đến thư mục 
+1. `git clone https://github.com/016886611529a/CHATBOT_TUYENSINH_DHKH.git`
+2. Di chuyển đến thư mục chatbot `cd chatbot`
 3. `pip install -r requirements.txt`
 4. `rasa run actions`
 5. `rasa shell`
 
 
-## Kết nối 
-- Cài đặt các bước deploy để test với FB (Chưa custom)
+## Kết nối FB 
+- Lưu ý: phải tạo app trong facebook deverlopers trước khi kết nối
+1. chạy ngrok http 5005 
+2. chạy rasa run --endpoints endpoints.yml --credentials credentials.yml
+3. chỉnh url gọi lại trong facebook deverlopers
+
+
+## Chạy chương trình trên web
+- chạy `rasa run -m model --enable-api --cors "*` trong Terminal
 
 ## Phản hồi
-- Mọi ý kiến phản hồi hay cài chưa được vui lòng liên hệ (`nguyenngoclongpdl13@gmail.com`)
-
+- Mọi ý kiến phản hồi vui lòng liên hệ (`nguyenngoclongpdl13@gmail.com`hoặc `0772061082`)
 ## Phiên bản
-- v1.0.1
+- v1.0.0
 
 ## Tác giả
 
