@@ -3,7 +3,7 @@
 ## Mở đầu
 - Trong phần này tôi sẽ mô tả từng bước cài đặt môi trường cho  mã nguồn mở Rasa.
 
-###= Những phần cần phải cài đặt
+### Những phần cần phải cài đặt
 
 ```
 python
