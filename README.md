@@ -35,9 +35,9 @@ django
 
 ## Kết nối FB 
 - Lưu ý: phải tạo app trong facebook deverlopers trước khi kết nối
-1. chạy ngrok http 5005 
-2. chạy rasa run --endpoints endpoints.yml --credentials credentials.yml
-3. chỉnh url gọi lại trong facebook deverlopers
+1. chạy `ngrok http 5005`
+2. chạy `rasa run --endpoints endpoints.yml --credentials credentials.yml`
+3. Copy https trong ngrok và chỉnh url gọi lại trong facebook deverlopers
 
 
 ## Chạy chương trình trên web
