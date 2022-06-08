@@ -3,7 +3,7 @@
 ## Mở đầu
 - Trong phần này tôi sẽ mô tả từng bước cài đặt môi trường cho  mã nguồn mở Rasa.
 
-### Những phần cần phải cài đặt
+## Những phần cần phải cài đặt
 
 ```
 python
@@ -15,7 +15,7 @@ django
 ....
 ```
 
-### Cài đặt thiết lập 
+## Cài đặt thiết lập 
 1. Cài đặt `python` phiên bản >= 3.7 (https://www.python.org/downloads/release/python-370/)
 2. Cài đặt `pycharm` (https://www.jetbrains.com/pycharm/download/#section=windows)
 3. Cài đặt `rasa` bằng  `pip install rasa` trong Terminal
