@@ -46,4 +46,4 @@ class DbQueryingMethods:
             for result in records:
                 Nganh = result[1]
                 ToHopMon = result[2]
-                return f"Ngành  {(result[1])} năm 2021 xét tuyển các tổ hợp như sau: {result[2]} ."
+                return f"Ngành {(result[1])} năm 2021 xét tuyển các tổ hợp như sau: {result[2]} ."

@@ -1,6 +1,33 @@
 version: "2.0"
 stories:
-
+- story: khangnangcuabot
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+- story: botchaohoi
+  steps:
+  - intent: chaohoi
+  - action: utter_chaohoi
+- story: bottambiet
+  steps:
+  - intent: tambiet
+  - action: utter_tambiet
+- story: botchaohoithongminh
+  steps:
+  - intent: chaohoithongminh
+  - action: utter_chaohoithongminh
+- story: tracuu
+  steps:
+  - intent: tracuu
+  - action: utter_tracuu
+- story: kytucxa
+  steps:
+  - intent: kytucxa
+  - action: utter_kytucxa
+- story: hocbong
+  steps:
+  - intent: hocbong
+  - action: utter_hocbong
 - story: test
   steps:
   - intent: chaohoi1
@@ -9,63 +36,65 @@ stories:
   - action: utter_thongtinmanganhnam2021
   - action: utter_thongtintohopmonnam2021
   - intent: thongtintoanbo
-  - action: action_templatetong
+  - action: utter_toanbo
+#  - action: action_templatetong
   - intent: chon1
-  - action: action_template
+  - action: utter_diem
+#  - action: action_template
   - intent: chon2
-  - action: action_template2
+  - action: utter_manganh
+#  - action: action_template2
   - intent: chon3
-  - action: action_template3
+  - action: utter_tohopmon
+#  - action: action_template3
 - story: test1
   steps:
   - intent: chaohoi2
   - action: utter_thongtintuyensinhnam2021_local
   - intent: thongtintoanbo
-  - action: action_templatetong
+  - action: utter_toanbo
+#  - action: action_templatetong
   - intent: chon1
-  - action: action_template
+  - action: utter_diem
+#  - action: action_template
   - intent: chon2
-  - action: action_template2
+  - action: utter_manganh
+#  - action: action_template2
   - intent: chon3
-  - action: action_template3
+  - action: utter_tohopmon
+#  - action: action_template3
 
 - story: diem2021
   steps:
   - intent: diemchuan2021
     entities:
     - diem: "Điểm ngành"
-    - major : "han nom"
+    - major : "Báo chí"
   - slot_was_set:
-    - major: "han nom"
+    - major: "Báo chí"
   - action: action_diemchuan2021
 - story: manganh2021
   steps:
   - intent: Manganh
     entities:
       - code: "Mã ngành"
-      - major: "han nom"
+      - major: "Báo chí"
   - slot_was_set:
-      - major: "han nom"
+      - major: "Báo chí"
   - action: action_Manganh
 - story: tohopmon2021
   steps:
   - intent: tohopmon
     entities:
       - mon: "Tổ hợp môn xét tuyển ngành"
-      - major: "han nom"
+      - major: "Báo chí"
   - slot_was_set:
-      - major: "han nom"
+      - major: "Báo chí"
   - action: action_tohopmon
 
-- story: bot chao lai khi nguoi dung chao bot
-  steps:
-  - intent: chaohoithongminh
-  - action: utter_chaohoithongminh
 
 - story: hỏi thông tin trường
   steps:
-  - intent: chaohoi
-  - action: utter_chaohoi
   - intent: infomation
   - action: utter_info1
   - action: utter_info2
@@ -73,154 +102,218 @@ stories:
 
 - story: hỏi ngành đào tạo
   steps:
-  - intent: chaohoi
-  - action: utter_chaohoi
   - intent: majors
   - action: utter_majors
 
 - story: hỏi học phí
   steps:
-  - intent: chaohoi
-  - action: utter_chaohoi
-  - intent: tuition
-  - action: utter_tuition
+  - intent: hocphi
+  - action: utter_hocphi
 
 - story: hỏi điều kiện xét tuyển bằng điểm tốt nghiệp
   steps:
-  - intent: chaohoi
-  - action: utter_chaohoi
-  - intent: reg
-  - action: utter_reg
+  - intent: tuyensinh
+  - action: utter_tuyensinh
   - intent: phuongthucxetdiemthithpt
   - action: utter_reg_ask
   - intent: điều kiện xét tuyển theo điểm thi THPT
   - action: utter_dieukienxettuyendiemthi
   - intent: xettuyentheophuongthucdiemthiTHPT
   - action: utter_cachxettuyendiemthi
-  - intent: tambiet
-  - action: utter_tambiet
 
 - story: hỏi điều kiện bằng học bạ
   steps:
-  - intent: chaohoi
-  - action: utter_chaohoi
-  - intent: reg
-  - action: utter_reg
+  - intent: tuyensinh
+  - action: utter_tuyensinh
   - intent: phuongthuchocba
   - action: utter_reg_ask
   - intent: điều kiện xét tuyển học bạ
   - action: utter_dieukienxethocba
   - intent: cachxettuyenhocba
   - action: utter_cachxettuyenhocba
-  - intent: tambiet
-  - action: utter_tambiet
 
 - story: hỏi điều kiện xét tuyển theo phương thức riêng
   steps:
-  - intent: chaohoi
-  - action: utter_chaohoi
-  - intent: reg
-  - action: utter_reg
+  - intent: tuyensinh
+  - action: utter_tuyensinh
   - intent: phuongthucrieng
   - action: utter_reg_ask
   - intent: điều kiện theo phương thức riêng
   - action: utter_dieukientheophuongthucrieng
   - intent: xettuyentheophuongthucrieng
   - action: utter_cachxettuyentheophuongthucrieng
-  - intent: tambiet
-  - action: utter_tambiet
 
 - story: hỏi điểm chuẩn
   steps:
-  - intent: chaohoi
-  - action: utter_chaohoi
   - intent: benchmark
   - action: utter_benchmark
-  - intent: tambiet
-  - action: utter_tambiet
 - story: hỏi việc làm
   steps:
   - intent: job
   - action: utter_job
 
-- story: hỏi việc làm ngành Công nghệ thông tin
-  steps:
-  - intent: job_IT
-    entities:
-      - job: "Việc làm"
-      - major: "Công nghệ thông tin"
-  - action: utter_job_IT
-
-- story: hỏi việc làm ngành Đông phương học
-  steps:
-  - intent: job_OS
-    entities:
-      - job: "Việc làm"
-      - major: "Đông phương học"
-  - action: utter_job_OS
-
-- story: hỏi việc làm ngành Kỹ thuật phần mềm
-  steps:
-  - intent: job_SE
-    entities:
-      - job: "Việc làm"
-      - major: "Kỹ thuật phần mềm"
-  - action: utter_job_SE
-
-- story: hỏi việc làm ngành Công nghệ sinh học
-  steps:
-  - intent: job_Biotech
-    entities:
-      - job: "Việc làm"
-      - major: "Công nghệ sinh học"
-  - action: utter_job_Biotech
-
-- story: hỏi việc làm ngành Kỹ thuật sinh học
-  steps:
-  - intent: job_Bioeng
-    entities:
-      - job: "Việc làm"
-      - major: "Kỹ thuật sinh học"
-  - action: utter_job_Bioeng
-
 - story: hỏi việc làm ngành Báo chí
   steps:
-  - intent: job_jour
+  - intent: Vieclam_Baochi
     entities:
       - job: "Việc làm"
       - major: "Báo chí"
-  - action: utter_job_jour
-
-- story: hỏi việc làm ngành Kiến trúc
+  - action: utter_VieclamBaochi
+- story: hỏi việc làm ngành Công nghệ kỹ thuật điện tử - Viễn thông
   steps:
-  - intent: job_Arc
+  - intent: Vieclam_Congnghekythuatdienthu-Vienthong
     entities:
       - job: "Việc làm"
-      - major: "Kiến trúc"
-  - action: utter_job_Arc
-
-- story: hỏi việc làm ngành Chemi
+      - major: "Công nghệ kỹ thuật điện tử - Viễn thông"
+  - action: utter_VieclamnganhCongnghekythuatdientu-Vienthong
+- story: hỏi việc làm ngành Công nghệ kỹ thuật hóa học
   steps:
-  - intent: job_Chemi
+  - intent: Vieclam_Congnghekythuathoahoc
     entities:
       - job: "Việc làm"
-      - major: "Hoá học"
-  - action: utter_job_Chemi
-
-- story: hỏi việc làm ngành Triết học
+      - major: "Công nghệ kỹ thuật hóa học"
+  - action: utter_VieclamnganhCongnghekythuathoahoc
+- story: hỏi việc làm ngành Công nghệ sinh học
   steps:
-  - intent: job_Philo
+  - intent: Vieclam_Congnghesinhhoc
     entities:
       - job: "Việc làm"
-      - major: "Triết học"
-  - action: utter_job_Philo
-
+      - major: "Công nghệ sinh học"
+  - action: utter_VieclamnganhCongnghesinhhoc
+- story: hỏi việc làm ngành Công nghệ thông tin
+  steps:
+  - intent: Vieclam_Congnghethongtin
+    entities:
+      - job: "Việc làm"
+      - major: "Công nghệ thông tin"
+  - action: utter_VieclamnganhCongnghethongtin
 - story: hỏi việc làm ngành Công tác xã hội
   steps:
-  - intent: job_SW
+  - intent: Vieclam_Congtacxahoi
     entities:
       - job: "Việc làm"
       - major: "Công tác xã hội"
-  - action: utter_job_SW
+  - action: utter_VieclamnganhCongtacxahoi
+- story: hỏi việc làm ngành Địa kỹ thuật xây dựng
+  steps:
+  - intent: Vieclam_Diakythuatxaydung
+    entities:
+      - job: "Việc làm"
+      - major: "Địa kỹ thuật xây dựng"
+  - action: utter_VieclamnganhDiakythuatxaydung
+- story: hỏi việc làm ngành Đông phương học
+  steps:
+  - intent: Vieclam_Dongphuonghoc
+    entities:
+      - job: "Việc làm"
+      - major: "Đông phương học"
+  - action: utter_VieclamnganhDongphuonghoc
+- story: hỏi việc làm ngành Hán - Nôm
+  steps:
+  - intent: Vieclam_Hannom
+    entities:
+      - job: "Việc làm"
+      - major: "Hán - Nôm"
+  - action: utter_VieclamnganhHanNom
+- story: hỏi việc làm ngành Hóa học
+  steps:
+  - intent: Vieclam_Hoahoc
+    entities:
+      - job: "Việc làm"
+      - major: "Hoá học"
+  - action: utter_VieclamnganhHoahoc
+
+- story: hỏi việc làm ngành Khoa học môi trường
+  steps:
+  - intent: Vieclam_Khoahocmoitruong
+    entities:
+      - job: "Việc làm"
+      - major: "Khoa học môi trường"
+  - action: utter_VieclamnganhKhoahocmoitruong
+- story: hỏi việc làm ngành Kiến trúc
+  steps:
+  - intent: Viemlam_Kientruc
+    entities:
+      - job: "Việc làm"
+      - major: "Kiến trúc"
+  - action: utter_VieclamnganhKientruc
+- story: hỏi việc làm ngành Kỹ thuật phần mềm
+  steps:
+  - intent: Vieclam_Kythuatphanmem
+    entities:
+      - job: "Việc làm"
+      - major: "Kỹ thuật phần mềm"
+  - action: utter_VieclamnganhKythuatphanmem
+- story: hỏi việc làm ngành Kỹ thuật trắc địa bản đồ
+  steps:
+  - intent: Vieclam_Kythuattracdiabando
+    entities:
+      - job: "Việc làm"
+      - major: "Kỹ thuật trắc địa - bản đồ"
+  - action: utter_VieclamnganhKythuattracdiabando
+- story: hỏi việc làm ngành Lịch sử
+  steps:
+  - intent: Vieclam_Lichsu
+    entities:
+      - job: "Việc làm"
+      - major: "Lịch sử"
+  - action: utter_VieclamnganhLichsu
+- story: hỏi việc làm ngành Quản lý an toàn sức khỏe và môi trường
+  steps:
+  - intent: Vieclam_Quanlyantoansuckhoevamoitruong
+    entities:
+      - job: "Việc làm"
+      - major: "Quản lý an toàn, sức khỏe và môi trường"
+  - action: utter_VieclamnganhQuanlyantoansuckhoevamoitruong
+- story: hỏi việc làm ngành Quản lý nhà nước
+  steps:
+  - intent: Vieclam_Quanlynhanuoc
+    entities:
+      - job: "Việc làm"
+      - major: "Quản lý nhà nước"
+  - action: utter_VieclamnganhQuanlynhanuoc
+- story: hỏi việc làm ngành Quản lý tài nguyên và môi trường
+  steps:
+  - intent: Vieclam_Quanlytainguyenvamoitruong
+    entities:
+      - job: "Việc làm"
+      - major: "Quản lý tài nguyên và môi trường"
+  - action: utter_VieclamnganhQuanlytainguyenvamoitruong
+- story: hỏi việc làm ngành Quản trị và phân tích dữ liệu
+  steps:
+  - intent: Vieclam_Quantrivaphantichdulieu
+    entities:
+      - job: "Việc làm"
+      - major: "Quản trị và phân tích dữ liệu"
+  - action: utter_Quantrivaphantichdulieu
+- story: hỏi việc làm ngành Triết học
+  steps:
+  - intent: Vieclam_Triethoc
+    entities:
+      - job: "Việc làm"
+      - major: "Triết học"
+  - action: utter_VieclamnganhTriethoc
+- story: hỏi việc làm ngành Truyền thông số
+  steps:
+  - intent: Vieclam_Truyenthongso
+    entities:
+      - job: "Việc làm"
+      - major: "Truyền thông sốc"
+  - action: utter_VieclamnganhTruyenthongso
+- story: hỏi việc làm ngành Văn học
+  steps:
+  - intent: Vieclam_Vanhoc
+    entities:
+      - job: "Việc làm"
+      - major: "Văn học"
+  - action: utter_VieclamnganhVanhoc
+
+- story: hỏi việc làm ngành Xã hội học
+  steps:
+  - intent: Vieclam_Xahoihoc
+    entities:
+      - job: "Việc làm"
+      - major: "Xã hội học"
+  - action: utter_VieclamnganhXahoihoc
 
 

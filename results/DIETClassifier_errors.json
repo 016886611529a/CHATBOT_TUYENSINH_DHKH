@@ -1,0 +1,29 @@
+[
+  {
+    "text": "Tổ hợp môn xét tuyển ngành Kỹ thuật sinh học năm 2021",
+    "entities": [
+      {
+        "start": 0,
+        "end": 26,
+        "value": "Tổ hợp môn xét tuyển ngành",
+        "entity": "mon"
+      },
+      {
+        "start": 27,
+        "end": 44,
+        "value": "ky thuat sinh hoc",
+        "entity": "major"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "mon",
+        "start": 0,
+        "end": 44,
+        "confidence_entity": 0.6839463710784912,
+        "value": "Tổ hợp môn xét tuyển ngành Kỹ thuật sinh học",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

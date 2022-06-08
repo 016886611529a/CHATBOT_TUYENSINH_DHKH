@@ -1,0 +1,10 @@
+[
+  {
+    "text": "Điểm",
+    "intent": "benchmark",
+    "intent_prediction": {
+      "name": "chon1",
+      "confidence": 0.3169808089733124
+    }
+  }
+]

@@ -1,6 +1,9 @@
 version: "2.0"
 
 intents:
+ - tracuu
+ - kytucxa
+ - hocbong
  - chaohoi2
  - thongtintoanbo
  - chaohoi1
@@ -25,8 +28,8 @@ intents:
  - tambiet
  - infomation
  - majors
- - tuition
- - reg
+ - hocphi
+ - tuyensinh
  - phuongthucrieng
  - phuongthuchocba
  - phuongthucxetdiemthithpt
@@ -35,47 +38,101 @@ intents:
  - điều kiện theo phương thức riêng
  - benchmark
  - job
- - job_IT:
-     use_entities:
-       - job
-       - major
- - job_jour:
-     use_entities:
-       - job
-       - major
- - job_OS:
-     use_entities:
-       - job
-       - major
- - job_SE:
-     use_entities:
-       - job
-       - major
- - job_Biotech:
-     use_entities:
-       - job
-       - major
- - job_Bioeng:
-     use_entities:
-       - job
-       - major
- - job_Arc:
-     use_entities:
-       - job
-       - major
- - job_Chemi:
-     use_entities:
-       - job
-       - major
- - job_Philo:
-     use_entities:
-       - job
-       - major
- - job_SW:
-     use_entities:
-       - job
-       - major
  - bot_challenge
+
+ - Vieclam_Baochi:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Congnghekythuatdienthu-Vienthong:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Congnghekythuathoahoc:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Congnghesinhhoc:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Congnghethongtin:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Congtacxahoi:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Diakythuatxaydung:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Dongphuonghoc:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Hannom:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Hoahoc:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Khoahocmoitruong:
+     use_entities:
+       - job
+       - major
+ - Viemlam_Kientruc:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Kythuatphanmem:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Kythuattracdiabando:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Lichsu:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Quanlyantoansuckhoevamoitruong:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Quanlynhanuoc:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Quanlytainguyenvamoitruong:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Quantrivaphantichdulieu:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Triethoc:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Truyenthongso:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Vanhoc:
+     use_entities:
+       - job
+       - major
+ - Vieclam_Xahoihoc:
+     use_entities:
+       - job
+       - major
+
 
 entities:
  - mon
@@ -104,6 +161,18 @@ actions:
 - action_template3
 - action_templatetong
 responses:
+  utter_toanbo:
+  - text: " Thông tin tuyển sinh "
+    image: "https://i.imgur.com/89IYwu5.png"
+  utter_manganh:
+  - text: " Thông tin về mã ngành tuyển sinh "
+    image: "https://i.imgur.com/H2c552k.png"
+  utter_diem:
+  - text: " Thông tin về điểm chuẩn "
+    image: "https://i.imgur.com/Ru3xerL.png"
+  utter_tohopmon:
+  - text: " Thông tin về tổ hợp môn "
+    image: "https://i.imgur.com/B6c05n5.png"
   utter_thongtintuyensinhnam2021_local:
   - text: "Thông tin về ngành"
     buttons:
@@ -137,19 +206,42 @@ responses:
       payload: "/chon3"
   utter_chaohoithongminh:
   - text: "Kính chào {sex} {name}. Bot có thể giúp gì được cho {sex} {name} ạ !!"
-  utter_faq/rasa_intro:
-  - text: "Rasa là một nền tảng chabot."
-  utter_faq/retrieval_action_intro:
-  - text: "Retrieval action là một dạng action trong Rasa được thiết kế để xử lý các câu hỏi dạng FAQ."
+  utter_tracuu:
+  - text: "Bạn có thể xem kết quả tra cứu tại: https://dkxt.hueuni.edu.vn/ketquaxettuyen"
+  utter_kytucxa:
+  - text: " Trung tâm Phục vụ Sinh viên – Đại học Huế (PVSV) hiện có 03 khu Ký túc xá (KTX) với tổng số khoảng 670 phòng đáp ứng hơn 4.000 chỗ ở phục vụ toàn bộ sinh viên nội trú và lưu học sinh nước ngoài cho các Trường, Khoa, Viện, Trung tâm và các đơn vị của Đại học Huế. Các phòng ở rộng rãi, thoáng mát, công trình phụ khép kín, đảm bảo an ninh, trật tự, tiện lợi cho học sinh, sinh viên (HSSV) Đại học Huế sinh hoạt, học tập, rèn luyện và lưu trú.\n
+     Đối tượng tiếp nhận ở nội trú tất cả học sinh, sinh viên có nhu cầu ở trong toàn quốc tham gia học tập tại các đơn vị đào tạo của Đại học Huế. Nếu số lượng học sinh, sinh viên đăng ký đông hơn số phòng hiện có thì Trung tâm sẽ xét ưu tiên theo thứ tự quy định của nhà nước (theo Thông tư số 27/2011/TT-BGDĐT ngày 27 tháng 06 năm 2011 của Bộ Giáo dục Đào tạo).\n
+        1. Ký túc xá Trường Bia: Có 580 phòng, đáp ứng khoảng 3.500 chỗ ở\n
+        - Địa điểm: KTX Trường Bia, 40,42 Nguyễn Khánh Toàn-TP. Huế (cách nhà thi đấu thể thao Đại học Huế 20m, Trường ĐH Kinh Tế 300m, Trường ĐH Ngoại Ngữ 30m, Trường ĐH Luật 500m.\n
+        - Địa chỉ liên hệ: BQL KTX Trường Bia, số 40,42 Nguyễn Khánh Toàn, TP. Huế.\n
+        - Điện thoại: 02343.816.109.\n
+        2. Ký túc xá Đống Đa: Có 30 phòng, đáp ứng được khoảng 350 chỗ\n
+        - Địa điểm: 32 Lê Hồng Phong – Huế (cách trường ĐH Khoa Học 500m, ĐH Y Dược 1500m, ĐH Sư phạm 1.5km).\n
+        - Địa chỉ liên hệ: BQL KTX Đống Đa, số 32 Lê Hồng Phong – TP. Huế.\n
+        - Điện thoại: 02343.822.972.\n
+        3. Ký túc xá Tây Lộc: Có 60 phòng, đáp ứng được khoảng 460 chỗ\n
+        - Địa điểm: 100 Trần Văn Kỷ– Huế (cách trường ĐH Nông Lâm 500m, ĐH  Nghệ thuật 700m).\n
+        - Địa chỉ liên hệ: BQL KTX Tây Lộc, số 100 Trần Văn Kỷ – TP. Huế.\n
+        - Điện thoại: 02343.516.240."
+  utter_hocbong:
+  - text: "- Thủ khoa của ngành có điểm đầu vào từ 25.00 điểm trở lên (không tính điểm ưu tiên, chưa nhân hệ số) được cấp học bổng trị giá 100% học phí theo ngành trúng tuyển cho học kỳ đầu tiên. Học bổng được chi trả vào đầu học kỳ 2, năm thứ nhất.\n
+- Thủ khoa của ngành có điểm đầu vào từ 23.00 đến dưới 25.00 điểm (không tính điểm ưu tiên, chưa nhân hệ số) được cấp học bổng trị giá 50% học phí theo ngành trúng tuyển cho học kỳ đầu tiên. Học bổng được chi trả vào đầu học kỳ 2, năm thứ nhất.\n
+- Sinh viên có điểm đầu vào từ 23.00 điểm trở lên (không tính điểm ưu tiên, chưa nhân hệ số) được cấp học bổng trị giá 25% học phí theo ngành trúng tuyển cho học kỳ đầu tiên. Học bổng được chi trả được chi trả vào đầu học kỳ 2, năm thứ nhất.\n
+- Sinh viên được xem xét cấp học bổng hỗ trợ tham gia chương trình Career Design với trị giá 250 triệu/sinh viên từ dự án KIS GE Internship Program.\n\n
+- Sinh viên thủ khoa toàn trường (xét theo kết quả thi THPT) được cấp 10.000.000 đồng từ các nguồn học bổng khuyến khích học tập, nhà tài trợ.\n
+- Học bổng khuyến khích học tập do nhà trường quy định."
+  - text: "Chính sách học bổng riêng cho từng ngành:"
+    image: "https://i.imgur.com/3phNMVL.png"
   utter_chaohoi:
   - text: "Chào bạn. Mình là Chatbot hỗ trợ tư vấn tuyển sinh Trường Đại học Khoa học - Đại học Huế. Bạn cần tư vấn về vấn đề gì?"
-  utter_default:
-  - text: "Em xin lỗi, em chưa hiểu ý muốn của anh(chị) ạ. Anh chị có thể nói lại được không ạ"
+  utter_fallback:
+  - text: "Xin lỗi, Tôi chưa hiểu ý muốn của bạn ạ. Bạn có thể nói lại được không ạ\n
+  - Bạn có thể tham khảo các câu hỏi thường gặp ở website tư vấn tuyển sinh của Trường Đại học Khoa học tại http://127.0.0.1:8000/home/hoi-dap/\n
+  - Hoặc xem thêm thông tin tuyển sinh tại website: https://tuyensinh.husc.edu.vn/
+  - Ngoài ra bạn có thể tra cứu các câu hỏi thường gặp ở website tư vấn tuyển sinh của Đại Học Huế : https://tuyensinh.hueuni.edu.vn/Consultant"
 
   utter_tambiet:
-  - text: "Cám ơn bạn đã đến đây.\n
-  Tạm biệt bạn"
-
+  - text: "Cám ơn bạn đã đến đây.Tạm biệt bạn"
 
   utter_info1:
   - text: "Trường Đại học Khoa học , Đại học Huế (ĐHKH) là một đơn vị đào tạo và nghiên cứu có uy tín và bề dày thành tích ở khu vực miền Trung và Tây Nguyên. Với lịch sử hơn 63 năm xây dựng và phát triển (1957 – 2020), Trường ĐHKH hiện nay đã xây dựng được một mô hình giáo dục hiện đại, đa dạng ngành nghề, nhiều tiềm năng hợp tác quốc tế và liên kết với các doanh nghiệp. Nhà trường có 15 khoa, 05 trung tâm nghiên cứu, 01 viện nghiên cứu. Đội ngũ giảng viên, cán bộ của Trường hiện nay có 03 giáo sư, 44 phó giáo sư, 67 tiến sĩ và 197 nghiên cứu sinh, thạc sĩ; đã đạt nhiều thành tích trong giảng dạy, nghiên cứu khoa học và ứng dụng, chuyển giao công nghệ với hơn 1.535 đề tài khoa học cùng nhiều bài báo quốc tế có uy tín. Trong đó, có 22 đề tài hợp tác quốc tế, 4 đề tài cấp Nhà nước, 159 đề tài nghiên cứu cơ bản, 312 đề tài cấp Bộ và cấp Bộ trọng điểm, 108 đề tài cấp Tỉnh và các đề tài cơ sở.
@@ -181,34 +273,28 @@ responses:
      - Kỹ thuật địa chất\n
      - Kỹ thuật môi trường\n
      - Kỹ thuật phần mềm (Cơ chế đặc thù)\n
-     - Kỹ thuật sinh học\n
+     - Kỹ thuật trắc địa - bản đồ\n
      - Lịch sử\n
+     - Quản lý an toàn, sức khỏe và môi trường
      - Quản lý nhà nước\n
      - Quản lý tài nguyên và môi trường\n
      - Quản trị và phân tích dữ liệu\n
-     - Toán ứng dụng\n
      - Triết học\n
+     - Truyền thông số\n
      - Văn học\n
      - Xã hội học"
 
 
-  utter_tuition:
+  utter_hocphi:
   - text: "
      Khoa học Xã hội: 320.000đ/tín chỉ. Tổng 9.600.000đ/năm\n
-     Khoa học tự nhiên và Công nghệ:385.000đ/tín chỉ. Tổng khoảng  11.550.000đ/năm\n
-     "
-
-  utter_reg:
+     Khoa học tự nhiên và Công nghệ:385.000đ/tín chỉ. Tổng khoảng  11.550.000đ/năm\n"
+  utter_tuyensinh:
   - text: "Bạn muốn hỏi về việc đăng ký xét tuyển theo phương thức nào? Phương thức riêng, phương thức học bạ hay phương thức xét điểm tốt nghiệp?
            https://i.imgur.com/qNEAziK.jpg\n
            https://i.imgur.com/GjQUK2q.jpg\n
            https://i.imgur.com/3QrwOd9.jpg\n"
     image: "https://i.imgur.com/eMAsNZf.jpg"
-
-
-
-
-
   utter_dieukientheophuongthucrieng:
   - text: "
   Xét tuyển theo phương thức riêng \n
@@ -259,15 +345,12 @@ responses:
   utter_benchmark:
   - text: ""
     image: "https://i.imgur.com/7BjgJ2G.jpg"
-
-
-
   utter_iamabot:
   - text: "- mình là auto chatbot, mình có khả năng trả lời các câu hỏi về tuyển sinh của trường đại học khoa học"
   utter_job:
     - text: "Bạn muốn hỏi công việc cho ngành đào tạo nào?"
 
-  utter_job_IT:
+  utter_VieclamBaochi:
     - text: "\n
         - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
         - Chuyên viên gia công, phát triển và kiểm thử phần mềm, thiết kế Website tại các công ty phần mềm trong và ngoài nước;\n
@@ -275,83 +358,168 @@ responses:
         - Chuyên viên phân tích, thiết kế, cài đặt, quản trị, bảo trì các phần mềm máy tính trong các tổ chức, doanh nghiệp;\n
         - Giảng dạy về ngành Công nghệ thông tin tại các trường đại học, cao đẳng, trung cấp  chuyên nghiệp, dạy nghề và các trường phổ thông.\n
         "
-  utter_job_jour:
-    - text: "\n
-        -	Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
-        -	Phóng viên, biên tập viên, kỹ thuật viên tại: đài phát thanh, đài truyền hình, toà soạn báo, các cơ quan thông tấn báo chí ở Trung ương và địa phương;\n
-        -	Cán bộ quản lý hoạt động báo chí, truyền thông tại các tỉnh, thành phố;\n
-        -	Chuyên viên truyền thông, quan hệ công chúng tại các công ty, doanh nghiệp, cơ quan hành chính sự nghiệp;\n
-        -	Chuyên viên phụ trách các trang thông tin điện tử của các cơ quan ban ngành ở Trung ương và địa phương;\n
-        -	Giảng dạy tại các trường đào tạo báo chí, truyền thông.\n
-        "
-  utter_job_OS:
-    - text: "\n
-        -	Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
-        -	Làm việc tại các cơ quan ban ngành Nhà nước từ Trung ương đến địa phương về lịch sử, văn hóa, xã hội, ngoại giao, an ninh – quốc phòng; các cơ sở ngoại giao, học viện, trường chính trị, cơ quan tuyên giáo, công ty nước ngoài, công ty du lịch, chương trình, dự án, tổ chức phi chính phủ;\n
-        -	Chuyên viên tổng hợp văn phòng, nhân sự, kinh doanh, hướng dẫn viên du lịch… cho các tổ chức tư nhân, công ty, doanh nghiệp trong các lĩnh vực du lịch, lữ hành, văn hóa, xã hội, đối ngoại;\n
-        -	Làm việc tại các nước trong khu vực châu Á (Nhật Bản, Hàn Quốc, Trung Quốc, Thái Lan, Malaysia, Singapore…) theo các chương trình, dự án hợp tác của Chính phủ hoặc các công ty, cơ quan nghiên cứu, ngoại giao, du lịch… ở nước ngoài.\n
-        "
-  utter_job_SE:
-  - text: "\n
-       - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:
-       - Làm việc trong các công ty sản xuất, gia công phần mềm trong nước cũng như nước ngoài; các công ty tư vấn về đề xuất giải pháp, xây dựng và bảo trì các hệ thống thông tin;\n
-       - Chuyên viên phân tích, thiết kế, cài đặt, quản trị, bảo trì các phần mềm máy tính trong các tổ chức, doanh nghiệp;\n
-       - Cán bộ quản lý, chuyên viên phụ trách mảng ứng dụng công nghệ thông tin của các cơ quan hành chính sự nghiệp, ngân hàng, viễn thông, hàng không, xây dựng,…;\n
-       - Giảng dạy về ngành Công nghệ thông tin tại các trường đại học, cao đẳng và  trung cấp chuyên nghiệp.\n"
-
-  utter_job_Biotech:
+  utter_VieclamnganhCongnghekythuatdientu-Vienthong:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Chuyên viên tư vấn, thiết kế, vận hành, điều hành kỹ thuật tại các đài phát thanh, đài truyền hình, các công ty hoạt động trong lĩnh vực đa phương tiện;\n
+Chuyên viên thiết kế, quy hoạch mạng và tối ưu mạng, quản lý mạng, vận hành hệ thống mạng và hệ thống viễn thông tại các công ty viễn thông;\n
+Chuyên viên thiết kế và viết chương trình phần mềm cho các thiết bị điện tử thông minh như điện thoại di động, rô bốt, xe ô tô, đầu thu truyền hình kỹ thuật số,…, kiểm thử phần mềm nhúng tại các công ty phần mềm, trung tâm nghiên cứu phát triển của những hãng công nghệ lớn;\n
+Chuyên viên vận hành, bảo dưỡng thiết bị y tế, thiết kế hệ thống thông tin y tế;\n
+Chuyên viên vận hành, quản lý hệ thống dẫn đường và kiểm soát không lưu, trạm mặt đất, bảo dưỡng các thiết bị điện tử trên máy bay,... cho các công ty hoạt động trong lĩnh vực điện tử hàng không - vũ trụ;\n
+Giám đốc kỹ thuật, Trưởng bộ phận kỹ thuật tại các công ty, doanh nghiệp hoạt động trong lĩnh vực điện tử, viễn thông, truyền thông."
+  utter_VieclamnganhCongnghekythuathoahoc:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Kỹ sư phụ trách kỹ thuật, quản lý chất lượng, phát triển sản phẩm tại các đơn vị sản xuất trong lĩnh vực công nghệ kỹ thuật hóa học\n
+Kỹ sư phụ trách tư vấn, thiết kế tại các đơn vị chuyển giao công nghệ, cung cấp thiết bị, vật tư, phụ gia, hóa chất trong lĩnh vực công nghệ kỹ thuật hóa học;\n
+Chuyên viên tại các cơ quan quản lý có liên quan đến công nghệ kỹ thuật hóa học;\n
+Chuyên viên nghiên cứu về công nghệ kỹ thuật hóa học ở các viện nghiên cứu, trung tâm và cơ quan nghiên cứu của các bộ, ngành, trường đại học và cao đẳng;\n
+Giảng viên các trường đại học, cao đẳng, trung học chuyên nghiệp, dạy nghề."
+  utter_VieclamnganhCongnghesinhhoc:
   - text: "\n
       - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
       - Cán bộ kỹ thuật, cán bộ kiểm nghiệm ở Bệnh viện, Sở Công an, Sở Y tế, Xí nghiệp dược phẩm, Trung tâm phân tích, cơ sở nuôi trồng thủy sản, khu chế xuất, các cơ sở sản xuất nuôi cấy mô, cơ sở chế biến thực phẩm;\n
       - Cán bộ kỹ thuật tại cácTrung tâm chuyển giao công nghệ và phát triển sản xuất: nuôi cấy mô, giống cây trồng và vật nuôi, nuôi trồng và chế biến các loại nấm, chế biến thực phẩm, công nghệ bảo quản sản phẩm sau thu hoạch, dược phẩm (sản xuất, chế biến thuốc, vacxin), xử lý môi trường;\n
       - Giảng dạy và nghiên cứu tại các viện nghiên cứu, trường đại học, cao đẳng và trung cấp chuyên nghiệp.\n
       "
-  utter_job_Bioeng:
-  - text: "\n
-      - Kỹ sư Kỹ thuật sinh học có thể làm việc trong các lĩnh vực và vị trí sau:\n
-      - Chuyên viên tại các cơ quan quản lý Nhà nước, quản lý chất lượng trong lĩnh vực sinh học, công nghệ sinh học, thực phẩm;\n
-      - Cán bộ quản lý, kỹ thuật, kiểm tra chất lượng sản phẩm tại các doanh nghiệp sản xuất và các tập đoàn đa quốc gia về lĩnh vực nước giải khát, vacxin, dược phẩm, thực phẩm chức năng, các sản phẩm có hoạt tính sinh học;\n
-      - Cán bộ kỹ thuật, quản lý chất lượng tại các đơn vị tư vấn, thiết kế, lắp đặt và vận hành các thiết bị trong lĩnh vực công nghệ sinh học;\n
-      - Chuyên viên lập và quản lý các dự án đầu tư phát triển nông thôn;\n
-      - Giảng dạy, nghiên cứu tại các viện nghiên cứu, trường đại học, cao đẳng và trung cấp chuyên nghiệp.\n
-      "
-  utter_job_Arc:
-  - text: "\n
-      - Sinh viên tốt nghiệp ngành Kiến trúc được cấp bằng Kiến trúc sư, có thể làm việc trong các lĩnh vực và vị trí sau:\n
-      - Tự khởi nghiệp với vai trò chủ đầu tư, nhà thiết kế, thi công kiến trúc – quy hoạch – nội thất – vật liệu;\n
-      - Cán bộ trong các tổ chức chính trị – xã hội – nghề nghiệp, các doanh nghiệp Nhà nước, tư nhân và nước ngoài (đặc biệt tại Nhật Bản và Hàn Quốc);\n
-      - Kiến trúc sư tư vấn, thiết kế công trình kiến trúc dân dụng và công nghiệp, thiết kế nội thất, thiết kế quy hoạch, thiết kế bảo tồn và cảnh quan, giám sát thi công các công trình kiến trúc;\n
-      - Chuyên viên tư vấn, điều phối, xây dựng, thẩm định và đánh giá dự án;\n
-      - Giảng dạy và nghiên cứu tại các cơ sở giáo dục đào tạo và các Viện, trung tâm nghiên cứu, các trường đại học liên quan đến chuyên ngành Kiến trúc – Quy hoạch – Nội thất – xây dựng.\n
-      "
-
-  utter_job_Chemi:
-  - text: "\n
-      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
-      - Chuyên viên nghiên cứu, tư vấn tại các viện, trung tâm nghiên cứu, các cơ quan quản lý liên quan đến hóa học, hóa học môi trường…;\n
-      - Chuyên viên quản lý, kỹ thuật, kiểm tra chất lượng sản phẩm tại các công ty, nhà máy sản xuất liên quan đến lĩnh vực hóa học (sản xuất vật liệu xây dựng, chế biến thực phẩm, mỹ phẩm, dược phẩm, bảo vệ và kiểm soát chất lượng môi trường…);\n
-      - Giảng viên các trường đại học, cao đẳng, trung học phổ thông và trung học chuyên nghiệp.\n
-
-      "
-  utter_job_Philo:
-  - text: "\n
-      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
-      - Chuyên viên tại các cơ quan Nhà nước, trong hệ thống chính trị, chính quyền các cấp, các tổ chức Đảng, Đoàn thể như: Văn phòng Chính phủ, Mặt trận Tổ quốc, Công đoàn, Đoàn Thanh niên, Hội Liên hiệp Phụ nữ, Hội Nông dân…;\n
-      - Làm công tác tham mưu trong các cơ quan, tổ chức chính trị – xã hội, các tổ chức kinh tế Nhà nước và tư nhân;\n
-      - Nghiên cứu viên ở các cơ quan lý luận chính trị, các Viện nghiên cứu thuộc lĩnh vực xã hội;\n
-      - Chuyên viên phân tích, bình luận, viết bài về chính trị, thời sự ở các báo, đài Trung ương và địa phương;\n
-      - Giảng dạy tại các trường đại học, cao đẳng và trung cấp chuyên nghiệp.\n
-
-      "
-  utter_job_SW:
-  - text: "\n
-      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
-      - Chuyên viên tại các cơ quan Nhà nước, các trung tâm và tổ chức tư nhân trong các lĩnh vực về lao động, việc làm, tiền lương, tổ chức nhân sự, thương binh – xã hội, bà mẹ – trẻ em, hoạt động xã hội – phong trào, tổ chức sự kiện xã hội;\n
-      - Chuyên viên các chương trình dự án, tổ chức phi chính phủ (NGO) quốc tế và địa phương, tham gia nghiên cứu và phát triển chính sách hỗ trợ xã hội ở các cấp;\n
-      - Làm việc độc lập với vai trò như là một cán bộ hoạch định chính sách, nhân viên xã hội, một kiểm huấn viên, một chuyên gia tâm lý, hay một nhà nghiên cứu…;\n
-      - Giảng dạy và nghiên cứu khoa học trong các viện nghiên cứu, các trường đại học, cao đẳng và trung cấp chuyên nghiệp.\n
-
-      "
+  utter_VieclamnganhCongnghethongtin:
+  - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Chuyên viên gia công, phát triển và kiểm thử phần mềm, thiết kế Website tại các công ty phần mềm trong và ngoài nước;\n
+Chuyên viên tư vấn và thiết kế giải pháp mạng, giải pháp công nghệ thông tin, vận hành và phát triển các hệ thống thông tin cho các cơ quan và doanh nghiệp;\n
+Chuyên viên phân tích, thiết kế, cài đặt, quản trị, bảo trì các phần mềm máy tính trong các tổ chức, doanh nghiệp;\n
+Giảng dạy về ngành Công nghệ thông tin tại các trường đại học, cao đẳng, trung cấp chuyên nghiệp, dạy nghề và các trường phổ thông."
+  utter_VieclamnganhCongtacxahoi:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Chuyên viên tại các cơ quan Nhà nước, các trung tâm và tổ chức tư nhân trong các lĩnh vực về lao động, việc làm, tiền lương, tổ chức nhân sự, thương binh - xã hội, bà mẹ - trẻ em, hoạt động xã hội - phong trào, tổ chức sự kiện xã hội;\n
+Chuyên viên các chương trình dự án, tổ chức phi chính phủ (NGO) quốc tế và địa phương, tham gia nghiên cứu và phát triển chính sách hỗ trợ xã hội ở các cấp;\n
+Làm việc độc lập với vai trò như là một cán bộ hoạch định chính sách, nhân viên xã hội, một kiểm huấn viên, một chuyên gia tâm lý, hay một nhà nghiên cứu…;\n
+Giảng dạy và nghiên cứu khoa học trong các viện nghiên cứu, các trường đại học, cao đẳng và trung cấp chuyên nghiệp."
+  utter_VieclamnganhDiakythuatxaydung:
+    - text: "Trong chương trình đào tạo theo định hướng thực hành thực tế, sinh viên sẽ được hướng dẫn thực tập hiện trường trong 2 năm đầu. Trong năm 3 và năm 4, sinh viên sẽ thực tập công việc chuyên môn tại các công ty xây dựng và có cơ hội được tuyển dụng trước khi tốt nghiệp. 100% sinh viên tốt nghiệp sẽ được giới thiệu và đảm bảo công việc đúng chuyên môn với thu nhập ổn định. Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Cán bộ quản lý nhà nước trong các Sở, Ban ngành có liên quan đến lĩnh vực Xây dựng, Tài nguyên khoáng sản và môi trường…;\n
+Cán bộ kỹ thuật và quản lý thuộc Công ty và các tập đoàn đa quốc gia về Tư vấn, khảo sát, thiết kế, kiểm định các công trình xây dựng, lĩnh vực địa chất khoáng sản và tài nguyên nước;\n
+Cán bộ kỹ thuật và quản lý Phòng thí nghiệm thuộc lĩnh vực Địa chất công trình - Địa kỹ thuật;\n
+Cán bộ tư vấn và điều hành dự án đầu tư cơ sở hạ tầng, khai thác mỏ…;\n
+Cán bộ kỹ thuật và quản lý các doanh nghiệp cung cấp thiết bị, các giải pháp xây dựng nền móng công trình và vật liệu xây dựng tái chế;\n
+Giảng viên và nghiên cứu viên tại các trường đại học, cao đẳng và viện nghiên cứu về lĩnh vực xây dựng, địa chất khoáng sản và tài nguyên nước;\n
+Khởi nghiệp thành lập các doanh nghiệp hoạt động trong lĩnh vực tư vấn thiết kế - thi công - kiểm định công trình xây dựng, tư vấn - khai thác và đánh giá tác động môi trường hoạt động khai thác mỏ nói chung và vật liệu xây dựng nói riêng."
+  utter_VieclamnganhDongphuonghoc:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Làm việc tại các cơ quan ban ngành Nhà nước từ Trung ương đến địa phương về lịch sử, văn hóa, xã hội, ngoại giao, an ninh - quốc phòng; các cơ sở ngoại giao, học viện, trường chính trị, cơ quan tuyên giáo, công ty nước ngoài, công ty du lịch, chương trình, dự án, tổ chức phi chính phủ;\n
+Chuyên viên tổng hợp văn phòng, nhân sự, kinh doanh, hướng dẫn viên du lịch… cho các tổ chức tư nhân, công ty, doanh nghiệp trong các lĩnh vực du lịch, lữ hành, văn hóa, xã hội, đối ngoại;\n
+Làm việc tại các nước trong khu vực châu Á (Nhật Bản, Hàn Quốc, Trung Quốc, Thái Lan, Malaysia, Singapore…) theo các chương trình, dự án hợp tác của Chính phủ hoặc các công ty, cơ quan nghiên cứu, ngoại giao, du lịch… ở nước ngoài."
+  utter_VieclamnganhHanNom:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Cán bộ nghiên cứu tại Sở Khoa học và Công nghệ, các Viện nghiên cứu, Trung tâm khoa học xã hội và nhân văn;\n
+Cán bộ, nhân viên tại các cơ quan bảo tồn, bảo tàng, Sở Văn hóa;\n
+Hướng dẫn viên du lịch tại các trung tâm di tích;\n
+Thông dịch viên tại các công ty có sử dụng tiếng Trung;\n
+Biên tập viên tại các cơ quan báo chí, nhà xuất bản;\n
+Giảng dạy tại các trường đại học, cao đẳng và trung cấp chuyên nghiệp."
+  utter_VieclamnganhHoahoc:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Chuyên viên nghiên cứu, tư vấn tại các viện, trung tâm nghiên cứu, các cơ quan quản lý liên quan đến hóa học, hóa học môi trường...;\n
+Chuyên viên quản lý, kỹ thuật, kiểm tra chất lượng sản phẩm tại các công ty, nhà máy sản xuất liên quan đến lĩnh vực hóa học (sản xuất vật liệu xây dựng, chế biến thực phẩm, mỹ phẩm, dược phẩm, bảo vệ và kiểm soát chất lượng môi trường...);\n
+Giảng viên các trường đại học, cao đẳng, trung học phổ thông và trung học chuyên nghiệp."
+  utter_VieclamnganhKhoahocmoitruong:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Chuyên viên trong các cơ quan Nhà nước như: Bộ Tài nguyên - Môi trường (TN-MT), Tổng cục Môi trường, Sở TN-MT, Chi cục Bảo vệ Môi trường, Phòng TN-MT huyện thị xã, Sở Y tế, Trung tâm Y tế dự phòng, Bệnh viện, Trung tâm Bảo tồn thiên nhiên, các Vườn Quốc gia, Trung tâm Tư vấn môi trường, các tổ chức phi chính phủ, các dự án liên quan đến TN-MT;\n
+Nghiên cứu viên ở các cơ quan nghiên cứu như: Viện Khoa học Công nghệ, Trung tâm TN-MT thuộc hệ thống Viện Khoa học và Công nghệ Việt Nam, các Hiệp hội Khoa học Công nghệ;\n
+Sĩ quan, chiến sĩ ở các phòng cảnh sát môi trường;\n
+Cán bộ quản lý, kỹ thuật ở các doanh nghiệp về môi trường như: Công ty Môi trường Đô thị, Công ty cấp thoát nước, Công ty hạ tầng Khu đô thị;\n
+Giảng dạy tại các trường đại học, cao đẳng và trung cấp chuyên nghiệp."
+  utter_VieclamnganhKientruc:
+    - text: "Sinh viên tốt nghiệp ngành Kiến trúc được cấp bằng Kiến trúc sư, có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Tự khởi nghiệp với vai trò chủ đầu tư, nhà thiết kế, thi công kiến trúc - quy hoạch - nội thất - vật liệu;\n
+Cán bộ trong các tổ chức chính trị - xã hội - nghề nghiệp, các doanh nghiệp Nhà nước, tư nhân và nước ngoài (đặc biệt tại Nhật Bản và Hàn Quốc);\n
+Kiến trúc sư tư vấn, thiết kế công trình kiến trúc dân dụng và công nghiệp, thiết kế nội thất, thiết kế quy hoạch, thiết kế bảo tồn và cảnh quan, giám sát thi công các công trình kiến trúc;\n
+Chuyên viên tư vấn, điều phối, xây dựng, thẩm định và đánh giá dự án;\n
+Giảng dạy và nghiên cứu tại các cơ sở giáo dục đào tạo và các Viện, trung tâm nghiên cứu, các trường đại học liên quan đến chuyên ngành Kiến trúc - Quy hoạch - Nội thất - xây dựng."
+  utter_VieclamnganhKythuatphanmem:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Làm việc trong các công ty sản xuất, gia công phần mềm trong nước cũng như nước ngoài; các công ty tư vấn về đề xuất giải pháp, xây dựng và bảo trì các hệ thống thông tin;\n
+Chuyên viên phân tích, thiết kế, cài đặt, quản trị, bảo trì các phần mềm máy tính trong các tổ chức, doanh nghiệp;\n
+Cán bộ quản lý, chuyên viên phụ trách mảng ứng dụng công nghệ thông tin của các cơ quan hành chính sự nghiệp, ngân hàng, viễn thông, hàng không, xây dựng,…;\n
+Giảng dạy về ngành Công nghệ thông tin tại các trường đại học, cao đẳng và trung cấp chuyên nghiệp."
+  utter_VieclamnganhKythuattracdiabando:
+    - text: "Sau khi ra trường, các tân kỹ sư ngành Kỹ thuật Trắc địa - Bản đồ có thể làm việc tại các cơ quan, doanh nghiệp, cụ thể như sau:\n
+Cục đo đạc và bản đồ Việt Nam - Bộ Tài nguyên và Môi trường; Nhà xuất bản Tài nguyên - Môi trường và bản đồ Việt Nam; Cục bản đồ Bộ tổng tham mưu;...\n
+Các Sở (cấp tỉnh): Sở Tài nguyên và Môi trường; Sở Nông nghiệp và Phát triển Nông thôn, Sở Xây dựng, Sở Kế hoạch và Đầu tư; Sở Giao thông Vận tải; Sở Khoa học và Công nghệ, Viện Quy hoạch,…\n
+Ban Quản lý Dự án các Khu kinh tế; Khu công nghiệp; Ban quản lý các dự án thuộc các tổ chức trong và ngoài nước liên quan đến Môi trường đô thị, công nghiệp, nông thôn, biến đổi khí hậu, tai biến thiên nhiên…\n
+Các phòng (cấp huyện): Phòng Tài nguyên và Môi trường; Văn phòng Ủy ban.\n
+Các trung tâm: Trung tâm Quan trắc và Phân tích Môi trường; Trung tâm Môi trường ở các khu công nghiệp, thành phố; Trung tâm Kiểm định, các phòng thí nghiệm phân tích, quan trắc và đánh giá chất lượng môi trường; Trung tâm Nước sạch và Vệ sinh môi trường; Trung tâm Tư vấn xây dựng và dịch vụ môi trường.\n
+Các viện, trung tâm, các trường đại học, cao đẳng liên quan đến lĩnh vực tài nguyên và môi trường (Viện Tài nguyên & Môi trường, Viện Hàn lâm Khoa học và Công nghệ, Trường Đại học Tài nguyên và Môi trường, Trường Đại học Khoa học...).\n
+Các công ty, doanh nghiệp hoạt động trong lĩnh vực tài  nguyên và Môi trường, trắc địa, khảo sát trắc địa, địa hình,...\n
+Có nhiều cơ hội khởi nghiệp trong lĩnh vực số hóa không gian, thực tại ảo… phục vụ cách mạng 4.0;\n
+Mức lương ngành Kỹ thuật Trắc địa - Bản đồ đối với những sinh viên mới ra trường khoảng từ 7 - 8 triệu/tháng và sau một hai năm kinh nghiệm có thể lên tới 10 - 12 triệu/tháng; với những kỹ sư ở vị trí cấp quản lý dự án có thể đạt tới 20 - 30 triệu/tháng."
+  utter_VieclamnganhLichsu:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Làm việc tại các cơ quan, ban ngành Nhà nước từ Trung ương đến địa phương về lịch sử, văn hóa, xã hội, du lịch, quân sự, ngoại vụ;\n
+Cán bộ viên chức của các tổ chức Chính trị - xã hội (Trường chính trị, Mặt trận Tổ quốc, Viện kiểm sát, Tòa án, Hội Phụ nữ, Đoàn Thanh niên, Công đoàn…);\n
+Cán bộ viên chức của các tổ chức Văn hóa - xã hội (cơ quan báo chí, sở, ban, ngành văn hóa, bảo tàng, hội khoa học kỹ thuật…);\n
+Cán bộ viên chức của các tổ chức An ninh - quốc phòng (quân đội , công an);…\n
+Làm việc cho các chương trình, dự án, các tổ chức phi chính phủ, các công ty về văn hóa - xã hội, du lịch, lữ hành, quảng cáo, sự kiện, từ thiện, nhận đạo, môi trường;\n
+Giảng dạy và nghiên cứu lịch sử Việt Nam, lịch sử thế giới, nhân học, khảo cổ và văn hóa du lịch trong các trường đại học, cao đẳng và trung cấp chuyên nghiệp."
+  utter_VieclamnganhQuanlyantoansuckhoevamoitruong:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+    - Các doanh nghiệp, khu công nghiệp (bộ phận an toàn và sức khỏe nghề nghiệp,  bộ phận quản lý chất lượng môi trường );\n
+    - Công ty tư vấn môi trường;\n
+    - Cơ quan quản lý nhà nước (Bộ/Sở Lao Động – Thương binh và xã hội, Bộ/Sở Tài nguyên và Môi trường, Tổng liên đoàn lao động Việt Nam, Chi cục bảo vệ môi trường, Cảnh sát môi trường, Trung tâm quan trắc môi trường, Phòng tài nguyên và môi trường); - Các cơ quan nghiên cứu và đào tạo (Các viện nghiên cứu về môi trường và các trường đại học, cao đẳng, ...);\n
+    - Chuyên viên/chuyên gia  tại các tổ chức phi chính phủ. \n
+    - Lương ngành HSE Về mức lương, cán bộ an toàn lao động HSE có khoảng lương phổ biến vào khoảng từ 10 – 13 triệu đồng/tháng. Khi đã có nhiều kinh nghiệm và đảm nhiệm vị trí quản lý HSE tại các công ty, tập đoàn lớn, chuyên viên  HSE sẽ có mức lương rất hấp dẫn, từ 17 – 37 triệu đồng/tháng."
+  utter_VieclamnganhQuanlynhanuoc:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Lãnh đạo, quản lý, chuyên viên hành chính các khu vực công và khu vực tư, đặc biệt là hệ thống chính quyền ở cấp xã, huyện, tỉnh và Trung ương;\n
+Nghiên cứu viên về khoa học hành chính, khoa học quản lý ở các cơ sở nghiên cứu, các cơ quan tham mưu hoạch định chiến lược, chính sách của Đảng và Nhà nước;\n
+Giảng dạy về khoa học hành chính, cán bộ hành chính, khoa học quản lý tại các cơ sở đào tạo, bồi dưỡng cán bộ hành chính;\n
+Có cơ hội học tập, nâng cao trình độ chuyên môn ở bậc sau đại học chuyên ngành Quản lý nhà nước, Hành chính công, Quản lý công, Chính trị học."
+  utter_VieclamnganhQuanlytainguyenvamoitruong:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Theo quyết định số 1216/QĐ-TTg ký ngày 22/7/2011 của Thủ tướng Chính phủ thì nhu cầu nhân lực ngành này khoảng 300 cán bộ đại học/năm;\n
+Cán bộ quản lý về lĩnh vực tài nguyên, môi trường cho các cơ quan quản lý Nhà nước như các Bộ, Sở, Phòng Tài nguyên và Môi trường, Chi cục Bảo vệ Môi trường;\n
+Cán bộ quản lý đất đai ở các xã, phường, thị trấn;\n
+Cán bộ quản lý môi trường ở các công ty, nhà máy, xí nghiệp;\n
+Giảng dạy và nghiên cứu tại các trường đại học, viện nghiên cứu liên quan đến tài nguyên và môi trường, giảm nhẹ thiên tai, thích ứng với biến đổi khí hậu…"
+  utter_Quantrivaphantichdulieu:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Chuyên viên quản trị, phân tích, phát triển và tích hợp cơ sở dữ liệu;\n
+Chuyên viên khai phá dữ liệu và xây dựng mô hình;\n
+Chuyên viên phân tích thống kê, phân tích kinh doanh;\n
+Quản lý (trưởng phòng/ giám đốc) phân tích dữ liệu;\n
+Chuyên viên trong các cơ quan hành chính nhà nước hay tư nhân, hỗ trợ các công việc kỹ thuật về xử lý dữ liệu, thống kê và làm các quyết định;\n
+Chuyên viên trong các tổ chức, công ty kinh doanh, quản lý và xử lý các tập dữ liệu phát sinh mỗi ngày;\n
+Chuyên viên và nghiên cứu tại các viện và trung tâm lớn của quốc gia và cấp tỉnh về xử lý dữ liệu;\n
+Trở thành giảng viên và chuyên gia trong các lĩnh vực xử lý dữ liệu, big data hay khoa học dữ liệu."
+  utter_VieclamnganhTriethoc:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Chuyên viên tại các cơ quan Nhà nước, trong hệ thống chính trị, chính quyền các cấp, các tổ chức Đảng, Đoàn thể như: Văn phòng Chính phủ, Mặt trận Tổ quốc, Công đoàn, Đoàn Thanh niên, Hội Liên hiệp Phụ nữ, Hội Nông dân...;\n
+Làm công tác tham mưu trong các cơ quan, tổ chức chính trị - xã hội, các tổ chức kinh tế Nhà nước và tư nhân;\n
+Nghiên cứu viên ở các cơ quan lý luận chính trị, các Viện nghiên cứu thuộc lĩnh vực xã hội;\n
+Chuyên viên phân tích, bình luận, viết bài về chính trị, thời sự ở các báo, đài Trung ương và địa phương;\n
+Giảng dạy tại các trường đại học, cao đẳng và trung cấp chuyên nghiệp."
+  utter_VieclamnganhTruyenthongso:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Phóng viên, Biên tập viên tại các cơ quan thông tấn báo chí.\n
+Quản lý, biên tập, xây dựng các nội dung tác phẩm truyền thông, báo chí tại các công ty truyền thông, các cơ quan báo chí, các doanh nghiệp và các cơ quan nhà nước.\n
+Thiết kế sản phẩm game, kỹ xảo điện ảnh, hoạt hình tại các công ty quảng cáo, doanh nghiệp.\n
+Chuyên gia thiết kế, tư vấn quảng cáo, thiết kế nhãn hiệu sản phẩm, thiết kế logo, làm phim quảng cáo, bộ nhận dạng thương hiệu tại các công ty quảng cáo.\n
+Thiết kế, xây dựng website, thiết kế giao diện, thiết kế chức năng, xây dựng nội dung (tại các công ty phát triển phần mềm, tạo dựng website).\n
+Thiết kế đồ họa, mô phỏng, ứng dụng tại các công ty thiết kế đồ họa.\n
+Giảng dạy tại các cơ sở đào tạo, giáo dục đại học. Cao đẵng hoặc trung cấp chuyên nghiệp có liên quan đến ngành."
+  utter_VieclamnganhVanhoc:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Cán bộ nghiên cứu tại Sở Khoa học và Công nghệ, các Viện nghiên cứu, Trung tâm khoa học xã hội và nhân văn;\n
+Phóng viên, biên tập viên ở các cơ quan báo chí - truyền thông, nhà xuất bản;\n
+Nhân viên văn thư, văn phòng, cán bộ hành chính trong các cơ quan Đảng, Nhà nước và doanh nghiệp tư nhân;\n
+Hướng dẫn viên du lịch tại các trung tâm di tích;\n
+Nhân viên tại các trung tâm tổ chức sự kiện;\n
+Giảng dạy tại các trường đại học, cao đẳng và trung cấp chuyên nghiệp."
+  utter_VieclamnganhXahoihoc:
+    - text: "Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí sau:\n
+Cán bộ nghiên cứu tại Sở Khoa học và Công nghệ, các Viện nghiên cứu, Trung tâm khoa học xã hội và nhân văn;\n
+Phóng viên, biên tập viên ở các cơ quan báo chí - truyền thông, nhà xuất bản;\n
+Nhân viên văn thư, văn phòng, cán bộ hành chính trong các cơ quan Đảng, Nhà nước và doanh nghiệp tư nhân;\n
+Hướng dẫn viên du lịch tại các trung tâm di tích;\n
+Nhân viên tại các trung tâm tổ chức sự kiện;\n
+Giảng dạy tại các trường đại học, cao đẳng và trung cấp chuyên nghiệp."
 
 session_config:
   session_expiration_time: 60

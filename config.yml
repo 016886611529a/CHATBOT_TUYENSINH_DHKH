@@ -18,24 +18,16 @@ pipeline:
     epochs: 100
     constrain_similarities: true
   - name: EntitySynonymMapper
-  - name: ResponseSelector
-    epochs: 100
-    retrieval_intent: faq
-    constrain_similarities: true
-#   - name: FallbackClassifier
-#     threshold: 0.3
-#     ambiguity_threshold: 0.1
+#  - name: ResponseSelector
+#    epochs: 100
+#    retrieval_intent: faq
+#    constrain_similarities: true
+#  - name: FallbackClassifier
+#    threshold: 0.3
+#    ambiguity_threshold: 0.1
 
-# Other components
- # - name: ResponseSelector
- #   epochs: 100
-  #  retrieval_intent: faq
 
-#     epochs: 100
-#     constrain_similarities: true
-#   - name: FallbackClassifier
-#     threshold: 0.3
-#     ambiguity_threshold: 0.1
+
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
@@ -47,11 +39,13 @@ policies:
     epochs: 100
     constrain_similarities: true
   - name: RulePolicy
-    core_fallback_threshold: 0.4
-    core_fallback_action_name: "action_default_fallback"
-    enable_fallback_prediction: True
-# - name: "FallbackPolicy"
-#    nlu_threshold: 0.6
-#    core_threshold: 0.3
- #   fallback_action_name: 'utter_fallback'
+#    nlu_fallback_threshold: 0.6
+#    core_fallback_threshold: 0.3
+#    core_fallback_action_name: "action_default_fallback"
+ #   enable_fallback_prediction: True
+
+  - name: FallbackPolicy
+    nlu_threshold: 0.6
+    core_threshold: 0.3
+    fallback_action_name: 'utter_fallback'
 # This key can be left empty. Policies will then be provided   from a default configuration during training.

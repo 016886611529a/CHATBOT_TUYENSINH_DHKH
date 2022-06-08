@@ -25,7 +25,7 @@ nlu:
     - chào admin cho em hỏi thông tin tuyển sinh các năm trước
     - chào local cho em hỏi thông tin tuyển sinh các năm trước
     - admin có thể cho em biết thông tin tuyển sinh các năm trước
-    - chào bot cho tôi hỏi thông tin tuyner sinh các năm trước
+    - chào bot cho tôi hỏi thông tin tuyển sinh các năm trước
     - admin
     - chào local
     - chào admin
@@ -49,80 +49,81 @@ nlu:
     - tổ hợp môn của các ngành đào tạo
 - intent: Manganh
   examples: |
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Hán - Nôm]{"entity":"major","value":"han nom"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Triết học]{"entity":"major","value":"triet hoc"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Lịch sử]{"entity":"major","value":"lich su"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Văn học]{"entity":"major","value":"van hoc"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Quản lý nhà nước]{"entity":"major","value":"quan ly nha nuoc"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Xã hội học]{"entity":"major","value":"xa hoi hoc"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Đông phương học]{"entity":"major","value":"dong phuong hoc"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Báo chí]{"entity":"major","value":"bao chi"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Công nghệ sinh học]{"entity":"major","value":"cong nghe sinh hoc"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Kỹ thuật sinh học]{"entity":"major","value":"ky thuat sinh hoc"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Hoá học]{"entity":"major","value":"hoa hoc"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Khoa học môi trường]{"entity":"major","value":"khoa hoc moi truong"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Toán ứng dụng]{"entity":"major","value":"toan ung dung"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Kỹ thuật phần mềm]{"entity":"major","value":"ky thuat phan mem"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Quản trị và phân tích dữ liệu]{"entity":"major","value":"quan tri van phan tich du lieu"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Công nghệ thông tin]{"entity":"major","value":"cong nghe thong tin"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Công nghệ kỹ thuật điện tử - Viễn thông]{"entity":"major","value":"cong nghe ky thuat dien tu - vien thong"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Công nghệ kỹ thuật hoá học]{"entity":"major","value":"cong nghe ky thuat hoa hoc"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Kỹ thuật môi trường]{"entity":"major","value":"ky thuat moi truong"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Kỹ thuật địa chất]{"entity":"major","value":"ky thuat dia chat"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Kiến trúc]{"entity":"major","value":"kien truc"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Công tác xã hội]{"entity":"major","value":"cong tac xa hoi"} năm 2021
-    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Quản lý tài nguyên và môi trường]{"entity":"major","value":"quan ly tai nguyen va moi truong"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Hán - Nôm]{"entity":"major","value":"Hán - Nôm"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Triết học]{"entity":"major","value":"Triết học"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Lịch sử]{"entity":"major","value":"Lịch sử"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Văn học]{"entity":"major","value":"Văn học"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Quản lý nhà nước]{"entity":"major","value":"Quản lý nhà nước"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Xã hội học]{"entity":"major","value":"Xã hội học"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Đông phương học]{"entity":"major","value":"Đông phương học"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Báo chí]{"entity":"major","value":"Báo chí"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Công nghệ sinh học]{"entity":"major","value":"Công nghệ sinh học"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Kỹ thuật sinh học]{"entity":"major","value":"Kỹ thuật sinh học"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Hoá học]{"entity":"major","value":"Hóa học"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Khoa học môi trường]{"entity":"major","value":"Khoa học môi trường"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Toán ứng dụng]{"entity":"major","value":"Toán ứng dụng"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Kỹ thuật phần mềm]{"entity":"major","value":"Kỹ thuật phần mềm"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Quản trị và phân tích dữ liệu]{"entity":"major","value":"Quản trị và phân tích dữ liệu"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Công nghệ thông tin]{"entity":"major","value":"Công nghệ thông tin"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Công nghệ kỹ thuật điện tử - Viễn thông]{"entity":"major","value":"Công nghệ kỹ thuật điện tử - Viễn thông"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Công nghệ kỹ thuật hoá học]{"entity":"major","value":"Công nghệ kỹ thuật hoá học"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Kỹ thuật môi trường]{"entity":"major","value":"Kỹ thuật môi trường"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Kỹ thuật địa chất]{"entity":"major","value":"Kỹ thuật địa chất"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Kiến trúc]{"entity":"major","value":"Kiến trúc"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Công tác xã hội]{"entity":"major","value":"Công tác xã hội"} năm 2021
+    - [Mã ngành]{"entity":"code","value":"Mã ngành"} [Quản lý tài nguyên và môi trường]{"entity":"major","value":"Quản lý tài nguyên và môi trường"} năm 2021
 
 - intent: tohopmon
   examples: |
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Hán - Nôm]{"entity":"major","value":"han nom"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Triết học]{"entity":"major","value":"triet hoc"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Lịch sử]{"entity":"major","value":"lich su"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Văn học]{"entity":"major","value":"van hoc"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Quản lý nhà nước]{"entity":"major","value":"quan ly nha nuoc"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Xã hội học]{"entity":"major","value":"xa hoi hoc"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Đông phương học]{"entity":"major","value":"dong phuong hoc"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Báo chí]{"entity":"major","value":"bao chi"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Công nghệ sinh học]{"entity":"major","value":"cong nghe sinh hoc"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Kỹ thuật sinh học]{"entity":"major","value":"ky thuat sinh hoc"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Hoá học]{"entity":"major","value":"hoa hoc"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Khoa học môi trường]{"entity":"major","value":"khoa hoc moi truong"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Toán ứng dụng]{"entity":"major","value":"toan ung dung"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Kỹ thuật phần mềm]{"entity":"major","value":"ky thuat phan mem"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Quản trị và phân tích dữ liệu]{"entity":"major","value":"quan tri van phan tich du lieu"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Công nghệ thông tin]{"entity":"major","value":"cong nghe thong tin"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Công nghệ kỹ thuật điện tử - Viễn thông]{"entity":"major","value":"cong nghe ky thuat dien tu - vien thong"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Công nghệ kỹ thuật hoá học]{"entity":"major","value":"cong nghe ky thuat hoa hoc"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Kỹ thuật môi trường]{"entity":"major","value":"ky thuat moi truong"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Kỹ thuật địa chất]{"entity":"major","value":"ky thuat dia chat"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Kiến trúc]{"entity":"major","value":"kien truc"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Công tác xã hội]{"entity":"major","value":"cong tac xa hoi"} năm 2021
-    - [Tổ hợp môn xét tuyển ngành]{"entity":"mon","value":"Tổ hợp môn xét tuyển ngành"} [Quản lý tài nguyên và môi trường]{"entity":"major","value":"quan ly tai nguyen va moi truong"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Hán - Nôm]{"entity":"major","value":"Hán - Nôm"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Triết học]{"entity":"major","value":"Triết học"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Lịch sử]{"entity":"major","value":"Lịch sử"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Văn học]{"entity":"major","value":"Văn học"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Quản lý nhà nước]{"entity":"major","value":"Quản lý nhà nước"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Xã hội học]{"entity":"major","value":"Xã hội học"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Đông phương học]{"entity":"major","value":"Đông phương học"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Báo chí]{"entity":"major","value":"Báo chí"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Công nghệ sinh học]{"entity":"major","value":"Công nghệ sinh học"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Kỹ thuật sinh học]{"entity":"major","value":"Kỹ thuật sinh học"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Hoá học]{"entity":"major","value":"Hóa học"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Khoa học môi trường]{"entity":"major","value":"Khoa học môi trường"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Toán ứng dụng]{"entity":"major","value":"Toán ứng dụng"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Kỹ thuật phần mềm]{"entity":"major","value":"Kỹ thuật phần mềm"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Quản trị và phân tích dữ liệu]{"entity":"major","value":"Quản trị và phân tích dữ liệu"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Công nghệ thông tin]{"entity":"major","value":"Công nghệ thông tin"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Công nghệ kỹ thuật điện tử - Viễn thông]{"entity":"major","value":"Công nghệ kỹ thuật điện tử - Viễn thông"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Công nghệ kỹ thuật hoá học]{"entity":"major","value":"Công nghệ kỹ thuật hoá học"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Kỹ thuật môi trường]{"entity":"major","value":"Kỹ thuật môi trường"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Kỹ thuật địa chất]{"entity":"major","value":"Kỹ thuật địa chất"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Kiến trúc]{"entity":"major","value":"Kiến trúc"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Công tác xã hội]{"entity":"major","value":"Công tác xã hội"} năm 2021
+    - [Tổ hợp môn xét tuyển ngành]{"entity":"code","value":"Tổ hợp môn xét tuyển ngành"} [Quản lý tài nguyên và môi trường]{"entity":"major","value":"Quản lý tài nguyên và môi trường"} năm 2021
+
 - intent: diemchuan2021
   examples: |
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Hán - Nôm]{"entity":"major","value":"han nom"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Triết học]{"entity":"major","value":"triet hoc"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Lịch sử]{"entity":"major","value":"lich su"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Văn học]{"entity":"major","value":"van hoc"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Quản lý nhà nước]{"entity":"major","value":"quan ly nha nuoc"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Xã hội học]{"entity":"major","value":"xa hoi hoc"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Đông phương học]{"entity":"major","value":"dong phuong hoc"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Báo chí]{"entity":"major","value":"bao chi"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Công nghệ sinh học]{"entity":"major","value":"cong nghe sinh hoc"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Kỹ thuật sinh học]{"entity":"major","value":"ky thuat sinh hoc"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Hoá học]{"entity":"major","value":"hoa hoc"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Khoa học môi trường]{"entity":"major","value":"khoa hoc moi truong"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Toán ứng dụng]{"entity":"major","value":"toan ung dung"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Kỹ thuật phần mềm]{"entity":"major","value":"ky thuat phan mem"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Quản trị và phân tích dữ liệu]{"entity":"major","value":"quan tri van phan tich du lieu"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Công nghệ thông tin]{"entity":"major","value":"cong nghe thong tin"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Công nghệ kỹ thuật điện tử - Viễn thông]{"entity":"major","value":"cong nghe ky thuat dien tu - vien thong"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Công nghệ kỹ thuật hoá học]{"entity":"major","value":"cong nghe ky thuat hoa hoc"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Kỹ thuật môi trường]{"entity":"major","value":"ky thuat moi truong"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Kỹ thuật địa chất]{"entity":"major","value":"ky thuat dia chat"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Kiến trúc]{"entity":"major","value":"kien truc"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Công tác xã hội]{"entity":"major","value":"cong tac xa hoi"} năm 2021
-    - [Điểm ngành]{"entity":"diem","value":"Điểm ngành"} [Quản lý tài nguyên và môi trường]{"entity":"major","value":"quan ly tai nguyen va moi truong"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Hán - Nôm]{"entity":"major","value":"Hán - Nôm"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Triết học]{"entity":"major","value":"Triết học"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Lịch sử]{"entity":"major","value":"Lịch sử"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Văn học]{"entity":"major","value":"Văn học"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Quản lý nhà nước]{"entity":"major","value":"Quản lý nhà nước"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Xã hội học]{"entity":"major","value":"Xã hội học"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Đông phương học]{"entity":"major","value":"Đông phương học"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Báo chí]{"entity":"major","value":"Báo chí"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Công nghệ sinh học]{"entity":"major","value":"Công nghệ sinh học"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Kỹ thuật sinh học]{"entity":"major","value":"Kỹ thuật sinh học"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Hoá học]{"entity":"major","value":"Hóa học"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Khoa học môi trường]{"entity":"major","value":"Khoa học môi trường"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Toán ứng dụng]{"entity":"major","value":"Toán ứng dụng"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Kỹ thuật phần mềm]{"entity":"major","value":"Kỹ thuật phần mềm"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Quản trị và phân tích dữ liệu]{"entity":"major","value":"Quản trị và phân tích dữ liệu"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Công nghệ thông tin]{"entity":"major","value":"Công nghệ thông tin"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Công nghệ kỹ thuật điện tử - Viễn thông]{"entity":"major","value":"Công nghệ kỹ thuật điện tử - Viễn thông"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Công nghệ kỹ thuật hoá học]{"entity":"major","value":"Công nghệ kỹ thuật hoá học"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Kỹ thuật môi trường]{"entity":"major","value":"Kỹ thuật môi trường"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Kỹ thuật địa chất]{"entity":"major","value":"Kỹ thuật địa chất"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Kiến trúc]{"entity":"major","value":"Kiến trúc"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Công tác xã hội]{"entity":"major","value":"Công tác xã hội"} năm 2021
+    - [Điểm ngành]{"entity":"code","value":"Điểm ngành"} [Quản lý tài nguyên và môi trường]{"entity":"major","value":"Quản lý tài nguyên và môi trường"} năm 2021
 
 - intent: chaohoithongminh
   examples: |
@@ -133,22 +134,33 @@ nlu:
     - [Chị]{"entity":"sex","value":"Chị"} là [Hồng Phước]{"entity":"name","value":"Hồng Phước"}
     - [Anh]{"entity":"sex","value":"Anh"} là [Thủy]{"entity":"name","value":"Thủy"}
     - [Anh]{"entity":"sex","value":"Anh"} là [Đăng Bình]{"entity":"name","value":"Đăng Bình"}
-- intent: faq/rasa_intro
+- intent: tracuu
   examples: |
-    - Rasa là gì?
-    - Tôi muốn biết về Rasa
-    - Em có thể cho anh thông tin về Rasa không?
-- intent: faq/retrieval_action_intro
+    - kết quả xét tuyển
+    - cho em xin kết quả xét tuyển
+    - kết quả xét tuyển năm 2022
+    - kết quả xét tuyển năm nay
+    - xem điểm chuẩn
+- intent: kytucxa
   examples: |
-    - retrieval action là gì thế?
-    - cho tôi biết về retrieval actions
-    - retrieval action dùng để làm gì
-    - tại sao lại cần retrieval actions
+    - cho em biết thông tin về ký túc xá
+    - ký túc xá đại học huế
+    - ký túc xã đại học khoa học
+    - Học ở huế có ký túc xá không
+    - ký túc xa ở Huế như thế nào
+- intent: hocbong
+  examples: |
+    - cho em hỏi học bổng của trường mình như thế nào
+    - thưa thầy, cho em hỏi học bổng của trường mình được trao như thế nào
+    - học bổng
+    - Thông tin về học bổng
+    - Chính sách về học bổng
+
 - intent: chaohoi
   examples: |
     - xin chào
     - xin chao
-    - chao
+    - chào
     - chào ad
     - chào bot
     - hello
@@ -163,6 +175,11 @@ nlu:
     - pp
     - bai bai
     - bai
+- intent: bot_challenge
+  examples: |
+    - khả năng của bot
+    - bot có khả năng gì
+    - hãy nêu chức năng của bot
 
 - intent: infomation
   examples: |
@@ -182,7 +199,7 @@ nlu:
     - trường dạy những ngành gì
     - majors
     - major
-- intent: tuition
+- intent: hocphi
   examples: |
     - học phí của trường là bao nhiêu
     - học phí tại trường như thế nào
@@ -192,9 +209,7 @@ nlu:
     - học phí ngành xã hội
     - học phí hiện tại
     - học phí năm nay như thế nào
-    - fee
-    - tuition fee
-- intent: reg
+- intent: tuyensinh
   examples: |
     - thông tin đăng ký xét tuyển
     - cách đăng ký xét tuyển
@@ -204,7 +219,9 @@ nlu:
     - làm hồ sơ xét tuyển
     - nộp hồ sơ xét tuyển
     - cách gửi hồ sơ xét tuyển
-    - reg
+    - thông tin tuyển sinh
+    - thông tin tuyển sinh năm nay
+    - thông tin tuyển sinh năm 2022
 - intent: phuongthucrieng
   examples: |
     - phương thức riêng
@@ -272,9 +289,10 @@ nlu:
     - cách để làm hồ sơ nhập học theo phương thức điểm thi THPT
 - intent: benchmark
   examples: |
-    - Điểm
-    - Điểm chuẩn năm nay
-    - Bảng điểm chuẩn
+    - Điểm chuẩn năm 2021
+    - Điểm chuẩn năm trước
+    - Bảng điểm chuẩn năm 2021
+    - Điểm chuẩn các ngành năm 2021
 - intent: job
   examples: |
     - Công việc sau khi ra trường
@@ -282,92 +300,152 @@ nlu:
     - [Việc làm]{"entity":"job", "value":"Việc làm"} sau khi ra trường
     - Cơ hội việc làm
     - [Việc làm]{"entity":"job", "value":"Việc làm"}
-    - Job
-
-- intent: job_IT
+    - Triển vọng nghề nghiệp
+- intent: Vieclam_Baochi
   examples: |
-    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Công nghệ thông tin]{"entity":"major", "value":"cong nghe thong tin"}
-    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [IT]{"entity":"major", "value":"cong nghe thong tin"}
-    - Ngành [Công nghệ thông tin]{"entity":"major", "value":"cong nghe thong tin"} ra trường làm gì?
-    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Công nghệ thông tin]{"entity":"major", "value":"cong nghe thong tin"} trường làm gì
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Báo chí]{"entity":"major", "value":"Báo chí"}
+    - Công việc cho ngành [Báo chí]{"entity":"major", "value":"Báo chí"}
+    - ngành [Báo chí]{"entity":"major", "value":"Báo chí"} ra làm gì?
+    - Ngành [Báo chí]{"entity":"major", "value":"Báo chí"} ra trường làm gì?
+- intent: Vieclam_Congnghekythuatdienthu-Vienthong
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Công nghệ kỹ thuật điện tử - Viễn thông]{"entity":"major", "value":"Công nghệ kỹ thuật điện tử - Viễn thông"}
+    - Công việc cho ngành [Công nghệ kỹ thuật điện tử - Viễn thông]{"entity":"major", "value":"Công nghệ kỹ thuật điện tử - Viễn thông"}
+    - ngành [Công nghệ kỹ thuật điện tử - Viễn thông]{"entity":"major", "value":"Công nghệ kỹ thuật điện tử - Viễn thông"} ra làm gì?
+    - Ngành [Công nghệ kỹ thuật điện tử - Viễn thông]{"entity":"major", "value":"Công nghệ kỹ thuật điện tử - Viễn thông"} ra trường làm gì?
+- intent: Vieclam_Congnghekythuathoahoc
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Công nghệ kỹ thuật hóa học]{"entity":"major", "value":"Công nghệ kỹ thuật hóa học"}
+    - Công việc cho ngành [Công nghệ kỹ thuật hóa học]{"entity":"major", "value":"Công nghệ kỹ thuật hóa học"}
+    - ngành [Công nghệ kỹ thuật hóa học]{"entity":"major", "value":"Công nghệ kỹ thuật hóa học"} ra làm gì?
+    - Ngành [Công nghệ kỹ thuật hóa học]{"entity":"major", "value":"Công nghệ kỹ thuật hóa học"} ra trường làm gì?
+- intent: Vieclam_Congnghesinhhoc
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Công nghệ sinh học]{"entity":"major", "value":"Công nghệ sinh học"}
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Công nghệ sinh học]{"entity":"major", "value":"Công nghệ sinh học"}
+    - Ngành [Công nghệ sinh học]{"entity":"major", "value":"Công nghệ sinh học"} ra trường làm gì?
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Công nghệ sinh học]{"entity":"major", "value":"Công nghệ sinh học"} ra trường làm gì
+- intent: Vieclam_Congnghethongtin
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Công nghệ thông tin]{"entity":"major", "value":"Công nghệ thông tin"}
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [IT]{"entity":"major", "value":"Công nghệ thông tin"}
+    - Ngành [Công nghệ thông tin]{"entity":"major", "value":"Công nghệ thông tin"} ra trường làm gì?
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Công nghệ thông tin]{"entity":"major", "value":"Công nghệ thông tin"} trường làm gì
+- intent: Vieclam_Congtacxahoi
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Công tác xã hội]{"entity":"major", "value":"Công tác xã hội"}
+    - Công việc cho ngành [Công tác xã hội]{"entity":"major", "value":"Công tác xã hội"}
+    - ngành [Công tác xã hội]{"entity":"major", "value":"Công tác xã hội"} ra làm gì?
+    - Ngành [Công tác xã hội]{"entity":"major", "value":"Công tác xã hội"} ra trường làm gì?
+
+- intent: Vieclam_Diakythuatxaydung
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Kỹ thuật xây dựng]{"entity":"major", "value":"Kỹ thuật xây dựng"}
+    - Công việc cho ngành [Kỹ thuật xây dựng]{"entity":"major", "value":"Kỹ thuật xây dựng"}
+    - ngành [Kỹ thuật xây dựng]{"entity":"major", "value":"Kỹ thuật xây dựng"} ra làm gì?
+    - Ngành [Kỹ thuật xây dựng]{"entity":"major", "value":"Kỹ thuật xây dựng"} ra trường làm gì?
+- intent: Vieclam_Dongphuonghoc
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Đông phương học]{"entity":"major", "value":"Đông phương học"}
+    - Công việc cho ngành [Đông phương học]{"entity":"major", "value":"Đông phương học"}
+    - ngành [Đông phương học]{"entity":"major", "value":"Đông phương học"} ra làm gì?
+    - Ngành [Đông phương học]{"entity":"major", "value":"Đông phương học"} ra trường làm gì?
+- intent: Vieclam_Hannom
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Hán - Nôm]{"entity":"major", "value":"Hán - Nôm"}
+    - Công việc cho ngành [Hán - Nôm]{"entity":"major", "value":"Hán - Nôm"}
+    - ngành [Hán - Nôm]{"entity":"major", "value":"Hán - Nôm"} ra làm gì?
+    - Ngành [Hán - Nôm]{"entity":"major", "value":"Hán - Nôm"} ra trường làm gì?
+- intent: Vieclam_Hoahoc
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Hoá học]{"entity":"major", "value":"Hoá học"}
+    - Công việc cho ngành [Hoá học]{"entity":"major", "value":"Hoá học"}
+    - ngành [Hoá học]{"entity":"major", "value":"Hoá học"} ra làm gì?
+    - [Hoá học]{"entity":"major", "value":"Hoá học"} ra trường làm gì?
+    - Ngành [Hoá học]{"entity":"major", "value":"Hoá học"} ra trường làm gì?
+    - những công việc mà ngành [Hóa học]{"entity":"major", "value":"Hoá học"} ?
+- intent: Vieclam_Khoahocmoitruong
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Khoa học môi trường]{"entity":"major", "value":"Khoa học môi trường"}
+    - Công việc cho ngành [Khoa học môi trường]{"entity":"major", "value":"Khoa học môi trường"}
+    - ngành [Khoa học môi trường]{"entity":"major", "value":"Khoa học môi trường"} ra làm gì?
+    - Ngành [Khoa học môi trường]{"entity":"major", "value":"Khoa học môi trường"} ra trường làm gì?
+- intent: Viemlam_Kientruc
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Kiến trúc]{"entity":"major", "value":"Kiến trúc"}
+    - Công việc cho ngành [Kiến trúc]{"entity":"major", "value":"Kiến trúc"}
+    - ngành [Kiến trúc]{"entity":"major", "value":"Kiến trúc"} ra làm gì?
+    - Ngành [Kiến trúc]{"entity":"major", "value":"Kiến trúc"} ra trường làm gì?
+- intent: Vieclam_Kythuatphanmem
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Kỹ thuật phần mềm]{"entity":"major", "value":"Kỹ thuật phần mềm"}
+    - Công việc cho ngành [Kỹ thuật phần mềm]{"entity":"major", "value":"Kỹ thuật phần mềm"}
+    - ngành [Kỹ thuật phần mềm]{"entity":"major", "value":"Kỹ thuật phần mềm"} ra làm gì?
+    - Ngành [Kỹ thuật phần mềm]{"entity":"major", "value":"Kỹ thuật phần mềm"} ra trường làm gì?
+
+- intent: Vieclam_Kythuattracdiabando
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Kỹ thuật trắc địa - bản đồ]{"entity":"major", "value":"Kỹ thuật trắc địa - bản đồ"}
+    - Công việc cho ngành [Kỹ thuật trắc địa - bản đồ]{"entity":"major", "value":"Kỹ thuật trắc địa - bản đồ"}
+    - ngành [Kỹ thuật trắc địa - bản đồ]{"entity":"major", "value":"Kỹ thuật trắc địa - bản đồ"} ra làm gì?
+    - Ngành [Kỹ thuật trắc địa - bản đồ]{"entity":"major", "value":"Kỹ thuật trắc địa - bản đồ"} ra trường làm gì?
+- intent: Vieclam_Lichsu
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Lịch sử]{"entity":"major", "value":"Lịch sử"}
+    - Công việc cho ngành [Lịch sử]{"entity":"major", "value":"Lịch sử"}
+    - ngành [Lịch sử]{"entity":"major", "value":"Lịch sử"} ra làm gì?
+    - Ngành [Lịch sử]{"entity":"major", "value":"Lịch sử"} ra trường làm gì?
+- intent: Vieclam_Quanlyantoansuckhoevamoitruong
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Quản lý an toàn, sức khỏe và môi trường]{"entity":"major", "value":"Quản lý an toàn, sức khỏe và môi trường"}
+    - Công việc cho ngành [Quản lý an toàn, sức khỏe và môi trường]{"entity":"major", "value":"Quản lý an toàn, sức khỏe và môi trường"}
+    - ngành [Quản lý an toàn, sức khỏe và môi trường]{"entity":"major", "value":"Quản lý an toàn, sức khỏe và môi trường"} ra làm gì?
+    - Ngành [Quản lý an toàn, sức khỏe và môi trường]{"entity":"major", "value":"Quản lý an toàn, sức khỏe và môi trường"} ra trường làm gì?
+- intent: Vieclam_Quanlynhanuoc
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Quản lý nhà nước]{"entity":"major", "value":"Quản lý nhà nước"}
+    - Công việc cho ngành [Quản lý nhà nước]{"entity":"major", "value":"Quản lý nhà nước"}
+    - ngành [Quản lý nhà nước]{"entity":"major", "value":"Quản lý nhà nước"} ra làm gì?
+    - Ngành [Quản lý nhà nước]{"entity":"major", "value":"Quản lý nhà nước"} ra trường làm gì?
+- intent: Vieclam_Quanlytainguyenvamoitruong
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Quản lý tài nguyên và môi trường]{"entity":"major", "value":"Quản lý tài nguyên và môi trường"}
+    - Công việc cho ngành [Quản lý tài nguyên và môi trường]{"entity":"major", "value":"Quản lý tài nguyên và môi trường"}
+    - ngành [Quản lý tài nguyên và môi trường]{"entity":"major", "value":"Quản lý tài nguyên và môi trường"} ra làm gì?
+    - Ngành [Quản lý tài nguyên và môi trường]{"entity":"major", "value":"Quản lý tài nguyên và môi trường"} ra trường làm gì?
+- intent: Vieclam_Quantrivaphantichdulieu
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Quản trị và phân tích dữ liệu]{"entity":"major", "value":"Quản trị và phân tích dữ liệu"}
+    - Công việc cho ngành [Quản trị và phân tích dữ liệu]{"entity":"major", "value":"Quản trị và phân tích dữ liệu"}
+    - ngành [Quản trị và phân tích dữ liệu]{"entity":"major", "value":"Quản trị và phân tích dữ liệu"} ra làm gì?
+    - Ngành [Quản trị và phân tích dữ liệu]{"entity":"major", "value":"Quản trị và phân tích dữ liệu"} ra trường làm gì?
+- intent: Vieclam_Triethoc
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Triết học]{"entity":"major", "value":"Triết học"}
+    - Công việc cho ngành [Triết học]{"entity":"major", "value":"Triết học"}
+    - ngành [Triết học]{"entity":"major", "value":"Triết học"} ra làm gì?
+    - Ngành [Triết học]{"entity":"major", "value":"Triết học"} ra trường làm gì?
+- intent: Vieclam_Truyenthongso
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Truyền thông số]{"entity":"major", "value":"Truyền thông số"}
+    - Công việc cho ngành [Truyền thông số]{"entity":"major", "value":"Truyền thông số"}
+    - ngành [Truyền thông số]{"entity":"major", "value":"Truyền thông số"} ra làm gì?
+    - Ngành [Truyền thông số]{"entity":"major", "value":"Truyền thông số"} ra trường làm gì?
+- intent: Vieclam_Vanhoc
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Văn học]{"entity":"major", "value":"Văn học"}
+    - Công việc cho ngành [Văn học]{"entity":"major", "value":"Văn học"}
+    - ngành [Văn học]{"entity":"major", "value":"Văn học"} ra làm gì?
+    - Ngành [Văn học]{"entity":"major", "value":"Văn học"} ra trường làm gì?
+- intent: Vieclam_Xahoihoc
+  examples: |
+    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Xã hội học]{"entity":"major", "value":"Xã hội học"}
+    - Công việc cho ngành [Xã hội học]{"entity":"major", "value":"Xã hội học"}
+    - ngành [Xã hội học]{"entity":"major", "value":"Xã hội học"} ra làm gì?
+    - Ngành [Xã hội học]{"entity":"major", "value":"Xã hội học"} ra trường làm gì?
     
 
-- intent: job_jour
-  examples: |
-    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Báo chí]{"entity":"major", "value":"bao chi"}
-    - Công việc cho ngành [Báo chí]{"entity":"major", "value":"bao chi"}
-    - ngành [Báo chí]{"entity":"major", "value":"bao chi"} ra làm gì?
-    - Ngành [Báo chí]{"entity":"major", "value":"bao chi"} ra trường làm gì?
 
-- intent: job_OS
-  examples: |
-    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Đông phương học]{"entity":"major", "value":"dong phuong hoc"}
-    - Công việc cho ngành [Đông phương học]{"entity":"major", "value":"dong phuong hoc"}
-    - ngành [Đông phương học]{"entity":"major", "value":"dong phuong hoc"} ra làm gì?
-    - Ngành [Đông phương học]{"entity":"major", "value":"dong phuong hoc"} ra trường làm gì?
     
 
-- intent: job_SE
-  examples: |
-    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Kỹ thuật phần mềm]{"entity":"major", "value":"ky thuat phan mem"}
-    - Công việc cho ngành [Kỹ thuật phần mềm]{"entity":"major", "value":"ky thuat phan mem"}
-    - ngành [Kỹ thuật phần mềm]{"entity":"major", "value":"ky thuat phan mem"} ra làm gì?
-    - Ngành [Kỹ thuật phần mềm]{"entity":"major", "value":"ky thuat phan mem"} ra trường làm gì?
-    
 
-- intent: job_Biotech
-  examples: |
-    - [Việc làm]{"entity":"job","value":"Việc làm"} ngành [Công nghệ sinh học]{"entity":"major", "value":"cong nghe sinh hoc"}
-    - Công việc cho ngành [Công nghệ sinh học]{"entity":"major", "value":"cong nghe sinh hoc"}
-    - ngành [Công nghệ sinh học]{"entity":"major", "value":"cong nghe sinh hoc"} ra làm gì?
-    - Ngành [Công nghệ sinh học]{"entity":"major", "value":"cong nghe sinh hoc"} ra trường làm gì?
-    
-
-- intent: job_Bioeng
-  examples: |
-    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Kỹ thuật sinh học]{"entity":"major", "value":"ky thuat sinh hoc"}
-    - Công việc cho ngành [Kỹ thuật sinh học]{"entity":"major", "value":"ky thuat sinh hoc"}
-    - ngành [Kỹ thuật sinh học]{"entity":"major", "value":"ky thuat sinh hoc"} ra làm gì?
-    - Ngành công nghệ [Kỹ thuật sinh học]{"entity":"major", "value":"ky thuat sinh hoc"} ra trường làm gì?
-    
-
-- intent: job_Arc
-  examples: |
-    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Kiến trúc]{"entity":"major", "value":"kien truc"}
-    - Công việc cho ngành [Kiến trúc]{"entity":"major", "value":"kien truc"}
-    - ngành [Kiến trúc]{"entity":"major", "value":"kien truc"} ra làm gì?
-    - Ngành công nghệ [Kiến trúc]{"entity":"major", "value":"kien truc"} ra trường làm gì?
-    
-
-- intent: job_Chemi
-  examples: |
-    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Hoá học]{"entity":"major", "value":"hoa hoc"}
-    - Công việc cho ngành [Hoá học]{"entity":"major", "value":"hoa hoc"}
-    - ngành [Hoá học]{"entity":"major", "value":"hoa hoc"} ra làm gì?
-    - [Hoá học]{"entity":"major", "value":"hoa hoc"} ra trường làm gì?
-    - Ngành [Hoá học]{"entity":"major", "value":"hoa hoc"} ra trường làm gì?
-    - những công việc mà ngành [Hóa học]{"entity":"major", "value":"hoa hoc"} ?
-    
-
-- intent: job_Philo
-  examples: |
-    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Triết học]{"entity":"major", "value":"triet hoc"}
-    - Công việc cho ngành [Triết học]{"entity":"major", "value":"triet hoc"}
-    - ngành [Triết học]{"entity":"major", "value":"triet hoc"} ra làm gì?
-    - Ngành công nghệ [Triết học]{"entity":"major", "value":"triet hoc"} ra trường làm gì?
-    
-
-- intent: job_SW
-  examples: |
-    - [Việc làm]{"entity":"job", "value":"Việc làm"} ngành [Công tác xã hội]{"entity":"major", "value":"cong tac xa hoi"}
-    - Công việc cho ngành [Công tác xã hội]{"entity":"major", "value":"cong tac xa hoi"}
-    - ngành [Công tác xã hội]{"entity":"major", "value":"cong tac xa hoi"} ra làm gì?
-    - Ngành [Công tác xã hội]{"entity":"major", "value":"cong tac xa hoi"} ra trường làm gì?
-    
-
-- intent: bot_challenge
-  examples: |
-    - khả năng của bot 
-    - bot có khả năng gì 
-    - hãy nêu chức năng của bot
-    

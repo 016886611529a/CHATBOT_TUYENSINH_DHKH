@@ -1,18 +1,5 @@
 version: "2.0"
 
 rules:
-- rule: khangnangcuabot
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-
-- rule: respond to FAQs
-  steps:
-  - intent: faq
-  - action: utter_faq
-
-
-
-
 
 

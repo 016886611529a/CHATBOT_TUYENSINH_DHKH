@@ -47,4 +47,4 @@ class DbQueryingMethods:
             for result in records:
                 Nganh = result[1]
                 Diem = result[3]
-                return f"Ngành  {(result[1])} năm 2021 lấy {result[3]} điểm."
+                return f"Ngành {(result[1])} năm 2021 lấy {result[3]} điểm."
